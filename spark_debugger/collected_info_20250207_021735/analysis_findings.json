@@ -1,0 +1,40 @@
+{
+  "error_analysis": {
+    "errors": [],
+    "categorized_errors": {},
+    "error_count": 0,
+    "categories_found": []
+  },
+  "resource_usage": {
+    "cpu": {
+      "count": 4,
+      "model": "Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz",
+      "raw_info": "processor\t: 0\nmodel name\t: Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz\ncpu MHz\t\t: 3502.185\nprocessor\t: 1\nmodel name\t: Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz\ncpu MHz\t\t: 3506.293\nprocessor\t: 2\nmodel name\t: Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz\ncpu MHz\t\t: 3504.296\nprocessor\t: 3\nmodel name\t: Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz\ncpu MHz\t\t: 3506.127\n"
+    }
+  },
+  "performance_metrics": {
+    "spark": {
+      "raw_data": "<!DOCTYPE html><html>\n      <head>\n        <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/static/bootstrap.min.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"/static/vis-timeline-graph2d.min.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"/static/webui.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"/static/timeline-view.css\" type=\"text/css\"/><script src=\"/static/sorttable.js\"></script><script src=\"/static/jquery-3.5.1.min.js\"></script><script src=\"/static/vis-timeline-graph2d.min.js\"></script><script src=\"/static/bootstrap.bundle.min.js\"></script><script src=\"/static/initialize-tooltips.js\"></script><script src=\"/static/table.js\"></script><script src=\"/static/timeline-view.js\"></script><script src=\"/static/log-view.js\"></script><script src=\"/static/webui.js\"></script><script>setUIRoot('')</script>\n        <link rel=\"stylesheet\" href=\"/static/jquery.dataTables.1.10.25.min.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"/static/dataTables.bootstrap4.1.10.25.min.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"/static/jsonFormatter.min.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"/static/webui-dataTables.css\" type=\"text/css\"/><script src=\"/static/jquery.dataTables.1.10.25.min.js\"></script><script src=\"/static/jquery.cookies.2.2.0.min.js\"></script><script src=\"/static/jquery.blockUI.min.js\"></script><script src=\"/static/dataTables.bootstrap4.1.10.25.min.js\"></script><script src=\"/static/jsonFormatter.min.js\"></script><script src=\"/static/jquery.mustache.js\"></script>\n        <link rel=\"shortcut icon\" href=\"/static/spark-logo-77x50px-hd.png\"></link>\n        <title>History Server</title>\n      </head>\n      <body>\n        <div class=\"container-fluid\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <h3 style=\"vertical-align: middle; display: inline-block;\">\n                <a style=\"text-decoration: none\" href=\"/\">\n                  <img src=\"/static/spark-logo-77x50px-hd.png\"/>\n                  <span class=\"version\" style=\"margin-right: 15px;\">3.3.0</span>\n                </a>\n                History Server\n              </h3>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <script src=\"/static/historypage-common.js\"></script><script src=\"/static/utils.js\"></script><div>\n          <div class=\"container-fluid\">\n            <ul class=\"list-unstyled\">\n              <li><strong>Event log directory:</strong> hdfs://master-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com:9000/spark-history</li>\n            </ul>\n            \n\n            <p>Last updated: <span id=\"last-updated\">1738894673787</span></p>\n\n            <p>Client local time zone: <span id=\"time-zone\"></span></p>\n\n            <script src=\"/static/dataTables.rowsGroup.js\"></script><div id=\"history-summary\"></div><script src=\"/static/historypage.js\"></script><script>setAppLimit(2147483647)</script>\n\n            <a href=\"/?showIncomplete=true\">\n              Show incomplete applications\n            </a>\n          </div>\n      </div>\n            </div>\n          </div>\n        </div>\n      </body>\n    </html>",
+      "parsed": {}
+    },
+    "yarn": {
+      "raw_data": "Total Nodes:2\n         Node-Id\t     Node-State\tNode-Http-Address\tNumber-of-Running-Containers\ncore-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com:8041\t        RUNNING\tcore-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com:8042\t                           0\ncore-1-2.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com:8041\t        RUNNING\tcore-1-2.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com:8042\t                           1\n",
+      "parsed": {}
+    },
+    "hdfs": {
+      "raw_data": "Configured Capacity: 680430796800 (633.70 GB)\nPresent Capacity: 680330133504 (633.61 GB)\nDFS Remaining: 679734084816 (633.05 GB)\nDFS Used: 596048688 (568.44 MB)\nDFS Used%: 0.09%\nReplicated Blocks:\n\tUnder replicated blocks: 0\n\tBlocks with corrupt replicas: 0\n\tMissing blocks: 0\n\tMissing blocks (with replication factor 1): 0\n\tLow redundancy blocks with highest priority to recover: 0\n\tPending deletion blocks: 0\nErasure Coded Block Groups: \n\tLow redundancy block groups: 0\n\tBlock groups with corrupt internal blocks: 0\n\tMissing block groups: 0\n\tLow redundancy blocks with highest priority to recover: 0\n\tPending deletion blocks: 0\n\n-------------------------------------------------\nLive datanodes (2):\n\nName: 192.168.0.92:9866 (core-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com)\nHostname: core-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com\nDecommission Status : Normal\nConfigured Capacity: 340215398400 (316.85 GB)\nDFS Used: 298024344 (284.22 MB)\nNon DFS Used: 0 (0 B)\nDFS Remaining: 339867042408 (316.53 GB)\nDFS Used%: 0.09%\nDFS Remaining%: 99.90%\nConfigured Cache Capacity: 0 (0 B)\nCache Used: 0 (0 B)\nCache Remaining: 0 (0 B)\nCache Used%: 100.00%\nCache Remaining%: 0.00%\nXceivers: 2\nLast contact: Fri Feb 07 10:17:51 CST 2025\nLast Block Report: Fri Feb 07 09:50:27 CST 2025\nNum of Blocks: 7\n\n\nName: 192.168.0.93:9866 (core-1-2.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com)\nHostname: core-1-2.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com\nDecommission Status : Normal\nConfigured Capacity: 340215398400 (316.85 GB)\nDFS Used: 298024344 (284.22 MB)\nNon DFS Used: 0 (0 B)\nDFS Remaining: 339867042408 (316.53 GB)\nDFS Used%: 0.09%\nDFS Remaining%: 99.90%\nConfigured Cache Capacity: 0 (0 B)\nCache Used: 0 (0 B)\nCache Remaining: 0 (0 B)\nCache Used%: 100.00%\nCache Remaining%: 0.00%\nXceivers: 2\nLast contact: Fri Feb 07 10:17:53 CST 2025\nLast Block Report: Fri Feb 07 09:50:27 CST 2025\nNum of Blocks: 7\n\n\n",
+      "parsed": {
+        "dfs_used_percentage": 0.09
+      }
+    }
+  },
+  "configuration_issues": {
+    "spark": {
+      "Error": "collecting spark_defaults: /etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (C.UTF-8)",
+      "cat:": "/etc/ecm/spark-conf/spark-defaults.conf: No such file or directory"
+    },
+    "yarn": {},
+    "hdfs": {}
+  },
+  "recommendations": []
+}

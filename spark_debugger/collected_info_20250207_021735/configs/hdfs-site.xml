@@ -1,0 +1,2 @@
+Error collecting hadoop_config: /etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (C.UTF-8)
+cat: /etc/ecm/hadoop-conf/hdfs-site.xml: No such file or directory
