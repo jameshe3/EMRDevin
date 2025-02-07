@@ -1,0 +1,62 @@
+Configured Capacity: 680430796800 (633.70 GB)
+Present Capacity: 680330133504 (633.61 GB)
+DFS Remaining: 679734607872 (633.05 GB)
+DFS Used: 595525632 (567.94 MB)
+DFS Used%: 0.09%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (2):
+
+Name: 192.168.0.92:9866 (core-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com)
+Hostname: core-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com
+Decommission Status : Normal
+Configured Capacity: 340215398400 (316.85 GB)
+DFS Used: 297762816 (283.97 MB)
+Non DFS Used: 0 (0 B)
+DFS Remaining: 339867303936 (316.53 GB)
+DFS Used%: 0.09%
+DFS Remaining%: 99.90%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 2
+Last contact: Fri Feb 07 10:08:00 CST 2025
+Last Block Report: Fri Feb 07 09:50:27 CST 2025
+Num of Blocks: 4
+
+
+Name: 192.168.0.93:9866 (core-1-2.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com)
+Hostname: core-1-2.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com
+Decommission Status : Normal
+Configured Capacity: 340215398400 (316.85 GB)
+DFS Used: 297762816 (283.97 MB)
+Non DFS Used: 0 (0 B)
+DFS Remaining: 339867303936 (316.53 GB)
+DFS Used%: 0.09%
+DFS Remaining%: 99.90%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 2
+Last contact: Fri Feb 07 10:07:59 CST 2025
+Last Block Report: Fri Feb 07 09:50:27 CST 2025
+Num of Blocks: 4
+
+

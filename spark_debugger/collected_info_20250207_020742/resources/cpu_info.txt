@@ -1,0 +1,12 @@
+processor	: 0
+model name	: Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz
+cpu MHz		: 3497.660
+processor	: 1
+model name	: Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz
+cpu MHz		: 3499.910
+processor	: 2
+model name	: Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz
+cpu MHz		: 3500.446
+processor	: 3
+model name	: Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz
+cpu MHz		: 3501.861

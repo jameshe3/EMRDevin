@@ -1,0 +1,16 @@
+[ {
+  "id" : "application_1738893023853_0002",
+  "name" : "IntentionallyFailingJob",
+  "attempts" : [ {
+    "startTime" : "2025-02-07T02:17:15.656GMT",
+    "endTime" : "2025-02-07T02:17:29.962GMT",
+    "lastUpdated" : "2025-02-07T02:17:30.011GMT",
+    "duration" : 14306,
+    "sparkUser" : "root",
+    "completed" : true,
+    "appSparkVersion" : "3.3.0",
+    "lastUpdatedEpoch" : 1738894650011,
+    "endTimeEpoch" : 1738894649962,
+    "startTimeEpoch" : 1738894635656
+  } ]
+} ]

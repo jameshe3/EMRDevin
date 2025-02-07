@@ -1,0 +1,5 @@
+Error collecting job_timeline: /etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (C.UTF-8)
+2025-02-07 10:08:26,045 INFO client.RMProxy: Connecting to ResourceManager at master-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com/192.168.0.91:8032
+2025-02-07 10:08:26,177 INFO client.AHSProxy: Connecting to Application History server at master-1-1.c-0dc7119d4b7f4c26.cn-hangzhou.emr.aliyuncs.com/192.168.0.91:10200
+bash: -c: line 0: syntax error near unexpected token `('
+bash: -c: line 0: `yarn applicationattempt -list Total number of applications (application-types: [], states: [NEW, NEW_SAVING, SUBMITTED, ACCEPTED, RUNNING, FINISHED, FAILED, KILLED] and tags: []):1 && yarn logs -applicationId Total number of applications (application-types: [], states: [NEW, NEW_SAVING, SUBMITTED, ACCEPTED, RUNNING, FINISHED, FAILED, KILLED] and tags: []):1 | grep Submitted|Launched|Completed|Failed'
