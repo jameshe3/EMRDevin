@@ -1,0 +1,2 @@
+# Ignore collected debug information
+spark_debugger/collected_info_*/
