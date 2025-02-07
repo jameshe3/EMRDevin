@@ -39,6 +39,7 @@ def get_create_cluster_request(
         v_switch_ids=[v_switch_id],
         instance_types=[instance_type],
         payment_type='PayAsYouGo',
+        with_public_ip=True,
         data_disks=[
             emr_20210320_models.DataDisk(
                 category='cloud_essd',
@@ -76,11 +77,13 @@ def get_create_cluster_request(
         deploy_mode='NORMAL',
         security_mode='NORMAL',
         release_version=release_version,
+        user_password=os.getenv('EMR_PASSWORD'),
         node_attributes=emr_20210320_models.NodeAttributes(
             zone_id=zone_id,
             vpc_id=vpc_id,
             ram_role='AliyunECSInstanceForEMRRole',
-            security_group_id=security_group_id
+            security_group_id=security_group_id,
+            master_root_password=os.getenv('EMR_ROOT_PASSWORD')
         ),
         payment_type='PayAsYouGo',
         node_groups=[master_group, core_group],
