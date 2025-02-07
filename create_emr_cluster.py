@@ -83,8 +83,7 @@ def get_create_cluster_request(
             vpc_id=vpc_id,
             ram_role='AliyunECSInstanceForEMRRole',
             security_group_id=security_group_id,
-            master_root_password=os.getenv('EMR_ROOT_PASSWORD'),
-            enable_public_access=True
+            master_root_password=os.getenv('EMR_ROOT_PASSWORD')
         ),
         payment_type='PayAsYouGo',
         node_groups=[master_group, core_group],
