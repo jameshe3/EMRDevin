@@ -3,9 +3,7 @@ from pyspark.sql import SparkSession
 
 def create_file_error_job():
     """Create a job that will fail due to missing file."""
-    spark = SparkSession.builder \
-        .appName("FileErrorJob") \
-        .getOrCreate()
+    spark = SparkSession.builder.appName("FileErrorJob").getOrCreate()
     
     # Try to read non-existent files
     df1 = spark.read.csv("/nonexistent/path/data1.csv")
