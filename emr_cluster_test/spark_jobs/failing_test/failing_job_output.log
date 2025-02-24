@@ -1,0 +1,294 @@
+25/02/24 23:26:56 INFO SparkContext: Running Spark version 3.3.0
+25/02/24 23:26:56 INFO ResourceUtils: ==============================================================
+25/02/24 23:26:56 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/02/24 23:26:56 INFO ResourceUtils: ==============================================================
+25/02/24 23:26:56 INFO SparkContext: Submitted application: EMR Test - Failing Job
+25/02/24 23:26:56 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 2948, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/02/24 23:26:56 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+25/02/24 23:26:56 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/02/24 23:26:56 INFO SecurityManager: Changing view acls to: root,*
+25/02/24 23:26:56 INFO SecurityManager: Changing modify acls to: root
+25/02/24 23:26:56 INFO SecurityManager: Changing view acls groups to: 
+25/02/24 23:26:56 INFO SecurityManager: Changing modify acls groups to: 
+25/02/24 23:26:56 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, *); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+25/02/24 23:26:57 INFO Utils: Successfully started service 'sparkDriver' on port 43123.
+25/02/24 23:26:57 INFO SparkEnv: Registering MapOutputTracker
+25/02/24 23:26:57 INFO SparkEnv: Registering BlockManagerMaster
+25/02/24 23:26:57 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/02/24 23:26:57 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/02/24 23:26:57 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/02/24 23:26:57 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-45a56d8b-9bf0-400d-9a70-f0205e5275d1
+25/02/24 23:26:57 INFO MemoryStore: MemoryStore started with capacity 912.3 MiB
+25/02/24 23:26:57 INFO SparkEnv: Registering OutputCommitCoordinator
+25/02/24 23:26:57 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/02/24 23:26:57 INFO RMProxy: Connecting to ResourceManager at master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:8032
+25/02/24 23:26:57 INFO Configuration: found resource resource-types.xml at file:/etc/taihao-apps/hadoop-conf/resource-types.xml
+25/02/24 23:26:57 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (13107 MB per container)
+25/02/24 23:26:57 INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+25/02/24 23:26:57 INFO Client: Setting up container launch context for our AM
+25/02/24 23:26:57 INFO Client: Setting up the launch environment for our AM container
+25/02/24 23:26:57 INFO Client: Preparing resources for our AM container
+25/02/24 23:26:57 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+25/02/24 23:26:59 INFO Client: Uploading resource file:/tmp/spark-3f442007-7481-4f27-8789-75e26b124ba6/__spark_libs__6028553076466070057.zip -> hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0005/__spark_libs__6028553076466070057.zip
+25/02/24 23:26:59 INFO SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+25/02/24 23:27:00 INFO SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+25/02/24 23:27:00 INFO SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+25/02/24 23:27:00 INFO Client: Uploading resource file:/etc/taihao-apps/spark-conf/hive-site.xml -> hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0005/hive-site.xml
+25/02/24 23:27:00 INFO SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+25/02/24 23:27:00 INFO Client: Uploading resource file:/opt/apps/SPARK3/spark-3.3.0-hadoop3.2-1.0.0/python/lib/pyspark.zip -> hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0005/pyspark.zip
+25/02/24 23:27:00 INFO SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+25/02/24 23:27:00 INFO Client: Uploading resource file:/opt/apps/SPARK3/spark-3.3.0-hadoop3.2-1.0.0/python/lib/py4j-0.10.9.5-src.zip -> hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0005/py4j-0.10.9.5-src.zip
+25/02/24 23:27:00 INFO SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+25/02/24 23:27:01 INFO Client: Uploading resource file:/tmp/spark-3f442007-7481-4f27-8789-75e26b124ba6/__spark_conf__2845955924206503462.zip -> hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0005/__spark_conf__.zip
+25/02/24 23:27:01 INFO SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+25/02/24 23:27:01 INFO SecurityManager: Changing view acls to: root,*
+25/02/24 23:27:01 INFO SecurityManager: Changing modify acls to: root
+25/02/24 23:27:01 INFO SecurityManager: Changing view acls groups to: 
+25/02/24 23:27:01 INFO SecurityManager: Changing modify acls groups to: 
+25/02/24 23:27:01 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, *); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+25/02/24 23:27:01 INFO Client: Submitting application application_1740409812679_0005 to ResourceManager
+25/02/24 23:27:01 INFO YarnClientImpl: Submitted application application_1740409812679_0005
+25/02/24 23:27:02 INFO Client: Application report for application_1740409812679_0005 (state: ACCEPTED)
+25/02/24 23:27:02 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1740410821131
+	 final status: UNDEFINED
+	 tracking URL: http://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:20888/proxy/application_1740409812679_0005/
+	 user: root
+25/02/24 23:27:03 INFO Client: Application report for application_1740409812679_0005 (state: ACCEPTED)
+25/02/24 23:27:04 INFO Client: Application report for application_1740409812679_0005 (state: ACCEPTED)
+25/02/24 23:27:04 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, PROXY_URI_BASES -> http://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:20888/proxy/application_1740409812679_0005), /proxy/application_1740409812679_0005
+25/02/24 23:27:04 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+25/02/24 23:27:05 INFO Client: Application report for application_1740409812679_0005 (state: RUNNING)
+25/02/24 23:27:05 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.0.179
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1740410821131
+	 final status: UNDEFINED
+	 tracking URL: http://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:20888/proxy/application_1740409812679_0005/
+	 user: root
+25/02/24 23:27:05 INFO YarnClientSchedulerBackend: Application application_1740409812679_0005 has started running.
+25/02/24 23:27:05 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38161.
+25/02/24 23:27:05 INFO NettyBlockTransferService: Server created on master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:38161
+25/02/24 23:27:05 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/02/24 23:27:05 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 38161, None)
+25/02/24 23:27:05 INFO BlockManagerMasterEndpoint: Registering block manager master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:38161 with 912.3 MiB RAM, BlockManagerId(driver, master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 38161, None)
+25/02/24 23:27:05 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 38161, None)
+25/02/24 23:27:05 INFO BlockManager: external shuffle service port = 7337
+25/02/24 23:27:05 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 38161, None)
+25/02/24 23:27:05 INFO SingleEventLogFileWriter: Logging events to hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/spark-history/application_1740409812679_0005.inprogress
+25/02/24 23:27:05 INFO SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /jobs: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /jobs/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /jobs/job: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /stages: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /stages/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /stages/stage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /stages/pool: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /storage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /storage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /environment: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /environment/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /executors: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /executors/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /static: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /api: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:05 INFO ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:07 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.0.179:38176) with ID 2,  ResourceProfileId 0
+25/02/24 23:27:07 INFO BlockManagerMasterEndpoint: Registering block manager core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:40783 with 1392.3 MiB RAM, BlockManagerId(2, core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 40783, None)
+25/02/24 23:27:08 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.0.178:45628) with ID 1,  ResourceProfileId 0
+25/02/24 23:27:08 INFO BlockManagerMasterEndpoint: Registering block manager core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:41231 with 1392.3 MiB RAM, BlockManagerId(1, core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 41231, None)
+25/02/24 23:27:08 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+25/02/24 23:27:08 INFO SharedState: spark.sql.warehouse.dir is not set, but hive.metastore.warehouse.dir is set. Setting spark.sql.warehouse.dir to the value of hive.metastore.warehouse.dir.
+25/02/24 23:27:08 INFO SharedState: Warehouse path is 'hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/hive/warehouse'.
+25/02/24 23:27:08 INFO ServerInfo: Adding filter to /SQL: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:08 INFO ServerInfo: Adding filter to /SQL/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:08 INFO ServerInfo: Adding filter to /SQL/execution: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:08 INFO ServerInfo: Adding filter to /SQL/execution/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:08 INFO ServerInfo: Adding filter to /static/sql: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/02/24 23:27:10 INFO CodeGenerator: Code generated in 192.684448 ms
+25/02/24 23:27:10 INFO CodeGenerator: Code generated in 12.209492 ms
+25/02/24 23:27:10 INFO SparkContext: Starting job: collect at /root/failing_job.py:33
+25/02/24 23:27:10 INFO DAGScheduler: Got job 0 (collect at /root/failing_job.py:33) with 2 output partitions
+25/02/24 23:27:10 INFO DAGScheduler: Final stage: ResultStage 0 (collect at /root/failing_job.py:33)
+25/02/24 23:27:10 INFO DAGScheduler: Parents of final stage: List()
+25/02/24 23:27:10 INFO DAGScheduler: Missing parents: List()
+25/02/24 23:27:10 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[9] at collect at /root/failing_job.py:33), which has no missing parents
+25/02/24 23:27:10 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 24.7 KiB, free 912.3 MiB)
+25/02/24 23:27:10 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 11.5 KiB, free 912.3 MiB)
+25/02/24 23:27:10 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:38161 (size: 11.5 KiB, free: 912.3 MiB)
+25/02/24 23:27:10 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1513
+25/02/24 23:27:10 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[9] at collect at /root/failing_job.py:33) (first 15 tasks are for partitions Vector(0, 1))
+25/02/24 23:27:10 INFO YarnScheduler: Adding task set 0.0 with 2 tasks resource profile 0
+25/02/24 23:27:10 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 1, partition 0, PROCESS_LOCAL, 4481 bytes) taskResourceAssignments Map()
+25/02/24 23:27:10 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 2, partition 1, PROCESS_LOCAL, 4518 bytes) taskResourceAssignments Map()
+25/02/24 23:27:11 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:40783 (size: 11.5 KiB, free: 1392.3 MiB)
+25/02/24 23:27:11 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:41231 (size: 11.5 KiB, free: 1392.3 MiB)
+25/02/24 23:27:12 WARN TaskSetManager: Lost task 1.0 in stage 0.0 (TID 1) (core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com executor 2): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage2.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$getByteArrayRdd$1(SparkPlan.scala:366)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:890)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:890)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+25/02/24 23:27:12 INFO TaskSetManager: Starting task 1.1 in stage 0.0 (TID 2) (core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 2, partition 1, PROCESS_LOCAL, 4518 bytes) taskResourceAssignments Map()
+25/02/24 23:27:12 INFO TaskSetManager: Lost task 0.0 in stage 0.0 (TID 0) on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 1: org.apache.spark.api.python.PythonException (Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+) [duplicate 1]
+25/02/24 23:27:12 INFO TaskSetManager: Starting task 0.1 in stage 0.0 (TID 3) (core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 1, partition 0, PROCESS_LOCAL, 4481 bytes) taskResourceAssignments Map()
+25/02/24 23:27:12 INFO TaskSetManager: Lost task 1.1 in stage 0.0 (TID 2) on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 2: org.apache.spark.api.python.PythonException (Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+) [duplicate 2]
+25/02/24 23:27:12 INFO TaskSetManager: Starting task 1.2 in stage 0.0 (TID 4) (core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 2, partition 1, PROCESS_LOCAL, 4518 bytes) taskResourceAssignments Map()
+25/02/24 23:27:12 INFO TaskSetManager: Lost task 0.1 in stage 0.0 (TID 3) on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 1: org.apache.spark.api.python.PythonException (Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+) [duplicate 3]
+25/02/24 23:27:12 INFO TaskSetManager: Starting task 0.2 in stage 0.0 (TID 5) (core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 1, partition 0, PROCESS_LOCAL, 4481 bytes) taskResourceAssignments Map()
+25/02/24 23:27:12 INFO TaskSetManager: Lost task 1.2 in stage 0.0 (TID 4) on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 2: org.apache.spark.api.python.PythonException (Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+) [duplicate 4]
+25/02/24 23:27:12 INFO TaskSetManager: Starting task 1.3 in stage 0.0 (TID 6) (core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 2, partition 1, PROCESS_LOCAL, 4518 bytes) taskResourceAssignments Map()
+25/02/24 23:27:12 INFO TaskSetManager: Lost task 0.2 in stage 0.0 (TID 5) on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 1: org.apache.spark.api.python.PythonException (Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+) [duplicate 5]
+25/02/24 23:27:12 INFO TaskSetManager: Starting task 0.3 in stage 0.0 (TID 7) (core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 1, partition 0, PROCESS_LOCAL, 4481 bytes) taskResourceAssignments Map()
+25/02/24 23:27:12 INFO TaskSetManager: Lost task 1.3 in stage 0.0 (TID 6) on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, executor 2: org.apache.spark.api.python.PythonException (Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+) [duplicate 6]
+25/02/24 23:27:12 ERROR TaskSetManager: Task 1 in stage 0.0 failed 4 times; aborting job
+25/02/24 23:27:12 INFO YarnScheduler: Cancelling stage 0
+25/02/24 23:27:12 INFO YarnScheduler: Killing all running tasks in stage 0: Stage cancelled
+25/02/24 23:27:12 INFO YarnScheduler: Stage 0 was cancelled
+25/02/24 23:27:12 INFO DAGScheduler: ResultStage 0 (collect at /root/failing_job.py:33) failed in 2.072 s due to Job aborted due to stage failure: Task 1 in stage 0.0 failed 4 times, most recent failure: Lost task 1.3 in stage 0.0 (TID 6) (core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com executor 2): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage2.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$getByteArrayRdd$1(SparkPlan.scala:366)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:890)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:890)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+Driver stacktrace:
+25/02/24 23:27:12 INFO DAGScheduler: Job 0 failed: collect at /root/failing_job.py:33, took 2.140854 s
+java.lang.RuntimeException: taskMetricDistributionsOption is null
+	at org.apache.spark.status.AppStatusListener.$btrace$SparkCollector$fillStageTaskSummary(AppStatusListener.scala)
+	at org.apache.spark.status.AppStatusListener.$btrace$SparkCollector$sendStageInfo(AppStatusListener.scala)
+	at org.apache.spark.status.AppStatusListener.onStageCompleted(AppStatusListener.scala:866)
+	at org.apache.spark.scheduler.SparkListenerBus.doPostEvent(SparkListenerBus.scala:35)
+	at org.apache.spark.scheduler.SparkListenerBus.doPostEvent$(SparkListenerBus.scala:28)
+	at org.apache.spark.scheduler.AsyncEventQueue.doPostEvent(AsyncEventQueue.scala:37)
+	at org.apache.spark.scheduler.AsyncEventQueue.doPostEvent(AsyncEventQueue.scala:37)
+	at org.apache.spark.util.ListenerBus.postToAll(ListenerBus.scala:117)
+	at org.apache.spark.util.ListenerBus.postToAll$(ListenerBus.scala:101)
+	at org.apache.spark.scheduler.AsyncEventQueue.super$postToAll(AsyncEventQueue.scala:105)
+	at org.apache.spark.scheduler.AsyncEventQueue.$anonfun$dispatch$1(AsyncEventQueue.scala:105)
+	at scala.runtime.java8.JFunction0$mcJ$sp.apply(JFunction0$mcJ$sp.java:23)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+	at org.apache.spark.scheduler.AsyncEventQueue.org$apache$spark$scheduler$AsyncEventQueue$$dispatch(AsyncEventQueue.scala:100)
+	at org.apache.spark.scheduler.AsyncEventQueue$$anon$2.$anonfun$run$1(AsyncEventQueue.scala:96)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1446)
+	at org.apache.spark.scheduler.AsyncEventQueue$$anon$2.run(AsyncEventQueue.scala:96)
+25/02/24 23:27:12 WARN TaskSetManager: Lost task 0.3 in stage 0.0 (TID 7) (core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com executor 1): TaskKilled (Stage cancelled)
+25/02/24 23:27:12 INFO YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+Job failed as expected with error: 
+  An exception was thrown from the Python worker. Please see the stack trace below.
+Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+
+25/02/24 23:27:12 INFO SparkUI: Stopped Spark web UI at http://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:4040
+25/02/24 23:27:12 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+25/02/24 23:27:13 INFO YarnClientSchedulerBackend: Shutting down all executors
+25/02/24 23:27:13 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+25/02/24 23:27:13 INFO YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+25/02/24 23:27:13 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/02/24 23:27:13 INFO MemoryStore: MemoryStore cleared
+25/02/24 23:27:13 INFO BlockManager: BlockManager stopped
+25/02/24 23:27:13 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/02/24 23:27:13 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/02/24 23:27:13 INFO SparkContext: Successfully stopped SparkContext
+Traceback (most recent call last):
+  File "/root/failing_job.py", line 42, in <module>
+    main()
+  File "/root/failing_job.py", line 33, in main
+    result = df_with_error.collect()
+  File "/opt/apps/SPARK3/spark-current/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 817, in collect
+  File "/opt/apps/SPARK3/spark-current/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/apps/SPARK3/spark-current/python/lib/pyspark.zip/pyspark/sql/utils.py", line 196, in deco
+pyspark.sql.utils.PythonException: 
+  An exception was thrown from the Python worker. Please see the stack trace below.
+Traceback (most recent call last):
+  File "/root/failing_job.py", line 7, in failing_udf
+IndexError: list index out of range
+
+25/02/24 23:27:13 INFO ShutdownHookManager: Shutdown hook called
+25/02/24 23:27:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-3f442007-7481-4f27-8789-75e26b124ba6
+25/02/24 23:27:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-229bf1bf-5af1-4353-b002-07d82b9a94a9
+25/02/24 23:27:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-3f442007-7481-4f27-8789-75e26b124ba6/pyspark-b0d56504-613f-4c0f-a48b-c8447d62681c

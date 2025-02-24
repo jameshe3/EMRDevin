@@ -1,0 +1,9 @@
+Word Count Results:
+Cluster: 1
+EMR: 2
+Hello: 1
+Job: 2
+Running: 1
+Spark: 3
+Test: 2
+Testing: 1

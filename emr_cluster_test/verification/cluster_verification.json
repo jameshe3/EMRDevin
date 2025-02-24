@@ -1,0 +1,18 @@
+{
+  "cluster_id": "c-dca6391bee134114",
+  "cluster_type": "DATALAKE",
+  "cluster_state": "RUNNING",
+  "configured_components": [
+    "SPARK3",
+    "YARN",
+    "HDFS",
+    "ZOOKEEPER",
+    "HIVE",
+    "HADOOP-COMMON"
+  ],
+  "master_node": {
+    "public_ip": "116.62.148.109",
+    "private_ip": "192.168.0.180",
+    "instance_type": "ecs.g7.xlarge"
+  }
+}
