@@ -15,6 +15,12 @@ This attempt implements:
 - Instance Type: ecs.g7.xlarge
 - EMR Version: EMR-5.9.0
 
+## Cluster Details
+- Cluster ID: c-875d732a1a98286d
+- Master Node Public IP: 121.40.231.137
+- Status: RUNNING
+- SSH Access: Verified
+
 ## Directory Structure
 ```
 attempt1/
