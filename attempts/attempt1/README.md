@@ -16,8 +16,9 @@ This attempt implements:
 - EMR Version: EMR-5.9.0
 
 ## Cluster Details
-- Cluster ID: c-875d732a1a98286d
-- Master Node Public IP: 121.40.231.137
+Example cluster details (replace with your own):
+- Cluster ID: <your-cluster-id>
+- Master Node Public IP: <your-master-ip>
 - Status: RUNNING
 - SSH Access: Verified
 
@@ -48,10 +49,10 @@ attempt1/
 ## Usage
 1. Set required environment variables:
    ```bash
-   export ACCESS_KEY_ID=your_access_key
-   export ACCESS_KEY_SECRET=your_secret_key
-   export EMR_PASSWORD=your_emr_password      # Optional, defaults to 1qaz@WSX3edc
-   export EMR_ROOT_PASSWORD=your_root_password # Optional, defaults to 1qaz@WSX3edc
+   export ACCESS_KEY_ID=<your_access_key>
+   export ACCESS_KEY_SECRET=<your_secret_key>
+   export EMR_PASSWORD=<your_emr_password>      # Optional
+   export EMR_ROOT_PASSWORD=<your_root_password> # Optional
    ```
 
 2. Create EMR cluster:
