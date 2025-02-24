@@ -4,6 +4,7 @@ def create_failing_job():
     spark = SparkSession \
         .builder \
         .appName("IntentionallyFailingJob") \
+        .enableHiveSupport() \
         .config("spark.master", "yarn") \
         .getOrCreate()
 
