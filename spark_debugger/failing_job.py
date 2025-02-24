@@ -1,8 +1,19 @@
 from pyspark.sql import SparkSession
 
 def create_failing_job():
-    spark = SparkSession.builder \
+    # Initialize SparkSession with YARN client mode
+    spark = SparkSession \
+        .builder \
         .appName("IntentionallyFailingJob") \
+        .config("spark.master", "yarn") \
+        .config("spark.submit.deployMode", "client") \
+        .config("spark.driver.memory", "2g") \
+        .config("spark.executor.memory", "2g") \
+        .config("spark.executor.instances", "2") \
+        .config("spark.yarn.am.memory", "2g") \
+        .config("spark.yarn.submit.waitAppCompletion", "true") \
+        .config("spark.sql.warehouse.dir", "/user/hive/warehouse") \
+        .enableHiveSupport() \
         .getOrCreate()
 
     # Read a non-existent file

@@ -77,7 +77,6 @@ def get_create_cluster_request(
         deploy_mode='NORMAL',
         security_mode='NORMAL',
         release_version=release_version,
-        user_password=os.getenv('EMR_PASSWORD'),
         node_attributes=emr_20210320_models.NodeAttributes(
             zone_id=zone_id,
             vpc_id=vpc_id,
@@ -132,7 +131,12 @@ def await_cluster_status_to_running(
     return operation_response.body.operation.operation_state
 
 def main():
-    client = create_client(os.getenv('ACCESS_KEY_ID'), os.getenv('ACCESS_KEY_SECRET'), 'cn-hangzhou')
+    access_key_id = os.getenv('ACCESS_KEY_ID')
+    access_key_secret = os.getenv('ACCESS_KEY_SECRET')
+    if not access_key_id or not access_key_secret:
+        raise ValueError("ACCESS_KEY_ID and ACCESS_KEY_SECRET environment variables must be set")
+    
+    client = create_client(access_key_id, access_key_secret, 'cn-hangzhou')
     ConsoleClient.log('create cluster begins')
     
     region_id = 'cn-hangzhou'
@@ -165,6 +169,7 @@ def main():
     )
     cluster_response = client.get_cluster(get_cluster_request)
     ConsoleClient.log(f'create cluster finished, cluster is ready, clusterId is {UtilClient.to_jsonstring(TeaCore.to_map(cluster_response.body.cluster))}.')
+    return body.cluster_id
 
 if __name__ == '__main__':
     main()
