@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import pyspark
+from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, explode, udf
 from pyspark.sql.types import StringType, IntegerType
 import time
@@ -8,11 +8,12 @@ import random
 def create_failing_job():
     """Create a Spark job with various failure scenarios."""
     # Create SparkSession using the recommended pattern
-    spark = pyspark.sql.SparkSession.builder \
+    spark = SparkSession.builder \
         .master("local[*]") \
         .appName("IntentionallyFailingJob") \
         .config("spark.executor.memory", "512m") \
         .config("spark.driver.memory", "512m") \
+        .enableHiveSupport() \
         .getOrCreate()
 
     try:
