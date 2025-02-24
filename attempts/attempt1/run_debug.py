@@ -20,7 +20,7 @@ def submit_and_debug(host: str, job_path: str, output_dir: Optional[str] = None)
         # Submit job
         print(f"Submitting job: {job_path}")
         submit_cmd = f'spark-submit --master yarn --deploy-mode cluster {job_path}'
-        submit_status = os.system(f'ssh -o StrictHostKeyChecking=no root@{host} "{submit_cmd}"')
+        submit_status = os.system(f'sshpass -p "{root_password}" ssh -o StrictHostKeyChecking=no root@{host} "{submit_cmd}"')
         
         if submit_status != 0:
             print("Warning: Job submission returned non-zero status")
