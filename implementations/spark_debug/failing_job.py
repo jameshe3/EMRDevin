@@ -5,14 +5,18 @@ from pyspark.sql.types import StringType, IntegerType
 import time
 import random
 
+def get_or_create_spark():
+    """Get or create a SparkSession."""
+    return SparkSession.builder \
+        .appName("IntentionallyFailingJob") \
+        .config("spark.executor.memory", "512m") \
+        .config("spark.driver.memory", "512m") \
+        .getOrCreate()
+
 def create_failing_job():
     """Create a Spark job with various failure scenarios."""
     # Create SparkSession using the recommended pattern
-    spark = (SparkSession.builder
-        .appName("IntentionallyFailingJob")
-        .config("spark.executor.memory", "512m")
-        .config("spark.driver.memory", "512m")
-        .getOrCreate())
+    spark = get_or_create_spark()
 
     try:
         print("Starting failing job scenarios...")
