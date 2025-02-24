@@ -1,15 +1,15 @@
 from pyspark.sql import SparkSession
 
 def create_failing_job():
-    # Initialize SparkSession with YARN cluster mode and resource configs
+    # Initialize SparkSession with YARN cluster mode
     spark = SparkSession \
         .builder \
         .appName("IntentionallyFailingJob") \
         .master("yarn") \
-        .config("spark.submit.deployMode", "cluster") \
-        .config("spark.driver.memory", "2g") \
+        .config("spark.submit.deployMode", "client") \
+        .config("spark.yarn.am.memory", "2g") \
         .config("spark.executor.memory", "2g") \
-        .config("spark.yarn.submit.waitAppCompletion", "true") \
+        .config("spark.executor.instances", "2") \
         .getOrCreate()
 
     # Read a non-existent file
