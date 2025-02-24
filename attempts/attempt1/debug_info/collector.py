@@ -4,6 +4,8 @@ import time
 from datetime import datetime
 from typing import Dict, List
 
+import sys
+sys.path.append("/home/ubuntu/repos/EMRDevin")
 from spark_debugger.collectors.spark_info_collector import SparkInfoCollector
 
 class ExtendedSparkInfoCollector(SparkInfoCollector):
@@ -17,11 +19,11 @@ class ExtendedSparkInfoCollector(SparkInfoCollector):
         os.makedirs(config_dir, exist_ok=True)
         
         config_files = [
-            "/etc/hadoop/conf/core-site.xml",
-            "/etc/hadoop/conf/hdfs-site.xml",
-            "/etc/hadoop/conf/mapred-site.xml",
-            "/etc/hadoop/conf/yarn-site.xml",
-            "/etc/hive/conf/hive-site.xml"
+            "/etc/ecm/hadoop-conf/core-site.xml",
+            "/etc/ecm/hadoop-conf/hdfs-site.xml",
+            "/etc/ecm/hadoop-conf/mapred-site.xml",
+            "/etc/ecm/hadoop-conf/yarn-site.xml",
+            "/etc/ecm/hive-conf/hive-site.xml"
         ]
         
         for config_file in config_files:
