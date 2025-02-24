@@ -50,11 +50,11 @@ class SparkDebugCollector:
     def collect_resource_metrics(self) -> Dict[str, str]:
         """Collect comprehensive resource usage metrics."""
         commands = {
-            'cpu_info': 'cat /proc/cpuinfo | grep "processor\\|model name\\|cpu MHz"',
-            'memory_info': 'free -h && vmstat 1 5',
-            'disk_space': 'df -h && iostat -x 1 5',
-            'network_stats': 'netstat -s && sar -n DEV 1 5',
-            'process_list': 'ps aux --sort=-%cpu | head -20',
+            'cpu_info': 'cat /proc/cpuinfo | grep "processor\\|model name\\|cpu MHz" || echo "No CPU info available"',
+            'memory_info': 'free -h && cat /proc/meminfo || echo "No memory info available"',
+            'disk_space': 'df -h || echo "No disk info available"',
+            'network_stats': 'ip -s link || echo "No network stats available"',
+            'process_list': 'ps aux --sort=-%cpu | head -20 || echo "No process info available"',
             'gpu_info': 'nvidia-smi || echo "No GPU found"'
         }
         
@@ -67,6 +67,10 @@ class SparkDebugCollector:
     def collect_application_metrics(self) -> Dict[str, str]:
         """Collect application-specific metrics."""
         commands = {
+            'yarn_metrics': 'ps aux | grep "org.apache.hadoop.yarn" || echo "No YARN processes found"',
+            'hdfs_metrics': 'df -h || echo "No HDFS metrics available"',
+            'spark_metrics': 'ps aux | grep spark || echo "No Spark processes found"'
+        } if self.is_local else {
             'yarn_metrics': '\
                 yarn node -list -all && \
                 yarn application -list -appStates ALL && \
