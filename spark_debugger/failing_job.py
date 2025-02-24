@@ -1,11 +1,10 @@
 from pyspark.sql import SparkSession
 
 def create_failing_job():
-    spark = (SparkSession
-        .builder
-        .config("spark.master", "yarn")
-        .appName("IntentionallyFailingJob")
-        .getOrCreate())
+    spark = SparkSession.builder \
+        .master("yarn") \
+        .appName("IntentionallyFailingJob") \
+        .getOrCreate()
 
     # Read a non-existent file
     df = spark.read.csv("/nonexistent/path/data.csv")
