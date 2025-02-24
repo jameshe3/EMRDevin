@@ -1,18 +1,18 @@
 from pyspark.sql import SparkSession
 
 def create_failing_job():
-    # Initialize SparkSession with YARN client mode and resource configs
-    spark = SparkSession.builder \
-        .appName("IntentionallyFailingJob") \
-        .config("spark.master", "yarn") \
-        .config("spark.submit.deployMode", "client") \
-        .config("spark.driver.memory", "2g") \
-        .config("spark.executor.memory", "2g") \
-        .config("spark.executor.instances", "2") \
-        .config("spark.yarn.am.memory", "2g") \
-        .config("spark.yarn.submit.waitAppCompletion", "true") \
-        .enableHiveSupport() \
-        .getOrCreate()
+    # Initialize SparkSession with YARN client mode
+    builder = SparkSession.builder
+    builder = builder.appName("IntentionallyFailingJob")
+    builder = builder.config("spark.master", "yarn")
+    builder = builder.config("spark.submit.deployMode", "client")
+    builder = builder.config("spark.driver.memory", "2g")
+    builder = builder.config("spark.executor.memory", "2g")
+    builder = builder.config("spark.executor.instances", "2")
+    builder = builder.config("spark.yarn.am.memory", "2g")
+    builder = builder.config("spark.yarn.submit.waitAppCompletion", "true")
+    builder = builder.enableHiveSupport()
+    spark = builder.getOrCreate()
 
     # Read a non-existent file
     df = spark.read.csv("/nonexistent/path/data.csv")
