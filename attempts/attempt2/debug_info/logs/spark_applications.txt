@@ -1,0 +1,4 @@
+Total number of applications (application-types: [], states: [NEW, NEW_SAVING, SUBMITTED, ACCEPTED, RUNNING, FINISHED, FAILED, KILLED] and tags: []):2
+                Application-Id	    Application-Name	    Application-Type	      User	     Queue	             State	       Final-State	       Progress	                       Tracking-URL
+application_1740386902239_0001	Thrift JDBC/ODBC Server	               SPARK	     spark	   default	           RUNNING	         UNDEFINED	            10%	http://master-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:4039
+application_1740386902239_0002	   file_error_job.py	               SPARK	      root	   default	          FINISHED	            FAILED	           100%	master-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:18080/history/application_1740386902239_0002/2

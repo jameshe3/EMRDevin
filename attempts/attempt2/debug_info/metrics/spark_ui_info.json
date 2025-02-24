@@ -1,0 +1,29 @@
+[ {
+  "id" : "application_1740386902239_0002",
+  "name" : "FileErrorJob",
+  "attempts" : [ {
+    "attemptId" : "2",
+    "startTime" : "2025-02-24T08:50:25.505GMT",
+    "endTime" : "2025-02-24T08:50:30.896GMT",
+    "lastUpdated" : "2025-02-24T08:50:30.944GMT",
+    "duration" : 5391,
+    "sparkUser" : "root",
+    "completed" : true,
+    "appSparkVersion" : "3.3.0",
+    "startTimeEpoch" : 1740387025505,
+    "endTimeEpoch" : 1740387030896,
+    "lastUpdatedEpoch" : 1740387030944
+  }, {
+    "attemptId" : "1",
+    "startTime" : "2025-02-24T08:50:14.629GMT",
+    "endTime" : "2025-02-24T08:50:21.725GMT",
+    "lastUpdated" : "2025-02-24T08:50:21.777GMT",
+    "duration" : 7096,
+    "sparkUser" : "root",
+    "completed" : true,
+    "appSparkVersion" : "3.3.0",
+    "startTimeEpoch" : 1740387014629,
+    "endTimeEpoch" : 1740387021725,
+    "lastUpdatedEpoch" : 1740387021777
+  } ]
+} ]
