@@ -1,0 +1,1555 @@
+Container: container_1740409812679_0004_01_000002 on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:directory.info
+LogLastModifiedTime:Mon Feb 24 23:25:49 +0800 2025
+LogLength:36988
+LogContents:
+ls -l:
+total 44
+-rw-r----- 1 hadoop hadoop   92 Feb 24 23:25 container_tokens
+-rwx------ 1 hadoop hadoop  664 Feb 24 23:25 default_container_executor_session.sh
+-rwx------ 1 hadoop hadoop  719 Feb 24 23:25 default_container_executor.sh
+lrwxrwxrwx 1 hadoop hadoop   70 Feb 24 23:25 hive-site.xml -> /mnt/disk1/yarn/nm-local-dir/usercache/root/filecache/24/hive-site.xml
+-rwx------ 1 hadoop hadoop 6891 Feb 24 23:25 launch_container.sh
+lrwxrwxrwx 1 hadoop hadoop   78 Feb 24 23:25 py4j-0.10.9.5-src.zip -> /mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/23/py4j-0.10.9.5-src.zip
+lrwxrwxrwx 1 hadoop hadoop   68 Feb 24 23:25 pyspark.zip -> /mnt/disk3/yarn/nm-local-dir/usercache/root/filecache/20/pyspark.zip
+lrwxrwxrwx 1 hadoop hadoop   75 Feb 24 23:25 __spark_conf__ -> /mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/21/__spark_conf__.zip
+lrwxrwxrwx 1 hadoop hadoop   94 Feb 24 23:25 __spark_libs__ -> /mnt/disk4/yarn/nm-local-dir/usercache/root/filecache/22/__spark_libs__1414285758766144539.zip
+drwx--x--- 2 hadoop hadoop 4096 Feb 24 23:25 tmp
+find -L . -maxdepth 5 -ls:
+4457012    4 drwx--x---   3 hadoop   hadoop       4096 Feb 24 23:25 .
+4457018    4 -rw-r-----   1 hadoop   hadoop         64 Feb 24 23:25 ./.launch_container.sh.crc
+6291578    4 drwx------   3 hadoop   hadoop       4096 Feb 24 23:25 ./__spark_conf__
+6291586    4 drwx------   2 hadoop   hadoop       4096 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__
+6291603    4 -r-x------   1 hadoop   hadoop       1335 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/configuration.xsl
+6291625    4 -r-x------   1 hadoop   hadoop       3763 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hdfs-env.sh
+6291619    4 -r-x------   1 hadoop   hadoop         21 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-signature.secret
+6291616    4 -r-x------   1 hadoop   hadoop       2615 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-policy.xml
+6291599    4 -r-x------   1 hadoop   hadoop       2367 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-client.xml
+6291587   16 -r-x------   1 hadoop   hadoop      15875 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/log4j.properties
+6291612   12 -r-x------   1 hadoop   hadoop       9182 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hive-site.xml
+6291601    4 -r-x------   1 hadoop   hadoop       3523 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-acls.xml
+6291614    4 -r-x------   1 hadoop   hadoop       1411 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-env.sh
+6291592   16 -r-x------   1 hadoop   hadoop      15784 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-log4j.properties
+6291604    4 -r-x------   1 hadoop   hadoop          9 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-exclude.xml
+6291594   16 -r-x------   1 hadoop   hadoop      15945 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-site.xml
+6291624    4 -r-x------   1 hadoop   hadoop       2268 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-server.xml.example
+6291602    4 -r-x------   1 hadoop   hadoop          6 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms.keystore.password
+6291597    0 -r-x------   1 hadoop   hadoop          0 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/dfs.exclude
+6291590    4 -r-x------   1 hadoop   hadoop       1657 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-log4j.properties
+6291626    8 -r-x------   1 hadoop   hadoop       5511 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-site.xml
+6291598    4 -r-x------   1 hadoop   hadoop       1631 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-log4j.properties
+6291611    4 -r-x------   1 hadoop   hadoop        924 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/truststore
+6291621    4 -r-x------   1 hadoop   hadoop        829 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-site.xml
+6291595    4 -r-x------   1 hadoop   hadoop        205 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hiveserver2-site.xml
+6291607    4 -r-x------   1 hadoop   hadoop        210 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/container-executor.cfg
+6291593    4 -r-x------   1 hadoop   hadoop       3868 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/keystore
+6291605    8 -r-x------   1 hadoop   hadoop       5238 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-env.sh
+6291623    4 -r-x------   1 hadoop   hadoop       2380 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-server.xml
+6291600    4 -r-x------   1 hadoop   hadoop       1376 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/capacity-scheduler.xml
+6291609    4 -r-x------   1 hadoop   hadoop        248 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-metrics.properties
+6291620    0 -r-x------   1 hadoop   hadoop          0 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/.yarn-exclude.xml.lock
+6291613    4 -r-x------   1 hadoop   hadoop       2316 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-client.xml.example
+6291615    4 -r-x------   1 hadoop   hadoop        314 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hbase-site.xml
+6291591    4 -r-x------   1 hadoop   hadoop        108 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-metrics2.properties
+6291622    4 -r-x------   1 hadoop   hadoop        814 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/rack-topology.sh
+6291617    4 -r-x------   1 hadoop   hadoop        782 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/fair-scheduler.xml
+6291608    4 -r-x------   1 hadoop   hadoop        196 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/resource-types.xml
+6291596   12 -r-x------   1 hadoop   hadoop      10289 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/core-site.xml
+6291606   32 -r-x------   1 hadoop   hadoop      31635 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hdfs-site.xml
+6291618    4 -r-x------   1 hadoop   hadoop       1580 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-env.sh
+6291610    4 -r-x------   1 hadoop   hadoop       1639 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/mapred-env.sh
+6291589   12 -r-x------   1 hadoop   hadoop       8974 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/mapred-site.xml
+6291588    4 -r-x------   1 hadoop   hadoop       1373 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-env.sh
+6291627  184 -r-x------   1 hadoop   hadoop     185301 Feb 24 23:25 ./__spark_conf__/__spark_hadoop_conf__.xml
+6291628   12 -r-x------   1 hadoop   hadoop       8554 Feb 24 23:25 ./__spark_conf__/__spark_conf__.properties
+6291629    4 -r-x------   1 hadoop   hadoop       1164 Feb 24 23:25 ./__spark_conf__/__spark_dist_cache__.properties
+6291585    4 -r-x------   1 hadoop   hadoop        103 Feb 24 23:25 ./__spark_conf__/metrics.properties
+4457017    8 -rwx------   1 hadoop   hadoop       6891 Feb 24 23:25 ./launch_container.sh
+4457022    4 -rw-r-----   1 hadoop   hadoop         16 Feb 24 23:25 ./.default_container_executor.sh.crc
+4457020    4 -rw-r-----   1 hadoop   hadoop         16 Feb 24 23:25 ./.default_container_executor_session.sh.crc
+6291806   12 -r-x------   1 hadoop   hadoop       9182 Feb 24 23:25 ./hive-site.xml
+4457019    4 -rwx------   1 hadoop   hadoop        664 Feb 24 23:25 ./default_container_executor_session.sh
+4457014    4 drwx--x---   2 hadoop   hadoop       4096 Feb 24 23:25 ./tmp
+4457021    4 -rwx------   1 hadoop   hadoop        719 Feb 24 23:25 ./default_container_executor.sh
+6291631   44 -r-x------   1 hadoop   hadoop      42404 Feb 24 23:25 ./py4j-0.10.9.5-src.zip
+4456743   20 drwx------   2 hadoop   hadoop      20480 Feb 24 23:25 ./__spark_libs__
+4456765  124 -r-x------   1 hadoop   hadoop     126094 Feb 24 23:25 ./__spark_libs__/metrics-core-4.2.7.jar
+4456791   76 -r-x------   1 hadoop   hadoop      77537 Feb 24 23:25 ./__spark_libs__/arpack-2.2.1.jar
+4456880 29568 -r-x------   1 hadoop   hadoop   30276738 Feb 24 23:25 ./__spark_libs__/hadoop-client-runtime-3.2.1.jar
+4456917   68 -r-x------   1 hadoop   hadoop      67758 Feb 24 23:25 ./__spark_libs__/jettison-1.1.jar
+4456787  108 -r-x------   1 hadoop   hadoop     108555 Feb 24 23:25 ./__spark_libs__/xz-1.8.jar
+4456878 1116 -r-x------   1 hadoop   hadoop    1138885 Feb 24 23:25 ./__spark_libs__/spark-streaming_2.12-3.3.0.jar
+4456925 1948 -r-x------   1 hadoop   hadoop    1992108 Feb 24 23:25 ./__spark_libs__/parquet-column-1.12.2.jar
+4456987   36 -r-x------   1 hadoop   hadoop      34654 Feb 24 23:25 ./__spark_libs__/paranamer-2.8.jar
+4456789 2164 -r-x------   1 hadoop   hadoop    2213560 Feb 24 23:25 ./__spark_libs__/commons-math3-3.6.1.jar
+4456868  200 -r-x------   1 hadoop   hadoop     203358 Feb 24 23:25 ./__spark_libs__/hk2-locator-2.6.1.jar
+4456826  352 -r-x------   1 hadoop   hadoop     357571 Feb 24 23:25 ./__spark_libs__/spark-yarn_2.12-3.3.0.jar
+4456896  200 -r-x------   1 hadoop   hadoop     201124 Feb 24 23:25 ./__spark_libs__/jdo-api-3.0.1.jar
+4456949  280 -r-x------   1 hadoop   hadoop     283653 Feb 24 23:25 ./__spark_libs__/curator-recipes-2.13.0.jar
+4456944  796 -r-x------   1 hadoop   hadoop     813149 Feb 24 23:25 ./__spark_libs__/lapack-2.2.1.jar
+4456768  332 -r-x------   1 hadoop   hadoop     337864 Feb 24 23:25 ./__spark_libs__/antlr4-runtime-4.8.jar
+4456777  160 -r-x------   1 hadoop   hadoop     160299 Feb 24 23:25 ./__spark_libs__/spark-network-shuffle_2.12-3.3.0.jar
+4456934  256 -r-x------   1 hadoop   hadoop     261276 Feb 24 23:25 ./__spark_libs__/api-ldap-extras-codec-2.0.0.jar
+4456994   60 -r-x------   1 hadoop   hadoop      58284 Feb 24 23:25 ./__spark_libs__/commons-cli-1.5.0.jar
+4456819   20 -r-x------   1 hadoop   hadoop      20437 Feb 24 23:25 ./__spark_libs__/audience-annotations-0.5.0.jar
+4456871  164 -r-x------   1 hadoop   hadoop     166244 Feb 24 23:25 ./__spark_libs__/commons-crypto-1.1.0.jar
+4456846  256 -r-x------   1 hadoop   hadoop     259090 Feb 24 23:25 ./__spark_libs__/jersey-client-2.34.jar
+4456839  164 -r-x------   1 hadoop   hadoop     165348 Feb 24 23:25 ./__spark_libs__/jersey-json-1.19.4.jar
+4456943   72 -r-x------   1 hadoop   hadoop      72596 Feb 24 23:25 ./__spark_libs__/kerb-common-2.0.1.jar
+4456757 17820 -r-x------   1 hadoop   hadoop   18245921 Feb 24 23:25 ./__spark_libs__/hadoop-client-api-3.2.1.jar
+4457002  180 -r-x------   1 hadoop   hadoop     183588 Feb 24 23:25 ./__spark_libs__/aircompressor-0.21.jar
+4456971   96 -r-x------   1 hadoop   hadoop      96221 Feb 24 23:25 ./__spark_libs__/commons-pool-1.5.4.jar
+4456844  420 -r-x------   1 hadoop   hadoop     427780 Feb 24 23:25 ./__spark_libs__/jodd-core-3.5.2.jar
+4456841  140 -r-x------   1 hadoop   hadoop     140376 Feb 24 23:25 ./__spark_libs__/jakarta.ws.rs-api-2.1.6.jar
+4456804  320 -r-x------   1 hadoop   hadoop     327410 Feb 24 23:25 ./__spark_libs__/hive-llap-common-2.3.9.jar
+4456900  100 -r-x------   1 hadoop   hadoop     101340 Feb 24 23:25 ./__spark_libs__/kerby-asn1-2.0.1.jar
+4456967   48 -r-x------   1 hadoop   hadoop      47189 Feb 24 23:25 ./__spark_libs__/wildfly-client-config-1.0.0.Final.jar
+4456939 8828 -r-x------   1 hadoop   hadoop    9038556 Feb 24 23:25 ./__spark_libs__/spark-sql_2.12-3.3.0.jar
+4456981   76 -r-x------   1 hadoop   hadoop      75714 Feb 24 23:25 ./__spark_libs__/jackson-annotations-2.13.3.jar
+4457005   84 -r-x------   1 hadoop   hadoop      85707 Feb 24 23:25 ./__spark_libs__/api-util-2.0.0.jar
+4456806  196 -r-x------   1 hadoop   hadoop     200223 Feb 24 23:25 ./__spark_libs__/hk2-api-2.6.1.jar
+4456863  220 -r-x------   1 hadoop   hadoop     221719 Feb 24 23:25 ./__spark_libs__/wildfly-common-1.3.0.Final.jar
+4456864  468 -r-x------   1 hadoop   hadoop     478807 Feb 24 23:25 ./__spark_libs__/netty-transport-4.1.74.Final.jar
+4456797  348 -r-x------   1 hadoop   hadoop     353793 Feb 24 23:25 ./__spark_libs__/commons-codec-1.15.jar
+4456748  224 -r-x------   1 hadoop   hadoop     226583 Feb 24 23:25 ./__spark_libs__/kerb-core-2.0.1.jar
+4456988   20 -r-x------   1 hadoop   hadoop      18140 Feb 24 23:25 ./__spark_libs__/jakarta.inject-2.6.1.jar
+4456859  200 -r-x------   1 hadoop   hadoop     201965 Feb 24 23:25 ./__spark_libs__/curator-framework-2.13.0.jar
+4456771   48 -r-x------   1 hadoop   hadoop      45703 Feb 24 23:25 ./__spark_libs__/has-client-2.0.1.jar
+4456914 1468 -r-x------   1 hadoop   hadoop    1502280 Feb 24 23:25 ./__spark_libs__/htrace-core4-4.1.0-incubating.jar
+4456979   56 -r-x------   1 hadoop   hadoop      54293 Feb 24 23:25 ./__spark_libs__/pickle-1.2.jar
+4456879   24 -r-x------   1 hadoop   hadoop      24145 Feb 24 23:25 ./__spark_libs__/netty-transport-native-kqueue-4.1.74.Final-osx-aarch_64.jar
+4456780  956 -r-x------   1 hadoop   hadoop     977557 Feb 24 23:25 ./__spark_libs__/parquet-hadoop-1.12.2.jar
+4456920  908 -r-x------   1 hadoop   hadoop     926574 Feb 24 23:25 ./__spark_libs__/janino-3.0.16.jar
+4456992   40 -r-x------   1 hadoop   hadoop      40163 Feb 24 23:25 ./__spark_libs__/netty-transport-native-unix-common-4.1.74.Final.jar
+4456891   88 -r-x------   1 hadoop   hadoop      89855 Feb 24 23:25 ./__spark_libs__/json4s-ast_2.12-3.7.0-M11.jar
+4456763   28 -r-x------   1 hadoop   hadoop      25058 Feb 24 23:25 ./__spark_libs__/jakarta.annotation-api-1.3.5.jar
+4456861  344 -r-x------   1 hadoop   hadoop     348265 Feb 24 23:25 ./__spark_libs__/json4s-scalap_2.12-3.7.0-M11.jar
+4456965  108 -r-x------   1 hadoop   hadoop     109948 Feb 24 23:25 ./__spark_libs__/arrow-format-7.0.0.jar
+4456989  244 -r-x------   1 hadoop   hadoop     246445 Feb 24 23:25 ./__spark_libs__/libthrift-0.12.0.jar
+4456985   12 -r-x------   1 hadoop   hadoop       8455 Feb 24 23:25 ./__spark_libs__/spire-platform_2.12-0.17.0.jar
+4456964  444 -r-x------   1 hadoop   hadoop     453914 Feb 24 23:25 ./__spark_libs__/org.apache.servicemix.bundles.antlr-2.7.7_5.jar
+4456776  300 -r-x------   1 hadoop   hadoop     303281 Feb 24 23:25 ./__spark_libs__/netty-buffer-4.1.74.Final.jar
+4456754  116 -r-x------   1 hadoop   hadoop     116728 Feb 24 23:25 ./__spark_libs__/kerb-crypto-2.0.1.jar
+4456832 1836 -r-x------   1 hadoop   hadoop    1879996 Feb 24 23:25 ./__spark_libs__/parquet-jackson-1.12.2.jar
+4456933   16 -r-x------   1 hadoop   hadoop      15935 Feb 24 23:25 ./__spark_libs__/dropwizard-metrics-hadoop-metrics2-reporter-0.1.2.jar
+4456792   92 -r-x------   1 hadoop   hadoop      93210 Feb 24 23:25 ./__spark_libs__/super-csv-2.2.0.jar
+4456959   48 -r-x------   1 hadoop   hadoop      48253 Feb 24 23:25 ./__spark_libs__/orc-mapreduce-1.7.4.jar
+4456788  184 -r-x------   1 hadoop   hadoop     188158 Feb 24 23:25 ./__spark_libs__/avro-mapred-1.11.0.jar
+4456809 5996 -r-x------   1 hadoop   hadoop    6138986 Feb 24 23:25 ./__spark_libs__/spark-mllib_2.12-3.3.0.jar
+4456918  764 -r-x------   1 hadoop   hadoop     780265 Feb 24 23:25 ./__spark_libs__/javassist-3.25.0-GA.jar
+4456800 13632 -r-x------   1 hadoop   hadoop   13956358 Feb 24 23:25 ./__spark_libs__/breeze_2.12-1.2.jar
+4456830   60 -r-x------   1 hadoop   hadoop      58683 Feb 24 23:25 ./__spark_libs__/chill-java-0.10.0.jar
+4456975  184 -r-x------   1 hadoop   hadoop     185616 Feb 24 23:25 ./__spark_libs__/avro-ipc-1.11.0.jar
+4456903   20 -r-x------   1 hadoop   hadoop      19827 Feb 24 23:25 ./__spark_libs__/opencsv-2.3.jar
+4456870   20 -r-x------   1 hadoop   hadoop      19559 Feb 24 23:25 ./__spark_libs__/token-provider-2.0.1.jar
+4456935   84 -r-x------   1 hadoop   hadoop      83989 Feb 24 23:25 ./__spark_libs__/spark-kvstore_2.12-3.3.0.jar
+4456883  108 -r-x------   1 hadoop   hadoop     108076 Feb 24 23:25 ./__spark_libs__/arrow-memory-core-7.0.0.jar
+4456821  116 -r-x------   1 hadoop   hadoop     116144 Feb 24 23:25 ./__spark_libs__/spark-mllib-local_2.12-3.3.0.jar
+4456882   24 -r-x------   1 hadoop   hadoop      24248 Feb 24 23:25 ./__spark_libs__/log4j-slf4j-impl-2.17.2.jar
+4456829   32 -r-x------   1 hadoop   hadoop      31475 Feb 24 23:25 ./__spark_libs__/kerby-xdr-2.0.1.jar
+4456895    8 -r-x------   1 hadoop   hadoop       5711 Feb 24 23:25 ./__spark_libs__/minlog-1.3.0.jar
+4456837  360 -r-x------   1 hadoop   hadoop     366748 Feb 24 23:25 ./__spark_libs__/datanucleus-api-jdo-4.2.4.jar
+4456751   32 -r-x------   1 hadoop   hadoop      30772 Feb 24 23:25 ./__spark_libs__/kerby-config-2.0.1.jar
+4456811  520 -r-x------   1 hadoop   hadoop     528865 Feb 24 23:25 ./__spark_libs__/netty-handler-4.1.74.Final.jar
+4456838  308 -r-x------   1 hadoop   hadoop     313702 Feb 24 23:25 ./__spark_libs__/libfb303-0.9.3.jar
+4456955  404 -r-x------   1 hadoop   hadoop     410874 Feb 24 23:25 ./__spark_libs__/kryo-shaded-4.0.2.jar
+4456942  248 -r-x------   1 hadoop   hadoop     250405 Feb 24 23:25 ./__spark_libs__/zookeeper-jute-3.6.2.jar
+4456860  184 -r-x------   1 hadoop   hadoop     184512 Feb 24 23:25 ./__spark_libs__/hive-beeline-2.3.9.jar
+4456974   36 -r-x------   1 hadoop   hadoop      34943 Feb 24 23:25 ./__spark_libs__/netty-tcnative-classes-2.0.48.Final.jar
+4456998  228 -r-x------   1 hadoop   hadoop     232470 Feb 24 23:25 ./__spark_libs__/JLargeArrays-1.5.jar
+4457007   24 -r-x------   1 hadoop   hadoop      23265 Feb 24 23:25 ./__spark_libs__/metrics-graphite-4.2.7.jar
+4456897  632 -r-x------   1 hadoop   hadoop     644596 Feb 24 23:25 ./__spark_libs__/joda-time-2.10.13.jar
+4456929 10624 -r-x------   1 hadoop   hadoop   10875375 Feb 24 23:25 ./__spark_libs__/hive-exec-2.3.9-core.jar
+4456886   40 -r-x------   1 hadoop   hadoop      39404 Feb 24 23:25 ./__spark_libs__/arrow-memory-netty-7.0.0.jar
+4456902  440 -r-x------   1 hadoop   hadoop     447005 Feb 24 23:25 ./__spark_libs__/univocity-parsers-2.9.1.jar
+4456904   64 -r-x------   1 hadoop   hadoop      64357 Feb 24 23:25 ./__spark_libs__/has-common-2.0.1.jar
+4456782 1220 -r-x------   1 hadoop   hadoop    1245934 Feb 24 23:25 ./__spark_libs__/zookeeper-3.6.2.jar
+4456961    8 -r-x------   1 hadoop   hadoop       4360 Feb 24 23:25 ./__spark_libs__/netty-all-4.1.74.Final.jar
+4456823   20 -r-x------   1 hadoop   hadoop      18336 Feb 24 23:25 ./__spark_libs__/jackson-jaxrs-1.9.13.jar
+4456957   12 -r-x------   1 hadoop   hadoop      12131 Feb 24 23:25 ./__spark_libs__/jpam-1.1.jar
+4456803 1928 -r-x------   1 hadoop   hadoop    1970939 Feb 24 23:25 ./__spark_libs__/snappy-java-1.1.8.4.jar
+4456984  928 -r-x------   1 hadoop   hadoop     946794 Feb 24 23:25 ./__spark_libs__/jersey-server-2.34.jar
+4457004  116 -r-x------   1 hadoop   hadoop     115498 Feb 24 23:25 ./__spark_libs__/jakarta.xml.bind-api-2.3.2.jar
+4456881   84 -r-x------   1 hadoop   hadoop      82872 Feb 24 23:25 ./__spark_libs__/jakarta.servlet-api-4.0.3.jar
+4456774    8 -r-x------   1 hadoop   hadoop       4722 Feb 24 23:25 ./__spark_libs__/jcip-annotations-1.0-1.jar
+4456921  136 -r-x------   1 hadoop   hadoop     136363 Feb 24 23:25 ./__spark_libs__/HikariCP-2.5.1.jar
+4456926   44 -r-x------   1 hadoop   hadoop      43167 Feb 24 23:25 ./__spark_libs__/api-asn1-ber-2.0.0.jar
+4456807   24 -r-x------   1 hadoop   hadoop      24177 Feb 24 23:25 ./__spark_libs__/metrics-jvm-4.2.7.jar
+4457006   52 -r-x------   1 hadoop   hadoop      51793 Feb 24 23:25 ./__spark_libs__/spark-repl_2.12-3.3.0.jar
+4456849  196 -r-x------   1 hadoop   hadoop     198476 Feb 24 23:25 ./__spark_libs__/blas-2.2.1.jar
+4456953  288 -r-x------   1 hadoop   hadoop     294763 Feb 24 23:25 ./__spark_libs__/xbean-asm9-shaded-4.20.jar
+4456773   68 -r-x------   1 hadoop   hadoop      69409 Feb 24 23:25 ./__spark_libs__/activation-1.1.1.jar
+4456786  244 -r-x------   1 hadoop   hadoop     249790 Feb 24 23:25 ./__spark_libs__/javax.jdo-3.2.0-m3.jar
+4456986   16 -r-x------   1 hadoop   hadoop      13732 Feb 24 23:25 ./__spark_libs__/hive-shims-scheduler-2.3.9.jar
+4456899  332 -r-x------   1 hadoop   hadoop     337126 Feb 24 23:25 ./__spark_libs__/netty-codec-4.1.74.Final.jar
+4456810   20 -r-x------   1 hadoop   hadoop      18359 Feb 24 23:25 ./__spark_libs__/kerb-identity-2.0.1.jar
+4456976   92 -r-x------   1 hadoop   hadoop      91930 Feb 24 23:25 ./__spark_libs__/jakarta.validation-api-2.0.2.jar
+4456842   88 -r-x------   1 hadoop   hadoop      87023 Feb 24 23:25 ./__spark_libs__/api-i18n-2.0.0.jar
+4456764   28 -r-x------   1 hadoop   hadoop      26514 Feb 24 23:25 ./__spark_libs__/stax-api-1.0.1.jar
+4456744   32 -r-x------   1 hadoop   hadoop      29263 Feb 24 23:25 ./__spark_libs__/orc-shims-1.7.4.jar
+4456833  116 -r-x------   1 hadoop   hadoop     114698 Feb 24 23:25 ./__spark_libs__/spire-macros_2.12-0.17.0.jar
+4456753 1644 -r-x------   1 hadoop   hadoop    1679362 Feb 24 23:25 ./__spark_libs__/hive-service-rpc-3.1.2.jar
+4456951   36 -r-x------   1 hadoop   hadoop      35085 Feb 24 23:25 ./__spark_libs__/spire-util_2.12-0.17.0.jar
+4456872  544 -r-x------   1 hadoop   hadoop     556575 Feb 24 23:25 ./__spark_libs__/scala-xml_2.12-1.2.0.jar
+4456928  992 -r-x------   1 hadoop   hadoop    1013367 Feb 24 23:25 ./__spark_libs__/jaxb-runtime-2.3.2.jar
+4456913 2360 -r-x------   1 hadoop   hadoop    2414964 Feb 24 23:25 ./__spark_libs__/spark-network-common_2.12-3.3.0.jar
+4456852  384 -r-x------   1 hadoop   hadoop     392124 Feb 24 23:25 ./__spark_libs__/velocity-1.5.jar
+4456818   44 -r-x------   1 hadoop   hadoop      41513 Feb 24 23:25 ./__spark_libs__/slf4j-api-1.7.32.jar
+4456850  692 -r-x------   1 hadoop   hadoop     707948 Feb 24 23:25 ./__spark_libs__/parquet-format-structures-1.12.2.jar
+4456812 1372 -r-x------   1 hadoop   hadoop    1402646 Feb 24 23:25 ./__spark_libs__/ivy-2.5.0.jar
+4457003   88 -r-x------   1 hadoop   hadoop      86352 Feb 24 23:25 ./__spark_libs__/kerb-server-2.0.1.jar
+4456828  560 -r-x------   1 hadoop   hadoop     573380 Feb 24 23:25 ./__spark_libs__/spark-hive-thriftserver_2.12-3.3.0.jar
+4456760  188 -r-x------   1 hadoop   hadoop     190432 Feb 24 23:25 ./__spark_libs__/gson-2.2.4.jar
+4456857 10724 -r-x------   1 hadoop   hadoop   10978529 Feb 24 23:25 ./__spark_libs__/scala-compiler-2.12.15.jar
+4456814  388 -r-x------   1 hadoop   hadoop     395195 Feb 24 23:25 ./__spark_libs__/javolution-5.5.1.jar
+4456799   96 -r-x------   1 hadoop   hadoop      96569 Feb 24 23:25 ./__spark_libs__/parquet-common-1.12.2.jar
+4456769  324 -r-x------   1 hadoop   hadoop     328436 Feb 24 23:25 ./__spark_libs__/httpcore-4.4.14.jar
+4456892  264 -r-x------   1 hadoop   hadoop     268780 Feb 24 23:25 ./__spark_libs__/jline-2.14.6.jar
+4456778 1024 -r-x------   1 hadoop   hadoop    1045744 Feb 24 23:25 ./__spark_libs__/leveldbjni-all-1.8.jar
+4456910  116 -r-x------   1 hadoop   hadoop     117235 Feb 24 23:25 ./__spark_libs__/hive-jdbc-2.3.9.jar
+4456912  108 -r-x------   1 hadoop   hadoop     107094 Feb 24 23:25 ./__spark_libs__/netty-transport-classes-kqueue-4.1.74.Final.jar
+4456790 1504 -r-x------   1 hadoop   hadoop    1536542 Feb 24 23:25 ./__spark_libs__/jackson-databind-2.13.3.jar
+4456905   72 -r-x------   1 hadoop   hadoop      73405 Feb 24 23:25 ./__spark_libs__/jersey-container-servlet-core-2.34.jar
+4456813   64 -r-x------   1 hadoop   hadoop      65261 Feb 24 23:25 ./__spark_libs__/oro-2.0.8.jar
+4456858  308 -r-x------   1 hadoop   hadoop     315001 Feb 24 23:25 ./__spark_libs__/api-ldap-codec-core-2.0.0.jar
+4456856 1296 -r-x------   1 hadoop   hadoop    1323178 Feb 24 23:25 ./__spark_libs__/tink-1.6.1.jar
+4456977 2140 -r-x------   1 hadoop   hadoop    2189117 Feb 24 23:25 ./__spark_libs__/guava-14.0.1.jar
+4456973   16 -r-x------   1 hadoop   hadoop      15071 Feb 24 23:25 ./__spark_libs__/jta-1.1.jar
+4456817  996 -r-x------   1 hadoop   hadoop    1018316 Feb 24 23:25 ./__spark_libs__/commons-compress-1.21.jar
+4456968 1168 -r-x------   1 hadoop   hadoop    1194003 Feb 24 23:25 ./__spark_libs__/arpack_combined_all-0.1.jar
+4456915  896 -r-x------   1 hadoop   hadoop     917420 Feb 24 23:25 ./__spark_libs__/hive-serde-2.3.9.jar
+4456835   28 -r-x------   1 hadoop   hadoop      27360 Feb 24 23:25 ./__spark_libs__/spark-ganglia-lgpl_2.12-3.3.0.jar
+4456875 1040 -r-x------   1 hadoop   hadoop    1062982 Feb 24 23:25 ./__spark_libs__/api-ldap-model-2.0.0.jar
+4456901   28 -r-x------   1 hadoop   hadoop      27156 Feb 24 23:25 ./__spark_libs__/istack-commons-runtime-3.0.8.jar
+4456855 1160 -r-x------   1 hadoop   hadoop    1185133 Feb 24 23:25 ./__spark_libs__/jersey-common-2.34.jar
+4456962    4 -r-x------   1 hadoop   hadoop       2543 Feb 24 23:25 ./__spark_libs__/shims-0.9.25.jar
+4456888  432 -r-x------   1 hadoop   hadoop     441689 Feb 24 23:25 ./__spark_libs__/hive-common-2.3.9.jar
+4456761  296 -r-x------   1 hadoop   hadoop     302511 Feb 24 23:25 ./__spark_libs__/log4j-api-2.17.2.jar
+4456798   28 -r-x------   1 hadoop   hadoop      27006 Feb 24 23:25 ./__spark_libs__/aopalliance-repackaged-2.6.1.jar
+4456793  428 -r-x------   1 hadoop   hadoop     436731 Feb 24 23:25 ./__spark_libs__/jersey-core-1.19.4.jar
+4456749  336 -r-x------   1 hadoop   hadoop     342526 Feb 24 23:25 ./__spark_libs__/nimbus-jose-jwt-8.2.1.jar
+4456779   44 -r-x------   1 hadoop   hadoop      44513 Feb 24 23:25 ./__spark_libs__/gmetric4j-1.0.10.jar
+4456802  524 -r-x------   1 hadoop   hadoop     533455 Feb 24 23:25 ./__spark_libs__/protobuf-java-2.5.0.jar
+4456990   12 -r-x------   1 hadoop   hadoop       8987 Feb 24 23:25 ./__spark_libs__/hive-shims-2.3.9.jar
+4456927    8 -r-x------   1 hadoop   hadoop       4589 Feb 24 23:25 ./__spark_libs__/jul-to-slf4j-1.7.32.jar
+4456822  872 -r-x------   1 hadoop   hadoop     890168 Feb 24 23:25 ./__spark_libs__/jaxb-impl-2.2.3-1.jar
+4456991   36 -r-x------   1 hadoop   hadoop      36199 Feb 24 23:25 ./__spark_libs__/netty-transport-native-epoll-4.1.74.Final-linux-x86_64.jar
+4456785  112 -r-x------   1 hadoop   hadoop     110600 Feb 24 23:25 ./__spark_libs__/bonecp-0.8.0.RELEASE.jar
+4456801   48 -r-x------   1 hadoop   hadoop      45807 Feb 24 23:25 ./__spark_libs__/hive-cli-2.3.9.jar
+4456919  280 -r-x------   1 hadoop   hadoop     284220 Feb 24 23:25 ./__spark_libs__/commons-lang-2.6.jar
+4456997  164 -r-x------   1 hadoop   hadoop     167282 Feb 24 23:25 ./__spark_libs__/jboss-threads-2.3.0.Beta2.jar
+4456766 1864 -r-x------   1 hadoop   hadoop    1908681 Feb 24 23:25 ./__spark_libs__/datanucleus-rdbms-4.1.19.jar
+4456745   52 -r-x------   1 hadoop   hadoop      53194 Feb 24 23:25 ./__spark_libs__/spark-unsafe_2.12-3.3.0.jar
+4456853  212 -r-x------   1 hadoop   hadoop     216211 Feb 24 23:25 ./__spark_libs__/commons-text-1.9.jar
+4456874 3264 -r-x------   1 hadoop   hadoop    3340031 Feb 24 23:25 ./__spark_libs__/cats-kernel_2.12-2.1.1.jar
+4456950  136 -r-x------   1 hadoop   hadoop     138332 Feb 24 23:25 ./__spark_libs__/netty-transport-classes-epoll-4.1.74.Final.jar
+4456836  576 -r-x------   1 hadoop   hadoop     588337 Feb 24 23:25 ./__spark_libs__/commons-collections-3.2.2.jar
+4456746  228 -r-x------   1 hadoop   hadoop     232248 Feb 24 23:25 ./__spark_libs__/jackson-core-asl-1.9.13.jar
+4456869  176 -r-x------   1 hadoop   hadoop     178149 Feb 24 23:25 ./__spark_libs__/stream-2.9.6.jar
+4456750 10760 -r-x------   1 hadoop   hadoop   11016376 Feb 24 23:25 ./__spark_libs__/spark-core_2.12-3.3.0.jar
+4456877  580 -r-x------   1 hadoop   hadoop     593627 Feb 24 23:25 ./__spark_libs__/avro-1.11.0.jar
+4456770  300 -r-x------   1 hadoop   hadoop     303443 Feb 24 23:25 ./__spark_libs__/log4j-1.2-api-2.17.2.jar
+4456885  124 -r-x------   1 hadoop   hadoop     123356 Feb 24 23:25 ./__spark_libs__/py4j-0.10.9.5.jar
+4456982 1972 -r-x------   1 hadoop   hadoop    2016766 Feb 24 23:25 ./__spark_libs__/datanucleus-core-4.1.17.jar
+4456932  368 -r-x------   1 hadoop   hadoop     374895 Feb 24 23:25 ./__spark_libs__/jackson-core-2.13.3.jar
+4456816   76 -r-x------   1 hadoop   hadoop      76818 Feb 24 23:25 ./__spark_libs__/jersey-hk2-2.34.jar
+4456960  572 -r-x------   1 hadoop   hadoop     582362 Feb 24 23:25 ./__spark_libs__/xnio-api-3.6.5.Final.jar
+4456862   20 -r-x------   1 hadoop   hadoop      19014 Feb 24 23:25 ./__spark_libs__/annotations-17.0.0.jar
+4456956  128 -r-x------   1 hadoop   hadoop     127223 Feb 24 23:25 ./__spark_libs__/remotetea-oncrpc-1.1.2.jar
+4456993   72 -r-x------   1 hadoop   hadoop      71626 Feb 24 23:25 ./__spark_libs__/commons-compiler-3.0.16.jar
+4456946   64 -r-x------   1 hadoop   hadoop      62050 Feb 24 23:25 ./__spark_libs__/commons-logging-1.1.3.jar
+4456898   36 -r-x------   1 hadoop   hadoop      33031 Feb 24 23:25 ./__spark_libs__/jsr305-3.0.0.jar
+4456845  452 -r-x------   1 hadoop   hadoop     458981 Feb 24 23:25 ./__spark_libs__/jackson-module-scala_2.12-2.13.3.jar
+4456909   32 -r-x------   1 hadoop   hadoop      32387 Feb 24 23:25 ./__spark_libs__/jersey-container-servlet-2.34.jar
+4456783  320 -r-x------   1 hadoop   hadoop     327135 Feb 24 23:25 ./__spark_libs__/commons-io-2.11.0.jar
+4456958  112 -r-x------   1 hadoop   hadoop     112235 Feb 24 23:25 ./__spark_libs__/scala-collection-compat_2.12-2.1.1.jar
+4456873   20 -r-x------   1 hadoop   hadoop      16682 Feb 24 23:25 ./__spark_libs__/metrics-json-4.2.7.jar
+4456889  576 -r-x------   1 hadoop   hadoop     587402 Feb 24 23:25 ./__spark_libs__/commons-lang3-3.12.0.jar
+4456894 3128 -r-x------   1 hadoop   hadoop    3200351 Feb 24 23:25 ./__spark_libs__/shapeless_2.12-2.3.7.jar
+4456755  164 -r-x------   1 hadoop   hadoop     164422 Feb 24 23:25 ./__spark_libs__/core-1.1.2.jar
+4456762 3272 -r-x------   1 hadoop   hadoop    3347200 Feb 24 23:25 ./__spark_libs__/hadoop-shaded-guava-1.1.0.jar
+4456851   24 -r-x------   1 hadoop   hadoop      21137 Feb 24 23:25 ./__spark_libs__/metrics-jmx-4.2.7.jar
+4456996   28 -r-x------   1 hadoop   hadoop      25475 Feb 24 23:25 ./__spark_libs__/json-1.8.jar
+4456784   80 -r-x------   1 hadoop   hadoop      81791 Feb 24 23:25 ./__spark_libs__/compress-lzf-1.1.jar
+4456936   76 -r-x------   1 hadoop   hadoop      75142 Feb 24 23:25 ./__spark_libs__/breeze-macros_2.12-1.2.jar
+4456916  708 -r-x------   1 hadoop   hadoop     724092 Feb 24 23:25 ./__spark_libs__/jline-3.11.0.jar
+4456937   20 -r-x------   1 hadoop   hadoop      16630 Feb 24 23:25 ./__spark_libs__/jcl-over-slf4j-1.7.32.jar
+4456752   40 -r-x------   1 hadoop   hadoop      38352 Feb 24 23:25 ./__spark_libs__/hive-vector-code-gen-2.3.9.jar
+4456747  276 -r-x------   1 hadoop   hadoop     282591 Feb 24 23:25 ./__spark_libs__/jsch-0.1.55.jar
+4456867  164 -r-x------   1 hadoop   hadoop     167761 Feb 24 23:25 ./__spark_libs__/antlr-runtime-3.5.2.jar
+4456911   28 -r-x------   1 hadoop   hadoop      27084 Feb 24 23:25 ./__spark_libs__/jackson-xc-1.9.13.jar
+4456907 35240 -r-x------   1 hadoop   hadoop   36085422 Feb 24 23:25 ./__spark_libs__/rocksdbjni-6.20.3.jar
+4456972   20 -r-x------   1 hadoop   hadoop      19479 Feb 24 23:25 ./__spark_libs__/osgi-resource-locator-1.0.3.jar
+4456887  132 -r-x------   1 hadoop   hadoop     131590 Feb 24 23:25 ./__spark_libs__/hk2-utils-2.6.1.jar
+4456825  736 -r-x------   1 hadoop   hadoop     751914 Feb 24 23:25 ./__spark_libs__/commons-collections4-4.4.jar
+4456854   80 -r-x------   1 hadoop   hadoop      80872 Feb 24 23:25 ./__spark_libs__/hadoop-yarn-server-web-proxy-3.2.1.jar
+4456796   32 -r-x------   1 hadoop   hadoop      30727 Feb 24 23:25 ./__spark_libs__/spark-sketch_2.12-3.3.0.jar
+4456980   40 -r-x------   1 hadoop   hadoop      37777 Feb 24 23:25 ./__spark_libs__/netty-resolver-4.1.74.Final.jar
+4456978  120 -r-x------   1 hadoop   hadoop     120316 Feb 24 23:25 ./__spark_libs__/json-smart-2.3.jar
+4456922   64 -r-x------   1 hadoop   hadoop      64873 Feb 24 23:25 ./__spark_libs__/flatbuffers-java-1.12.0.jar
+4456808   52 -r-x------   1 hadoop   hadoop      49414 Feb 24 23:25 ./__spark_libs__/objenesis-3.2.jar
+4456940  708 -r-x------   1 hadoop   hadoop     724777 Feb 24 23:25 ./__spark_libs__/spark-hive_2.12-3.3.0.jar
+4456865 2368 -r-x------   1 hadoop   hadoop    2423157 Feb 24 23:25 ./__spark_libs__/curator-client-2.13.0.jar
+4456756  100 -r-x------   1 hadoop   hadoop     101270 Feb 24 23:25 ./__spark_libs__/api-ldap-extras-codec-api-2.0.0.jar
+4456930 5748 -r-x------   1 hadoop   hadoop    5885445 Feb 24 23:25 ./__spark_libs__/zstd-jni-1.5.2-1.jar
+4456945  120 -r-x------   1 hadoop   hadoop     121001 Feb 24 23:25 ./__spark_libs__/hive-shims-common-2.3.9.jar
+4457000   16 -r-x------   1 hadoop   hadoop      15151 Feb 24 23:25 ./__spark_libs__/spark-tags_2.12-3.3.0.jar
+4456767  832 -r-x------   1 hadoop   hadoop     848557 Feb 24 23:25 ./__spark_libs__/parquet-encoding-1.12.2.jar
+4456847 1144 -r-x------   1 hadoop   hadoop    1168417 Feb 24 23:25 ./__spark_libs__/algebra_2.12-2.0.1.jar
+4456759  104 -r-x------   1 hadoop   hadoop     105305 Feb 24 23:25 ./__spark_libs__/kerb-admin-2.0.1.jar
+4456848   36 -r-x------   1 hadoop   hadoop      36767 Feb 24 23:25 ./__spark_libs__/kerb-util-2.0.1.jar
+4456908 12364 -r-x------   1 hadoop   hadoop   12660359 Feb 24 23:25 ./__spark_libs__/spark-catalyst_2.12-3.3.0.jar
+4456834 1076 -r-x------   1 hadoop   hadoop    1099948 Feb 24 23:25 ./__spark_libs__/orc-core-1.7.4.jar
+4456866   16 -r-x------   1 hadoop   hadoop      15071 Feb 24 23:25 ./__spark_libs__/transaction-api-1.1.jar
+4456983   56 -r-x------   1 hadoop   hadoop      55888 Feb 24 23:25 ./__spark_libs__/hive-shims-0.23-2.3.9.jar
+4456941   40 -r-x------   1 hadoop   hadoop      37065 Feb 24 23:25 ./__spark_libs__/json4s-jackson_2.12-3.7.0-M11.jar
+4456794  208 -r-x------   1 hadoop   hadoop     212374 Feb 24 23:25 ./__spark_libs__/chill_2.12-0.10.0.jar
+4456840  232 -r-x------   1 hadoop   hadoop     236660 Feb 24 23:25 ./__spark_libs__/ST4-4.0.4.jar
+4456948  420 -r-x------   1 hadoop   hadoop     428511 Feb 24 23:25 ./__spark_libs__/RoaringBitmap-0.9.25.jar
+4456970 3160 -r-x------   1 hadoop   hadoop    3232770 Feb 24 23:25 ./__spark_libs__/derby-10.14.2.0.jar
+4456772  764 -r-x------   1 hadoop   hadoop     780664 Feb 24 23:25 ./__spark_libs__/jackson-mapper-asl-1.9.13.jar
+4456824  160 -r-x------   1 hadoop   hadoop     160519 Feb 24 23:25 ./__spark_libs__/commons-dbcp-1.4.jar
+4456831  424 -r-x------   1 hadoop   hadoop     434043 Feb 24 23:25 ./__spark_libs__/spark-graphx_2.12-3.3.0.jar
+4456827   76 -r-x------   1 hadoop   hadoop      77752 Feb 24 23:25 ./__spark_libs__/spark-launcher_2.12-3.3.0.jar
+4456884  636 -r-x------   1 hadoop   hadoop     650152 Feb 24 23:25 ./__spark_libs__/netty-common-4.1.74.Final.jar
+4456924 8012 -r-x------   1 hadoop   hadoop    8201240 Feb 24 23:25 ./__spark_libs__/hive-metastore-2.3.9.jar
+4457001 3592 -r-x------   1 hadoop   hadoop    3678167 Feb 24 23:25 ./__spark_libs__/scala-reflect-2.12.15.jar
+4456952 1808 -r-x------   1 hadoop   hadoop    1851317 Feb 24 23:25 ./__spark_libs__/arrow-vector-7.0.0.jar
+4456963 7076 -r-x------   1 hadoop   hadoop    7243903 Feb 24 23:25 ./__spark_libs__/spire_2.12-0.17.0.jar
+4456758  100 -r-x------   1 hadoop   hadoop     102244 Feb 24 23:25 ./__spark_libs__/jaxb-api-2.2.11.jar
+4456969   60 -r-x------   1 hadoop   hadoop      59826 Feb 24 23:25 ./__spark_libs__/hadoop-annotations-3.1.3.jar
+4456893  516 -r-x------   1 hadoop   hadoop     526286 Feb 24 23:25 ./__spark_libs__/json4s-core_2.12-3.7.0-M11.jar
+4456923   32 -r-x------   1 hadoop   hadoop      30035 Feb 24 23:25 ./__spark_libs__/accessors-smart-1.2.jar
+4456966  220 -r-x------   1 hadoop   hadoop     222980 Feb 24 23:25 ./__spark_libs__/scala-parser-combinators_2.12-1.1.2.jar
+4456890  764 -r-x------   1 hadoop   hadoop     780321 Feb 24 23:25 ./__spark_libs__/httpclient-4.5.13.jar
+4456820  116 -r-x------   1 hadoop   hadoop     117077 Feb 24 23:25 ./__spark_libs__/kerb-client-2.0.1.jar
+4456843  200 -r-x------   1 hadoop   hadoop     204386 Feb 24 23:25 ./__spark_libs__/kerby-pkix-2.0.1.jar
+4456995 1772 -r-x------   1 hadoop   hadoop    1811089 Feb 24 23:25 ./__spark_libs__/log4j-core-2.17.2.jar
+4456954  232 -r-x------   1 hadoop   hadoop     233745 Feb 24 23:25 ./__spark_libs__/threeten-extra-1.5.0.jar
+4456781   24 -r-x------   1 hadoop   hadoop      24447 Feb 24 23:25 ./__spark_libs__/api-asn1-api-2.0.0.jar
+4456805   68 -r-x------   1 hadoop   hadoop      66023 Feb 24 23:25 ./__spark_libs__/jboss-logging-3.3.1.Final.jar
+4456775   40 -r-x------   1 hadoop   hadoop      37683 Feb 24 23:25 ./__spark_libs__/netty-transport-native-epoll-4.1.74.Final-linux-aarch_64.jar
+4456815 1152 -r-x------   1 hadoop   hadoop    1175798 Feb 24 23:25 ./__spark_libs__/JTransforms-3.1.jar
+4456938 5316 -r-x------   1 hadoop   hadoop    5443542 Feb 24 23:25 ./__spark_libs__/scala-library-2.12.15.jar
+4456947   28 -r-x------   1 hadoop   hadoop      25394 Feb 24 23:25 ./__spark_libs__/netty-transport-native-kqueue-4.1.74.Final-osx-x86_64.jar
+4456931   40 -r-x------   1 hadoop   hadoop      40916 Feb 24 23:25 ./__spark_libs__/kerby-util-2.0.1.jar
+4456876 4092 -r-x------   1 hadoop   hadoop    4189874 Feb 24 23:25 ./__spark_libs__/bcprov-jdk15on-1.60.jar
+4456795  232 -r-x------   1 hadoop   hadoop     236672 Feb 24 23:25 ./__spark_libs__/hive-storage-api-2.7.2.jar
+4456906  652 -r-x------   1 hadoop   hadoop     667140 Feb 24 23:25 ./__spark_libs__/mina-core-2.1.3.jar
+4456999  668 -r-x------   1 hadoop   hadoop     682804 Feb 24 23:25 ./__spark_libs__/lz4-java-1.8.0.jar
+1835309 1496 -r-x------   1 hadoop   hadoop    1529089 Feb 24 23:25 ./pyspark.zip
+4457015    4 -rw-r-----   1 hadoop   hadoop         92 Feb 24 23:25 ./container_tokens
+4457016    4 -rw-r-----   1 hadoop   hadoop         12 Feb 24 23:25 ./.container_tokens.crc
+broken symlinks(find -L . -maxdepth 5 -type l -ls):
+
+End of LogType:directory.info
+*******************************************************************************
+
+Container: container_1740409812679_0004_01_000002 on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:launch_container.sh
+LogLastModifiedTime:Mon Feb 24 23:25:49 +0800 2025
+LogLength:6891
+LogContents:
+#!/bin/bash
+
+set -o pipefail -e
+export PRELAUNCH_OUT="/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/prelaunch.out"
+exec >"${PRELAUNCH_OUT}"
+export PRELAUNCH_ERR="/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/prelaunch.err"
+exec 2>"${PRELAUNCH_ERR}"
+echo "Setting up env variables"
+export JAVA_HOME=${JAVA_HOME:-"/usr/lib/jvm/java"}
+export HADOOP_COMMON_HOME=${HADOOP_COMMON_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_HDFS_HOME=${HADOOP_HDFS_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/taihao-apps/hadoop-conf"}
+export HADOOP_YARN_HOME=${HADOOP_YARN_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_HOME=${HADOOP_HOME:-"/opt/apps/YARN/yarn-current"}
+export PATH=${PATH:-"/sbin:/bin:/usr/sbin:/usr/bin"}
+export LANG=${LANG:-"en_US.UTF-8"}
+export HADOOP_TOKEN_FILE_LOCATION="/mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000002/container_tokens"
+export CONTAINER_ID="container_1740409812679_0004_01_000002"
+export NM_PORT="8041"
+export NM_HOST="core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com"
+export NM_HTTP_PORT="8042"
+export LOCAL_DIRS="/mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk2/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk3/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004"
+export LOCAL_USER_DIRS="/mnt/disk1/yarn/nm-local-dir/usercache/root/,/mnt/disk2/yarn/nm-local-dir/usercache/root/,/mnt/disk3/yarn/nm-local-dir/usercache/root/,/mnt/disk4/yarn/nm-local-dir/usercache/root/"
+export LOG_DIRS="/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002,/mnt/disk2/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002,/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002,/mnt/disk4/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002"
+export USER="root"
+export LOGNAME="root"
+export HOME="/home/"
+export PWD="/mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000002"
+export JVM_PID="$$"
+export MALLOC_ARENA_MAX="4"
+export NM_AUX_SERVICE_spark_shuffle=""
+export NM_AUX_SERVICE_mapreduce_shuffle="AAA0+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+export SPARK_YARN_STAGING_DIR="hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0004"
+export PYTHONPATH="$PWD/pyspark.zip:$PWD/py4j-0.10.9.5-src.zip"
+export CLASSPATH="/opt/apps/METASTORE/metastore-current/hive2/*:/opt/apps/JINDOSDK/jindosdk-current/lib/*:/opt/apps/EMRHOOK/emrhook-current/spark-hook-1.1.4-spark30.jar:$PWD:$PWD/__spark_conf__:$PWD/__spark_libs__/*:$PWD/__spark_conf__/__hadoop_conf__"
+export SPARK_USER="root"
+echo "Setting up job resources"
+ln -sf -- "/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/23/py4j-0.10.9.5-src.zip" "py4j-0.10.9.5-src.zip"
+ln -sf -- "/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/21/__spark_conf__.zip" "__spark_conf__"
+ln -sf -- "/mnt/disk4/yarn/nm-local-dir/usercache/root/filecache/22/__spark_libs__1414285758766144539.zip" "__spark_libs__"
+ln -sf -- "/mnt/disk3/yarn/nm-local-dir/usercache/root/filecache/20/pyspark.zip" "pyspark.zip"
+ln -sf -- "/mnt/disk1/yarn/nm-local-dir/usercache/root/filecache/24/hive-site.xml" "hive-site.xml"
+echo "Copying debugging information"
+# Creating copy of launch script
+cp "launch_container.sh" "/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/launch_container.sh"
+chmod 640 "/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/launch_container.sh"
+# Determining directory contents
+echo "ls -l:" 1>"/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/directory.info"
+ls -l 1>>"/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/directory.info"
+echo "find -L . -maxdepth 5 -ls:" 1>>"/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/directory.info"
+find -L . -maxdepth 5 -ls 1>>"/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/directory.info"
+echo "broken symlinks(find -L . -maxdepth 5 -type l -ls):" 1>>"/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/directory.info"
+find -L . -maxdepth 5 -type l -ls 1>>"/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/directory.info"
+echo "Launching container"
+exec /bin/bash -c "LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH:/opt/apps/YARN/yarn-current/lib/native/:/opt/apps/SPARK3/spark-current/lib/native/:$LD_LIBRARY_PATH\" $JAVA_HOME/bin/java -server -Xmx2948m '-XX:+IgnoreUnrecognizedVMOptions' '--add-opens=java.base/java.lang=ALL-UNNAMED' '--add-opens=java.base/java.lang.invoke=ALL-UNNAMED' '--add-opens=java.base/java.lang.reflect=ALL-UNNAMED' '--add-opens=java.base/java.io=ALL-UNNAMED' '--add-opens=java.base/java.net=ALL-UNNAMED' '--add-opens=java.base/java.nio=ALL-UNNAMED' '--add-opens=java.base/java.util=ALL-UNNAMED' '--add-opens=java.base/java.util.concurrent=ALL-UNNAMED' '--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED' '--add-opens=java.base/sun.nio.ch=ALL-UNNAMED' '--add-opens=java.base/sun.nio.cs=ALL-UNNAMED' '--add-opens=java.base/sun.security.action=ALL-UNNAMED' '--add-opens=java.base/sun.util.calendar=ALL-UNNAMED' '--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED' '-Dlog4j2.formatMsgNoLookups=true' '-Dlog4j.configuration=/etc/taihao-apps/spark-conf/log4j.properties' '-noverify' '-javaagent:/opt/apps/TAIHAODOCTOR/taihaodoctor-current/emr-agent/btrace-agent.jar=libs=spark-3.2' -Djava.io.tmpdir=$PWD/tmp '-Dspark.driver.port=42271' '-Dspark.history.ui.port=18080' '-Dspark.shuffle.service.port=7337' -Dspark.yarn.app.container.log.dir=/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002 -XX:OnOutOfMemoryError='kill %p' org.apache.spark.executor.YarnCoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42271 --executor-id 1 --hostname core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com --cores 1 --app-id application_1740409812679_0004 --resourceProfileId 0 1>/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/stdout 2>/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000002/stderr"
+
+End of LogType:launch_container.sh
+************************************************************************************
+
+
+End of LogType:prelaunch.err
+******************************************************************************
+
+Container: container_1740409812679_0004_01_000002 on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:prelaunch.out
+LogLastModifiedTime:Mon Feb 24 23:25:49 +0800 2025
+LogLength:100
+LogContents:
+Setting up env variables
+Setting up job resources
+Copying debugging information
+Launching container
+
+End of LogType:prelaunch.out
+******************************************************************************
+
+Container: container_1740409812679_0004_01_000002 on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:stderr
+LogLastModifiedTime:Mon Feb 24 23:25:49 +0800 2025
+LogLength:6401
+LogContents:
+25/02/24 23:25:43 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 21341@core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com
+25/02/24 23:25:43 INFO SignalUtils: Registering signal handler for TERM
+25/02/24 23:25:43 INFO SignalUtils: Registering signal handler for HUP
+25/02/24 23:25:43 INFO SignalUtils: Registering signal handler for INT
+25/02/24 23:25:43 INFO SecurityManager: Changing view acls to: hadoop,root
+25/02/24 23:25:43 INFO SecurityManager: Changing modify acls to: hadoop,root
+25/02/24 23:25:43 INFO SecurityManager: Changing view acls groups to: 
+25/02/24 23:25:43 INFO SecurityManager: Changing modify acls groups to: 
+25/02/24 23:25:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop, root); groups with view permissions: Set(); users  with modify permissions: Set(hadoop, root); groups with modify permissions: Set()
+25/02/24 23:25:43 INFO TransportClientFactory: Successfully created connection to master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:42271 after 37 ms (0 ms spent in bootstraps)
+25/02/24 23:25:43 INFO SecurityManager: Changing view acls to: hadoop,root,*
+25/02/24 23:25:43 INFO SecurityManager: Changing modify acls to: hadoop,root
+25/02/24 23:25:43 INFO SecurityManager: Changing view acls groups to: 
+25/02/24 23:25:43 INFO SecurityManager: Changing modify acls groups to: 
+25/02/24 23:25:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop, root, *); groups with view permissions: Set(); users  with modify permissions: Set(hadoop, root); groups with modify permissions: Set()
+25/02/24 23:25:43 INFO TransportClientFactory: Successfully created connection to master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:42271 after 1 ms (0 ms spent in bootstraps)
+25/02/24 23:25:43 INFO DiskBlockManager: Created local directory at /mnt/disk2/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/blockmgr-1d457cc5-33d9-474c-a096-3865957f6474
+25/02/24 23:25:43 INFO DiskBlockManager: Created local directory at /mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/blockmgr-326a971a-b618-4fcb-b14c-9055f9857e66
+25/02/24 23:25:43 INFO DiskBlockManager: Created local directory at /mnt/disk3/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/blockmgr-ae5eb587-e479-4a21-a6e5-2d96c37412ef
+25/02/24 23:25:43 INFO DiskBlockManager: Created local directory at /mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/blockmgr-03563a55-4f15-4048-b38a-47c966d09cbf
+25/02/24 23:25:43 INFO MemoryStore: MemoryStore started with capacity 1392.3 MiB
+25/02/24 23:25:44 INFO YarnCoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42271
+25/02/24 23:25:44 INFO ResourceUtils: ==============================================================
+25/02/24 23:25:44 INFO ResourceUtils: No custom resources configured for spark.executor.
+25/02/24 23:25:44 INFO ResourceUtils: ==============================================================
+25/02/24 23:25:44 INFO YarnCoarseGrainedExecutorBackend: Successfully registered with driver
+25/02/24 23:25:44 INFO Executor: Starting executor ID 1 on host core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com
+25/02/24 23:25:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42291.
+25/02/24 23:25:44 INFO NettyBlockTransferService: Server created on core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42291
+25/02/24 23:25:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/02/24 23:25:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 42291, None)
+25/02/24 23:25:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 42291, None)
+25/02/24 23:25:44 INFO BlockManager: external shuffle service port = 7337
+25/02/24 23:25:44 INFO BlockManager: Registering executor with local external shuffle service.
+25/02/24 23:25:44 INFO TransportClientFactory: Successfully created connection to core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.178:7337 after 1 ms (0 ms spent in bootstraps)
+25/02/24 23:25:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 42291, None)
+25/02/24 23:25:44 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): 'file:/mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000002/__app__.jar,file:/mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000002/__app__.jar'
+25/02/24 23:25:46 INFO YarnCoarseGrainedExecutorBackend: Got assigned task 1
+25/02/24 23:25:46 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+25/02/24 23:25:47 INFO TorrentBroadcast: Started reading broadcast variable 0 with 1 pieces (estimated total size 4.0 MiB)
+25/02/24 23:25:47 INFO TransportClientFactory: Successfully created connection to master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:39163 after 2 ms (0 ms spent in bootstraps)
+25/02/24 23:25:47 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 6.9 KiB, free 1392.3 MiB)
+25/02/24 23:25:47 INFO TorrentBroadcast: Reading broadcast variable 0 took 74 ms
+25/02/24 23:25:47 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 13.3 KiB, free 1392.3 MiB)
+25/02/24 23:25:48 INFO CodeGenerator: Code generated in 170.672751 ms
+25/02/24 23:25:48 INFO PythonRunner: Times: total = 383, boot = 301, init = 82, finish = 0
+25/02/24 23:25:48 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1927 bytes result sent to driver
+25/02/24 23:25:48 INFO YarnCoarseGrainedExecutorBackend: Driver commanded a shutdown
+25/02/24 23:25:48 INFO MemoryStore: MemoryStore cleared
+25/02/24 23:25:48 INFO BlockManager: BlockManager stopped
+25/02/24 23:25:48 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+
+End of LogType:stdout
+***********************************************************************
+
+Container: container_1740409812679_0004_01_000003 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:directory.info
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:36987
+LogContents:
+ls -l:
+total 44
+-rw-r----- 1 hadoop hadoop   92 Feb 24 23:25 container_tokens
+-rwx------ 1 hadoop hadoop  664 Feb 24 23:25 default_container_executor_session.sh
+-rwx------ 1 hadoop hadoop  719 Feb 24 23:25 default_container_executor.sh
+lrwxrwxrwx 1 hadoop hadoop   70 Feb 24 23:25 hive-site.xml -> /mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/24/hive-site.xml
+-rwx------ 1 hadoop hadoop 6891 Feb 24 23:25 launch_container.sh
+lrwxrwxrwx 1 hadoop hadoop   78 Feb 24 23:25 py4j-0.10.9.5-src.zip -> /mnt/disk3/yarn/nm-local-dir/usercache/root/filecache/23/py4j-0.10.9.5-src.zip
+lrwxrwxrwx 1 hadoop hadoop   68 Feb 24 23:25 pyspark.zip -> /mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/20/pyspark.zip
+lrwxrwxrwx 1 hadoop hadoop   75 Feb 24 23:25 __spark_conf__ -> /mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/22/__spark_conf__.zip
+lrwxrwxrwx 1 hadoop hadoop   94 Feb 24 23:25 __spark_libs__ -> /mnt/disk4/yarn/nm-local-dir/usercache/root/filecache/21/__spark_libs__1414285758766144539.zip
+drwx--x--- 2 hadoop hadoop 4096 Feb 24 23:25 tmp
+find -L . -maxdepth 5 -ls:
+1048912    4 drwx--x---   3 hadoop   hadoop       4096 Feb 24 23:25 .
+2621556   12 -r-x------   1 hadoop   hadoop       9182 Feb 24 23:25 ./hive-site.xml
+786455   44 -r-x------   1 hadoop   hadoop      42404 Feb 24 23:25 ./py4j-0.10.9.5-src.zip
+1048918    4 -rw-r-----   1 hadoop   hadoop         64 Feb 24 23:25 ./.launch_container.sh.crc
+1048859   24 drwx------   2 hadoop   hadoop      20480 Feb 24 23:25 ./__spark_libs__
+1049048  368 -r-x------   1 hadoop   hadoop     374895 Feb 24 23:25 ./__spark_libs__/jackson-core-2.13.3.jar
+1049122   52 -r-x------   1 hadoop   hadoop      51793 Feb 24 23:25 ./__spark_libs__/spark-repl_2.12-3.3.0.jar
+1048966  692 -r-x------   1 hadoop   hadoop     707948 Feb 24 23:25 ./__spark_libs__/parquet-format-structures-1.12.2.jar
+1049077    8 -r-x------   1 hadoop   hadoop       4360 Feb 24 23:25 ./__spark_libs__/netty-all-4.1.74.Final.jar
+1049011    8 -r-x------   1 hadoop   hadoop       5711 Feb 24 23:25 ./__spark_libs__/minlog-1.3.0.jar
+1048932   76 -r-x------   1 hadoop   hadoop      76818 Feb 24 23:25 ./__spark_libs__/jersey-hk2-2.34.jar
+1049067   36 -r-x------   1 hadoop   hadoop      35085 Feb 24 23:25 ./__spark_libs__/spire-util_2.12-0.17.0.jar
+1048885  324 -r-x------   1 hadoop   hadoop     328436 Feb 24 23:25 ./__spark_libs__/httpcore-4.4.14.jar
+1048951   28 -r-x------   1 hadoop   hadoop      27360 Feb 24 23:25 ./__spark_libs__/spark-ganglia-lgpl_2.12-3.3.0.jar
+1049014   36 -r-x------   1 hadoop   hadoop      33031 Feb 24 23:25 ./__spark_libs__/jsr305-3.0.0.jar
+1049114  228 -r-x------   1 hadoop   hadoop     232470 Feb 24 23:25 ./__spark_libs__/JLargeArrays-1.5.jar
+1049089   16 -r-x------   1 hadoop   hadoop      15071 Feb 24 23:25 ./__spark_libs__/jta-1.1.jar
+1049053   20 -r-x------   1 hadoop   hadoop      16630 Feb 24 23:25 ./__spark_libs__/jcl-over-slf4j-1.7.32.jar
+1048875  104 -r-x------   1 hadoop   hadoop     105305 Feb 24 23:25 ./__spark_libs__/kerb-admin-2.0.1.jar
+1049084 1168 -r-x------   1 hadoop   hadoop    1194003 Feb 24 23:25 ./__spark_libs__/arpack_combined_all-0.1.jar
+1049010 3128 -r-x------   1 hadoop   hadoop    3200351 Feb 24 23:25 ./__spark_libs__/shapeless_2.12-2.3.7.jar
+1048952  576 -r-x------   1 hadoop   hadoop     588337 Feb 24 23:25 ./__spark_libs__/commons-collections-3.2.2.jar
+1048934   44 -r-x------   1 hadoop   hadoop      41513 Feb 24 23:25 ./__spark_libs__/slf4j-api-1.7.32.jar
+1048945   32 -r-x------   1 hadoop   hadoop      31475 Feb 24 23:25 ./__spark_libs__/kerby-xdr-2.0.1.jar
+1048886  300 -r-x------   1 hadoop   hadoop     303443 Feb 24 23:25 ./__spark_libs__/log4j-1.2-api-2.17.2.jar
+1049110   60 -r-x------   1 hadoop   hadoop      58284 Feb 24 23:25 ./__spark_libs__/commons-cli-1.5.0.jar
+1048949  116 -r-x------   1 hadoop   hadoop     114698 Feb 24 23:25 ./__spark_libs__/spire-macros_2.12-0.17.0.jar
+1049102   16 -r-x------   1 hadoop   hadoop      13732 Feb 24 23:25 ./__spark_libs__/hive-shims-scheduler-2.3.9.jar
+1049007   88 -r-x------   1 hadoop   hadoop      89855 Feb 24 23:25 ./__spark_libs__/json4s-ast_2.12-3.7.0-M11.jar
+1048980  468 -r-x------   1 hadoop   hadoop     478807 Feb 24 23:25 ./__spark_libs__/netty-transport-4.1.74.Final.jar
+1048999  108 -r-x------   1 hadoop   hadoop     108076 Feb 24 23:25 ./__spark_libs__/arrow-memory-core-7.0.0.jar
+1049116   16 -r-x------   1 hadoop   hadoop      15151 Feb 24 23:25 ./__spark_libs__/spark-tags_2.12-3.3.0.jar
+1048917   48 -r-x------   1 hadoop   hadoop      45807 Feb 24 23:25 ./__spark_libs__/hive-cli-2.3.9.jar
+1049017   28 -r-x------   1 hadoop   hadoop      27156 Feb 24 23:25 ./__spark_libs__/istack-commons-runtime-3.0.8.jar
+1048876  188 -r-x------   1 hadoop   hadoop     190432 Feb 24 23:25 ./__spark_libs__/gson-2.2.4.jar
+1048916 13632 -r-x------   1 hadoop   hadoop   13956358 Feb 24 23:25 ./__spark_libs__/breeze_2.12-1.2.jar
+1048953  360 -r-x------   1 hadoop   hadoop     366748 Feb 24 23:25 ./__spark_libs__/datanucleus-api-jdo-4.2.4.jar
+1048897   24 -r-x------   1 hadoop   hadoop      24447 Feb 24 23:25 ./__spark_libs__/api-asn1-api-2.0.0.jar
+1048936  116 -r-x------   1 hadoop   hadoop     117077 Feb 24 23:25 ./__spark_libs__/kerb-client-2.0.1.jar
+1049064  420 -r-x------   1 hadoop   hadoop     428511 Feb 24 23:25 ./__spark_libs__/RoaringBitmap-0.9.25.jar
+1048944  560 -r-x------   1 hadoop   hadoop     573380 Feb 24 23:25 ./__spark_libs__/spark-hive-thriftserver_2.12-3.3.0.jar
+1049033   68 -r-x------   1 hadoop   hadoop      67758 Feb 24 23:25 ./__spark_libs__/jettison-1.1.jar
+1049119   88 -r-x------   1 hadoop   hadoop      86352 Feb 24 23:25 ./__spark_libs__/kerb-server-2.0.1.jar
+1048940  160 -r-x------   1 hadoop   hadoop     160519 Feb 24 23:25 ./__spark_libs__/commons-dbcp-1.4.jar
+1048948 1836 -r-x------   1 hadoop   hadoop    1879996 Feb 24 23:25 ./__spark_libs__/parquet-jackson-1.12.2.jar
+1048950 1076 -r-x------   1 hadoop   hadoop    1099948 Feb 24 23:25 ./__spark_libs__/orc-core-1.7.4.jar
+1048938  872 -r-x------   1 hadoop   hadoop     890168 Feb 24 23:25 ./__spark_libs__/jaxb-impl-2.2.3-1.jar
+1049006  764 -r-x------   1 hadoop   hadoop     780321 Feb 24 23:25 ./__spark_libs__/httpclient-4.5.13.jar
+1048896  956 -r-x------   1 hadoop   hadoop     977557 Feb 24 23:25 ./__spark_libs__/parquet-hadoop-1.12.2.jar
+1049097   76 -r-x------   1 hadoop   hadoop      75714 Feb 24 23:25 ./__spark_libs__/jackson-annotations-2.13.3.jar
+1048889   68 -r-x------   1 hadoop   hadoop      69409 Feb 24 23:25 ./__spark_libs__/activation-1.1.1.jar
+1049087   96 -r-x------   1 hadoop   hadoop      96221 Feb 24 23:25 ./__spark_libs__/commons-pool-1.5.4.jar
+1048990 3264 -r-x------   1 hadoop   hadoop    3340031 Feb 24 23:25 ./__spark_libs__/cats-kernel_2.12-2.1.1.jar
+1048931 1152 -r-x------   1 hadoop   hadoop    1175798 Feb 24 23:25 ./__spark_libs__/JTransforms-3.1.jar
+1048928 1372 -r-x------   1 hadoop   hadoop    1402646 Feb 24 23:25 ./__spark_libs__/ivy-2.5.0.jar
+1049080  444 -r-x------   1 hadoop   hadoop     453914 Feb 24 23:25 ./__spark_libs__/org.apache.servicemix.bundles.antlr-2.7.7_5.jar
+1049052   76 -r-x------   1 hadoop   hadoop      75142 Feb 24 23:25 ./__spark_libs__/breeze-macros_2.12-1.2.jar
+1048915   96 -r-x------   1 hadoop   hadoop      96569 Feb 24 23:25 ./__spark_libs__/parquet-common-1.12.2.jar
+1049039   32 -r-x------   1 hadoop   hadoop      30035 Feb 24 23:25 ./__spark_libs__/accessors-smart-1.2.jar
+1049001  124 -r-x------   1 hadoop   hadoop     123356 Feb 24 23:25 ./__spark_libs__/py4j-0.10.9.5.jar
+1048892  300 -r-x------   1 hadoop   hadoop     303281 Feb 24 23:25 ./__spark_libs__/netty-buffer-4.1.74.Final.jar
+1048908   92 -r-x------   1 hadoop   hadoop      93210 Feb 24 23:25 ./__spark_libs__/super-csv-2.2.0.jar
+1048898 1220 -r-x------   1 hadoop   hadoop    1245934 Feb 24 23:25 ./__spark_libs__/zookeeper-3.6.2.jar
+1048973 10724 -r-x------   1 hadoop   hadoop   10978529 Feb 24 23:25 ./__spark_libs__/scala-compiler-2.12.15.jar
+1049117 3592 -r-x------   1 hadoop   hadoop    3678167 Feb 24 23:25 ./__spark_libs__/scala-reflect-2.12.15.jar
+1048904  184 -r-x------   1 hadoop   hadoop     188158 Feb 24 23:25 ./__spark_libs__/avro-mapred-1.11.0.jar
+1049113  164 -r-x------   1 hadoop   hadoop     167282 Feb 24 23:25 ./__spark_libs__/jboss-threads-2.3.0.Beta2.jar
+1048895   44 -r-x------   1 hadoop   hadoop      44513 Feb 24 23:25 ./__spark_libs__/gmetric4j-1.0.10.jar
+1048862  228 -r-x------   1 hadoop   hadoop     232248 Feb 24 23:25 ./__spark_libs__/jackson-core-asl-1.9.13.jar
+1049003  132 -r-x------   1 hadoop   hadoop     131590 Feb 24 23:25 ./__spark_libs__/hk2-utils-2.6.1.jar
+1049026  116 -r-x------   1 hadoop   hadoop     117235 Feb 24 23:25 ./__spark_libs__/hive-jdbc-2.3.9.jar
+1048993  580 -r-x------   1 hadoop   hadoop     593627 Feb 24 23:25 ./__spark_libs__/avro-1.11.0.jar
+1048902  244 -r-x------   1 hadoop   hadoop     249790 Feb 24 23:25 ./__spark_libs__/javax.jdo-3.2.0-m3.jar
+1048870  116 -r-x------   1 hadoop   hadoop     116728 Feb 24 23:25 ./__spark_libs__/kerb-crypto-2.0.1.jar
+1049028  108 -r-x------   1 hadoop   hadoop     107094 Feb 24 23:25 ./__spark_libs__/netty-transport-classes-kqueue-4.1.74.Final.jar
+1049031  896 -r-x------   1 hadoop   hadoop     917420 Feb 24 23:25 ./__spark_libs__/hive-serde-2.3.9.jar
+1049112   28 -r-x------   1 hadoop   hadoop      25475 Feb 24 23:25 ./__spark_libs__/json-1.8.jar
+1048941  736 -r-x------   1 hadoop   hadoop     751914 Feb 24 23:25 ./__spark_libs__/commons-collections4-4.4.jar
+1049118  180 -r-x------   1 hadoop   hadoop     183588 Feb 24 23:25 ./__spark_libs__/aircompressor-0.21.jar
+1048893  160 -r-x------   1 hadoop   hadoop     160299 Feb 24 23:25 ./__spark_libs__/spark-network-shuffle_2.12-3.3.0.jar
+1048884  332 -r-x------   1 hadoop   hadoop     337864 Feb 24 23:25 ./__spark_libs__/antlr4-runtime-4.8.jar
+1048929   64 -r-x------   1 hadoop   hadoop      65261 Feb 24 23:25 ./__spark_libs__/oro-2.0.8.jar
+1049121   84 -r-x------   1 hadoop   hadoop      85707 Feb 24 23:25 ./__spark_libs__/api-util-2.0.0.jar
+1049012  200 -r-x------   1 hadoop   hadoop     201124 Feb 24 23:25 ./__spark_libs__/jdo-api-3.0.1.jar
+1049034  764 -r-x------   1 hadoop   hadoop     780265 Feb 24 23:25 ./__spark_libs__/javassist-3.25.0-GA.jar
+1049058  248 -r-x------   1 hadoop   hadoop     250405 Feb 24 23:25 ./__spark_libs__/zookeeper-jute-3.6.2.jar
+1049093 2140 -r-x------   1 hadoop   hadoop    2189117 Feb 24 23:25 ./__spark_libs__/guava-14.0.1.jar
+1048960  420 -r-x------   1 hadoop   hadoop     427780 Feb 24 23:25 ./__spark_libs__/jodd-core-3.5.2.jar
+1049044  992 -r-x------   1 hadoop   hadoop    1013367 Feb 24 23:25 ./__spark_libs__/jaxb-runtime-2.3.2.jar
+1048877  296 -r-x------   1 hadoop   hadoop     302511 Feb 24 23:25 ./__spark_libs__/log4j-api-2.17.2.jar
+1049030 1468 -r-x------   1 hadoop   hadoop    1502280 Feb 24 23:25 ./__spark_libs__/htrace-core4-4.1.0-incubating.jar
+1048988  544 -r-x------   1 hadoop   hadoop     556575 Feb 24 23:25 ./__spark_libs__/scala-xml_2.12-1.2.0.jar
+1049057   40 -r-x------   1 hadoop   hadoop      37065 Feb 24 23:25 ./__spark_libs__/json4s-jackson_2.12-3.7.0-M11.jar
+1048943   76 -r-x------   1 hadoop   hadoop      77752 Feb 24 23:25 ./__spark_libs__/spark-launcher_2.12-3.3.0.jar
+1049051   84 -r-x------   1 hadoop   hadoop      83989 Feb 24 23:25 ./__spark_libs__/spark-kvstore_2.12-3.3.0.jar
+1049056  708 -r-x------   1 hadoop   hadoop     724777 Feb 24 23:25 ./__spark_libs__/spark-hive_2.12-3.3.0.jar
+1048989   20 -r-x------   1 hadoop   hadoop      16682 Feb 24 23:25 ./__spark_libs__/metrics-json-4.2.7.jar
+1048909  428 -r-x------   1 hadoop   hadoop     436731 Feb 24 23:25 ./__spark_libs__/jersey-core-1.19.4.jar
+1048910  208 -r-x------   1 hadoop   hadoop     212374 Feb 24 23:25 ./__spark_libs__/chill_2.12-0.10.0.jar
+1048962  256 -r-x------   1 hadoop   hadoop     259090 Feb 24 23:25 ./__spark_libs__/jersey-client-2.34.jar
+1048987  164 -r-x------   1 hadoop   hadoop     166244 Feb 24 23:25 ./__spark_libs__/commons-crypto-1.1.0.jar
+1048967   24 -r-x------   1 hadoop   hadoop      21137 Feb 24 23:25 ./__spark_libs__/metrics-jmx-4.2.7.jar
+1048868   40 -r-x------   1 hadoop   hadoop      38352 Feb 24 23:25 ./__spark_libs__/hive-vector-code-gen-2.3.9.jar
+1049066  136 -r-x------   1 hadoop   hadoop     138332 Feb 24 23:25 ./__spark_libs__/netty-transport-classes-epoll-4.1.74.Final.jar
+1049049   16 -r-x------   1 hadoop   hadoop      15935 Feb 24 23:25 ./__spark_libs__/dropwizard-metrics-hadoop-metrics2-reporter-0.1.2.jar
+1048894 1024 -r-x------   1 hadoop   hadoop    1045744 Feb 24 23:25 ./__spark_libs__/leveldbjni-all-1.8.jar
+1049081  108 -r-x------   1 hadoop   hadoop     109948 Feb 24 23:25 ./__spark_libs__/arrow-format-7.0.0.jar
+1048994 1116 -r-x------   1 hadoop   hadoop    1138885 Feb 24 23:25 ./__spark_libs__/spark-streaming_2.12-3.3.0.jar
+1048873 17820 -r-x------   1 hadoop   hadoop   18245921 Feb 24 23:25 ./__spark_libs__/hadoop-client-api-3.2.1.jar
+1048975  200 -r-x------   1 hadoop   hadoop     201965 Feb 24 23:25 ./__spark_libs__/curator-framework-2.13.0.jar
+1048866 10760 -r-x------   1 hadoop   hadoop   11016376 Feb 24 23:25 ./__spark_libs__/spark-core_2.12-3.3.0.jar
+1048998   24 -r-x------   1 hadoop   hadoop      24248 Feb 24 23:25 ./__spark_libs__/log4j-slf4j-impl-2.17.2.jar
+1048991 1040 -r-x------   1 hadoop   hadoop    1062982 Feb 24 23:25 ./__spark_libs__/api-ldap-model-2.0.0.jar
+1049085   60 -r-x------   1 hadoop   hadoop      59826 Feb 24 23:25 ./__spark_libs__/hadoop-annotations-3.1.3.jar
+1049013  632 -r-x------   1 hadoop   hadoop     644596 Feb 24 23:25 ./__spark_libs__/joda-time-2.10.13.jar
+1049096   40 -r-x------   1 hadoop   hadoop      37777 Feb 24 23:25 ./__spark_libs__/netty-resolver-4.1.74.Final.jar
+1048997   84 -r-x------   1 hadoop   hadoop      82872 Feb 24 23:25 ./__spark_libs__/jakarta.servlet-api-4.0.3.jar
+1048976  184 -r-x------   1 hadoop   hadoop     184512 Feb 24 23:25 ./__spark_libs__/hive-beeline-2.3.9.jar
+1048946   60 -r-x------   1 hadoop   hadoop      58683 Feb 24 23:25 ./__spark_libs__/chill-java-0.10.0.jar
+1049041 1948 -r-x------   1 hadoop   hadoop    1992108 Feb 24 23:25 ./__spark_libs__/parquet-column-1.12.2.jar
+1048977  344 -r-x------   1 hadoop   hadoop     348265 Feb 24 23:25 ./__spark_libs__/json4s-scalap_2.12-3.7.0-M11.jar
+1049104   20 -r-x------   1 hadoop   hadoop      18140 Feb 24 23:25 ./__spark_libs__/jakarta.inject-2.6.1.jar
+1048959  200 -r-x------   1 hadoop   hadoop     204386 Feb 24 23:25 ./__spark_libs__/kerby-pkix-2.0.1.jar
+1049032  708 -r-x------   1 hadoop   hadoop     724092 Feb 24 23:25 ./__spark_libs__/jline-3.11.0.jar
+1049086 3160 -r-x------   1 hadoop   hadoop    3232770 Feb 24 23:25 ./__spark_libs__/derby-10.14.2.0.jar
+1049020   64 -r-x------   1 hadoop   hadoop      64357 Feb 24 23:25 ./__spark_libs__/has-common-2.0.1.jar
+1048879   28 -r-x------   1 hadoop   hadoop      25058 Feb 24 23:25 ./__spark_libs__/jakarta.annotation-api-1.3.5.jar
+1048907   76 -r-x------   1 hadoop   hadoop      77537 Feb 24 23:25 ./__spark_libs__/arpack-2.2.1.jar
+1049109   72 -r-x------   1 hadoop   hadoop      71626 Feb 24 23:25 ./__spark_libs__/commons-compiler-3.0.16.jar
+1049016  100 -r-x------   1 hadoop   hadoop     101340 Feb 24 23:25 ./__spark_libs__/kerby-asn1-2.0.1.jar
+1049094  120 -r-x------   1 hadoop   hadoop     120316 Feb 24 23:25 ./__spark_libs__/json-smart-2.3.jar
+1048863  276 -r-x------   1 hadoop   hadoop     282591 Feb 24 23:25 ./__spark_libs__/jsch-0.1.55.jar
+1048881  124 -r-x------   1 hadoop   hadoop     126094 Feb 24 23:25 ./__spark_libs__/metrics-core-4.2.7.jar
+1049045 10624 -r-x------   1 hadoop   hadoop   10875375 Feb 24 23:25 ./__spark_libs__/hive-exec-2.3.9-core.jar
+1048964   36 -r-x------   1 hadoop   hadoop      36767 Feb 24 23:25 ./__spark_libs__/kerb-util-2.0.1.jar
+1048903  108 -r-x------   1 hadoop   hadoop     108555 Feb 24 23:25 ./__spark_libs__/xz-1.8.jar
+1049022  652 -r-x------   1 hadoop   hadoop     667140 Feb 24 23:25 ./__spark_libs__/mina-core-2.1.3.jar
+1048982   16 -r-x------   1 hadoop   hadoop      15071 Feb 24 23:25 ./__spark_libs__/transaction-api-1.1.jar
+1049072  128 -r-x------   1 hadoop   hadoop     127223 Feb 24 23:25 ./__spark_libs__/remotetea-oncrpc-1.1.2.jar
+1048995   24 -r-x------   1 hadoop   hadoop      24145 Feb 24 23:25 ./__spark_libs__/netty-transport-native-kqueue-4.1.74.Final-osx-aarch_64.jar
+1049038   64 -r-x------   1 hadoop   hadoop      64873 Feb 24 23:25 ./__spark_libs__/flatbuffers-java-1.12.0.jar
+1049050  256 -r-x------   1 hadoop   hadoop     261276 Feb 24 23:25 ./__spark_libs__/api-ldap-extras-codec-2.0.0.jar
+1049095   56 -r-x------   1 hadoop   hadoop      54293 Feb 24 23:25 ./__spark_libs__/pickle-1.2.jar
+1049071  404 -r-x------   1 hadoop   hadoop     410874 Feb 24 23:25 ./__spark_libs__/kryo-shaded-4.0.2.jar
+1049076  572 -r-x------   1 hadoop   hadoop     582362 Feb 24 23:25 ./__spark_libs__/xnio-api-3.6.5.Final.jar
+1048869 1644 -r-x------   1 hadoop   hadoop    1679362 Feb 24 23:25 ./__spark_libs__/hive-service-rpc-3.1.2.jar
+1049083   48 -r-x------   1 hadoop   hadoop      47189 Feb 24 23:25 ./__spark_libs__/wildfly-client-config-1.0.0.Final.jar
+1049061  120 -r-x------   1 hadoop   hadoop     121001 Feb 24 23:25 ./__spark_libs__/hive-shims-common-2.3.9.jar
+1048985  176 -r-x------   1 hadoop   hadoop     178149 Feb 24 23:25 ./__spark_libs__/stream-2.9.6.jar
+1048883  832 -r-x------   1 hadoop   hadoop     848557 Feb 24 23:25 ./__spark_libs__/parquet-encoding-1.12.2.jar
+1049019   20 -r-x------   1 hadoop   hadoop      19827 Feb 24 23:25 ./__spark_libs__/opencsv-2.3.jar
+1049073   12 -r-x------   1 hadoop   hadoop      12131 Feb 24 23:25 ./__spark_libs__/jpam-1.1.jar
+1048947  424 -r-x------   1 hadoop   hadoop     434043 Feb 24 23:25 ./__spark_libs__/spark-graphx_2.12-3.3.0.jar
+1049082  220 -r-x------   1 hadoop   hadoop     222980 Feb 24 23:25 ./__spark_libs__/scala-parser-combinators_2.12-1.1.2.jar
+1049042   44 -r-x------   1 hadoop   hadoop      43167 Feb 24 23:25 ./__spark_libs__/api-asn1-ber-2.0.0.jar
+1049123   24 -r-x------   1 hadoop   hadoop      23265 Feb 24 23:25 ./__spark_libs__/metrics-graphite-4.2.7.jar
+1048981 2368 -r-x------   1 hadoop   hadoop    2423157 Feb 24 23:25 ./__spark_libs__/curator-client-2.13.0.jar
+1049009  516 -r-x------   1 hadoop   hadoop     526286 Feb 24 23:25 ./__spark_libs__/json4s-core_2.12-3.7.0-M11.jar
+1049008  264 -r-x------   1 hadoop   hadoop     268780 Feb 24 23:25 ./__spark_libs__/jline-2.14.6.jar
+1048912   32 -r-x------   1 hadoop   hadoop      30727 Feb 24 23:25 ./__spark_libs__/spark-sketch_2.12-3.3.0.jar
+1049106   12 -r-x------   1 hadoop   hadoop       8987 Feb 24 23:25 ./__spark_libs__/hive-shims-2.3.9.jar
+1049046 5748 -r-x------   1 hadoop   hadoop    5885445 Feb 24 23:25 ./__spark_libs__/zstd-jni-1.5.2-1.jar
+1048926   20 -r-x------   1 hadoop   hadoop      18359 Feb 24 23:25 ./__spark_libs__/kerb-identity-2.0.1.jar
+1049021   72 -r-x------   1 hadoop   hadoop      73405 Feb 24 23:25 ./__spark_libs__/jersey-container-servlet-core-2.34.jar
+1049036  908 -r-x------   1 hadoop   hadoop     926574 Feb 24 23:25 ./__spark_libs__/janino-3.0.16.jar
+1048890    8 -r-x------   1 hadoop   hadoop       4722 Feb 24 23:25 ./__spark_libs__/jcip-annotations-1.0-1.jar
+1049079 7076 -r-x------   1 hadoop   hadoop    7243903 Feb 24 23:25 ./__spark_libs__/spire_2.12-0.17.0.jar
+1048860   32 -r-x------   1 hadoop   hadoop      29263 Feb 24 23:25 ./__spark_libs__/orc-shims-1.7.4.jar
+1048963 1144 -r-x------   1 hadoop   hadoop    1168417 Feb 24 23:25 ./__spark_libs__/algebra_2.12-2.0.1.jar
+1048958   88 -r-x------   1 hadoop   hadoop      87023 Feb 24 23:25 ./__spark_libs__/api-i18n-2.0.0.jar
+1048922  196 -r-x------   1 hadoop   hadoop     200223 Feb 24 23:25 ./__spark_libs__/hk2-api-2.6.1.jar
+1048906 1504 -r-x------   1 hadoop   hadoop    1536542 Feb 24 23:25 ./__spark_libs__/jackson-databind-2.13.3.jar
+1048888  764 -r-x------   1 hadoop   hadoop     780664 Feb 24 23:25 ./__spark_libs__/jackson-mapper-asl-1.9.13.jar
+1048983  164 -r-x------   1 hadoop   hadoop     167761 Feb 24 23:25 ./__spark_libs__/antlr-runtime-3.5.2.jar
+1048978   20 -r-x------   1 hadoop   hadoop      19014 Feb 24 23:25 ./__spark_libs__/annotations-17.0.0.jar
+1049091  184 -r-x------   1 hadoop   hadoop     185616 Feb 24 23:25 ./__spark_libs__/avro-ipc-1.11.0.jar
+1049075   48 -r-x------   1 hadoop   hadoop      48253 Feb 24 23:25 ./__spark_libs__/orc-mapreduce-1.7.4.jar
+1049120  116 -r-x------   1 hadoop   hadoop     115498 Feb 24 23:25 ./__spark_libs__/jakarta.xml.bind-api-2.3.2.jar
+1048911  232 -r-x------   1 hadoop   hadoop     236672 Feb 24 23:25 ./__spark_libs__/hive-storage-api-2.7.2.jar
+1049070  232 -r-x------   1 hadoop   hadoop     233745 Feb 24 23:25 ./__spark_libs__/threeten-extra-1.5.0.jar
+1048865  336 -r-x------   1 hadoop   hadoop     342526 Feb 24 23:25 ./__spark_libs__/nimbus-jose-jwt-8.2.1.jar
+1049063   28 -r-x------   1 hadoop   hadoop      25394 Feb 24 23:25 ./__spark_libs__/netty-transport-native-kqueue-4.1.74.Final-osx-x86_64.jar
+1048901  112 -r-x------   1 hadoop   hadoop     110600 Feb 24 23:25 ./__spark_libs__/bonecp-0.8.0.RELEASE.jar
+1049054 5316 -r-x------   1 hadoop   hadoop    5443542 Feb 24 23:25 ./__spark_libs__/scala-library-2.12.15.jar
+1049078    4 -r-x------   1 hadoop   hadoop       2543 Feb 24 23:25 ./__spark_libs__/shims-0.9.25.jar
+1049040 8012 -r-x------   1 hadoop   hadoop    8201240 Feb 24 23:25 ./__spark_libs__/hive-metastore-2.3.9.jar
+1048974  308 -r-x------   1 hadoop   hadoop     315001 Feb 24 23:25 ./__spark_libs__/api-ldap-codec-core-2.0.0.jar
+1049029 2360 -r-x------   1 hadoop   hadoop    2414964 Feb 24 23:25 ./__spark_libs__/spark-network-common_2.12-3.3.0.jar
+1048971 1160 -r-x------   1 hadoop   hadoop    1185133 Feb 24 23:25 ./__spark_libs__/jersey-common-2.34.jar
+1049103   36 -r-x------   1 hadoop   hadoop      34654 Feb 24 23:25 ./__spark_libs__/paranamer-2.8.jar
+1048920  320 -r-x------   1 hadoop   hadoop     327410 Feb 24 23:25 ./__spark_libs__/hive-llap-common-2.3.9.jar
+1049025   32 -r-x------   1 hadoop   hadoop      32387 Feb 24 23:25 ./__spark_libs__/jersey-container-servlet-2.34.jar
+1049092   92 -r-x------   1 hadoop   hadoop      91930 Feb 24 23:25 ./__spark_libs__/jakarta.validation-api-2.0.2.jar
+1049043    8 -r-x------   1 hadoop   hadoop       4589 Feb 24 23:25 ./__spark_libs__/jul-to-slf4j-1.7.32.jar
+1048933  996 -r-x------   1 hadoop   hadoop    1018316 Feb 24 23:25 ./__spark_libs__/commons-compress-1.21.jar
+1049002   40 -r-x------   1 hadoop   hadoop      39404 Feb 24 23:25 ./__spark_libs__/arrow-memory-netty-7.0.0.jar
+1049111 1772 -r-x------   1 hadoop   hadoop    1811089 Feb 24 23:25 ./__spark_libs__/log4j-core-2.17.2.jar
+1048970   80 -r-x------   1 hadoop   hadoop      80872 Feb 24 23:25 ./__spark_libs__/hadoop-yarn-server-web-proxy-3.2.1.jar
+1049074  112 -r-x------   1 hadoop   hadoop     112235 Feb 24 23:25 ./__spark_libs__/scala-collection-compat_2.12-2.1.1.jar
+1049055 8828 -r-x------   1 hadoop   hadoop    9038556 Feb 24 23:25 ./__spark_libs__/spark-sql_2.12-3.3.0.jar
+1048861   52 -r-x------   1 hadoop   hadoop      53194 Feb 24 23:25 ./__spark_libs__/spark-unsafe_2.12-3.3.0.jar
+1048979  220 -r-x------   1 hadoop   hadoop     221719 Feb 24 23:25 ./__spark_libs__/wildfly-common-1.3.0.Final.jar
+1049105  244 -r-x------   1 hadoop   hadoop     246445 Feb 24 23:25 ./__spark_libs__/libthrift-0.12.0.jar
+1049065  280 -r-x------   1 hadoop   hadoop     283653 Feb 24 23:25 ./__spark_libs__/curator-recipes-2.13.0.jar
+1048968  384 -r-x------   1 hadoop   hadoop     392124 Feb 24 23:25 ./__spark_libs__/velocity-1.5.jar
+1049108   40 -r-x------   1 hadoop   hadoop      40163 Feb 24 23:25 ./__spark_libs__/netty-transport-native-unix-common-4.1.74.Final.jar
+1049035  280 -r-x------   1 hadoop   hadoop     284220 Feb 24 23:25 ./__spark_libs__/commons-lang-2.6.jar
+1048969  212 -r-x------   1 hadoop   hadoop     216211 Feb 24 23:25 ./__spark_libs__/commons-text-1.9.jar
+1049023 35240 -r-x------   1 hadoop   hadoop   36085422 Feb 24 23:25 ./__spark_libs__/rocksdbjni-6.20.3.jar
+1048957  140 -r-x------   1 hadoop   hadoop     140376 Feb 24 23:25 ./__spark_libs__/jakarta.ws.rs-api-2.1.6.jar
+1048984  200 -r-x------   1 hadoop   hadoop     203358 Feb 24 23:25 ./__spark_libs__/hk2-locator-2.6.1.jar
+1048874  100 -r-x------   1 hadoop   hadoop     102244 Feb 24 23:25 ./__spark_libs__/jaxb-api-2.2.11.jar
+1048882 1864 -r-x------   1 hadoop   hadoop    1908681 Feb 24 23:25 ./__spark_libs__/datanucleus-rdbms-4.1.19.jar
+1048927  520 -r-x------   1 hadoop   hadoop     528865 Feb 24 23:25 ./__spark_libs__/netty-handler-4.1.74.Final.jar
+1048924   52 -r-x------   1 hadoop   hadoop      49414 Feb 24 23:25 ./__spark_libs__/objenesis-3.2.jar
+1049101   12 -r-x------   1 hadoop   hadoop       8455 Feb 24 23:25 ./__spark_libs__/spire-platform_2.12-0.17.0.jar
+1049115  668 -r-x------   1 hadoop   hadoop     682804 Feb 24 23:25 ./__spark_libs__/lz4-java-1.8.0.jar
+1048887   48 -r-x------   1 hadoop   hadoop      45703 Feb 24 23:25 ./__spark_libs__/has-client-2.0.1.jar
+1048937  116 -r-x------   1 hadoop   hadoop     116144 Feb 24 23:25 ./__spark_libs__/spark-mllib-local_2.12-3.3.0.jar
+1049062   64 -r-x------   1 hadoop   hadoop      62050 Feb 24 23:25 ./__spark_libs__/commons-logging-1.1.3.jar
+1048900   80 -r-x------   1 hadoop   hadoop      81791 Feb 24 23:25 ./__spark_libs__/compress-lzf-1.1.jar
+1048905 2164 -r-x------   1 hadoop   hadoop    2213560 Feb 24 23:25 ./__spark_libs__/commons-math3-3.6.1.jar
+1049024 12364 -r-x------   1 hadoop   hadoop   12660359 Feb 24 23:25 ./__spark_libs__/spark-catalyst_2.12-3.3.0.jar
+1048935   20 -r-x------   1 hadoop   hadoop      20437 Feb 24 23:25 ./__spark_libs__/audience-annotations-0.5.0.jar
+1048923   24 -r-x------   1 hadoop   hadoop      24177 Feb 24 23:25 ./__spark_libs__/metrics-jvm-4.2.7.jar
+1048986   20 -r-x------   1 hadoop   hadoop      19559 Feb 24 23:25 ./__spark_libs__/token-provider-2.0.1.jar
+1049000  636 -r-x------   1 hadoop   hadoop     650152 Feb 24 23:25 ./__spark_libs__/netty-common-4.1.74.Final.jar
+1049069  288 -r-x------   1 hadoop   hadoop     294763 Feb 24 23:25 ./__spark_libs__/xbean-asm9-shaded-4.20.jar
+1048939   20 -r-x------   1 hadoop   hadoop      18336 Feb 24 23:25 ./__spark_libs__/jackson-jaxrs-1.9.13.jar
+1049059   72 -r-x------   1 hadoop   hadoop      72596 Feb 24 23:25 ./__spark_libs__/kerb-common-2.0.1.jar
+1049088   20 -r-x------   1 hadoop   hadoop      19479 Feb 24 23:25 ./__spark_libs__/osgi-resource-locator-1.0.3.jar
+1048880   28 -r-x------   1 hadoop   hadoop      26514 Feb 24 23:25 ./__spark_libs__/stax-api-1.0.1.jar
+1049099   56 -r-x------   1 hadoop   hadoop      55888 Feb 24 23:25 ./__spark_libs__/hive-shims-0.23-2.3.9.jar
+1048864  224 -r-x------   1 hadoop   hadoop     226583 Feb 24 23:25 ./__spark_libs__/kerb-core-2.0.1.jar
+1048955  164 -r-x------   1 hadoop   hadoop     165348 Feb 24 23:25 ./__spark_libs__/jersey-json-1.19.4.jar
+1049027   28 -r-x------   1 hadoop   hadoop      27084 Feb 24 23:25 ./__spark_libs__/jackson-xc-1.9.13.jar
+1049100  928 -r-x------   1 hadoop   hadoop     946794 Feb 24 23:25 ./__spark_libs__/jersey-server-2.34.jar
+1048972 1296 -r-x------   1 hadoop   hadoop    1323178 Feb 24 23:25 ./__spark_libs__/tink-1.6.1.jar
+1048996 29568 -r-x------   1 hadoop   hadoop   30276738 Feb 24 23:25 ./__spark_libs__/hadoop-client-runtime-3.2.1.jar
+1048918  524 -r-x------   1 hadoop   hadoop     533455 Feb 24 23:25 ./__spark_libs__/protobuf-java-2.5.0.jar
+1048925 5996 -r-x------   1 hadoop   hadoop    6138986 Feb 24 23:25 ./__spark_libs__/spark-mllib_2.12-3.3.0.jar
+1049047   40 -r-x------   1 hadoop   hadoop      40916 Feb 24 23:25 ./__spark_libs__/kerby-util-2.0.1.jar
+1048867   32 -r-x------   1 hadoop   hadoop      30772 Feb 24 23:25 ./__spark_libs__/kerby-config-2.0.1.jar
+1049068 1808 -r-x------   1 hadoop   hadoop    1851317 Feb 24 23:25 ./__spark_libs__/arrow-vector-7.0.0.jar
+1049005  576 -r-x------   1 hadoop   hadoop     587402 Feb 24 23:25 ./__spark_libs__/commons-lang3-3.12.0.jar
+1049060  796 -r-x------   1 hadoop   hadoop     813149 Feb 24 23:25 ./__spark_libs__/lapack-2.2.1.jar
+1049098 1972 -r-x------   1 hadoop   hadoop    2016766 Feb 24 23:25 ./__spark_libs__/datanucleus-core-4.1.17.jar
+1049037  136 -r-x------   1 hadoop   hadoop     136363 Feb 24 23:25 ./__spark_libs__/HikariCP-2.5.1.jar
+1048954  308 -r-x------   1 hadoop   hadoop     313702 Feb 24 23:25 ./__spark_libs__/libfb303-0.9.3.jar
+1048992 4092 -r-x------   1 hadoop   hadoop    4189874 Feb 24 23:25 ./__spark_libs__/bcprov-jdk15on-1.60.jar
+1048961  452 -r-x------   1 hadoop   hadoop     458981 Feb 24 23:25 ./__spark_libs__/jackson-module-scala_2.12-2.13.3.jar
+1048921   68 -r-x------   1 hadoop   hadoop      66023 Feb 24 23:25 ./__spark_libs__/jboss-logging-3.3.1.Final.jar
+1049107   36 -r-x------   1 hadoop   hadoop      36199 Feb 24 23:25 ./__spark_libs__/netty-transport-native-epoll-4.1.74.Final-linux-x86_64.jar
+1049015  332 -r-x------   1 hadoop   hadoop     337126 Feb 24 23:25 ./__spark_libs__/netty-codec-4.1.74.Final.jar
+1048930  388 -r-x------   1 hadoop   hadoop     395195 Feb 24 23:25 ./__spark_libs__/javolution-5.5.1.jar
+1048956  232 -r-x------   1 hadoop   hadoop     236660 Feb 24 23:25 ./__spark_libs__/ST4-4.0.4.jar
+1048872  100 -r-x------   1 hadoop   hadoop     101270 Feb 24 23:25 ./__spark_libs__/api-ldap-extras-codec-api-2.0.0.jar
+1048919 1928 -r-x------   1 hadoop   hadoop    1970939 Feb 24 23:25 ./__spark_libs__/snappy-java-1.1.8.4.jar
+1048942  352 -r-x------   1 hadoop   hadoop     357571 Feb 24 23:25 ./__spark_libs__/spark-yarn_2.12-3.3.0.jar
+1048891   40 -r-x------   1 hadoop   hadoop      37683 Feb 24 23:25 ./__spark_libs__/netty-transport-native-epoll-4.1.74.Final-linux-aarch_64.jar
+1048914   28 -r-x------   1 hadoop   hadoop      27006 Feb 24 23:25 ./__spark_libs__/aopalliance-repackaged-2.6.1.jar
+1048871  164 -r-x------   1 hadoop   hadoop     164422 Feb 24 23:25 ./__spark_libs__/core-1.1.2.jar
+1049004  432 -r-x------   1 hadoop   hadoop     441689 Feb 24 23:25 ./__spark_libs__/hive-common-2.3.9.jar
+1048878 3272 -r-x------   1 hadoop   hadoop    3347200 Feb 24 23:25 ./__spark_libs__/hadoop-shaded-guava-1.1.0.jar
+1049018  440 -r-x------   1 hadoop   hadoop     447005 Feb 24 23:25 ./__spark_libs__/univocity-parsers-2.9.1.jar
+1048965  196 -r-x------   1 hadoop   hadoop     198476 Feb 24 23:25 ./__spark_libs__/blas-2.2.1.jar
+1048899  320 -r-x------   1 hadoop   hadoop     327135 Feb 24 23:25 ./__spark_libs__/commons-io-2.11.0.jar
+1049090   36 -r-x------   1 hadoop   hadoop      34943 Feb 24 23:25 ./__spark_libs__/netty-tcnative-classes-2.0.48.Final.jar
+1048913  348 -r-x------   1 hadoop   hadoop     353793 Feb 24 23:25 ./__spark_libs__/commons-codec-1.15.jar
+1048915    4 -rw-r-----   1 hadoop   hadoop         92 Feb 24 23:25 ./container_tokens
+1048919    4 -rwx------   1 hadoop   hadoop        664 Feb 24 23:25 ./default_container_executor_session.sh
+1048917    8 -rwx------   1 hadoop   hadoop       6891 Feb 24 23:25 ./launch_container.sh
+1048920    4 -rw-r-----   1 hadoop   hadoop         16 Feb 24 23:25 ./.default_container_executor_session.sh.crc
+1048914    4 drwx--x---   2 hadoop   hadoop       4096 Feb 24 23:25 ./tmp
+2621506 1496 -r-x------   1 hadoop   hadoop    1529089 Feb 24 23:25 ./pyspark.zip
+1048922    4 -rw-r-----   1 hadoop   hadoop         16 Feb 24 23:25 ./.default_container_executor.sh.crc
+1048921    4 -rwx------   1 hadoop   hadoop        719 Feb 24 23:25 ./default_container_executor.sh
+2621509    4 drwx------   3 hadoop   hadoop       4096 Feb 24 23:25 ./__spark_conf__
+2621553   12 -r-x------   1 hadoop   hadoop       8554 Feb 24 23:25 ./__spark_conf__/__spark_conf__.properties
+2621511    4 drwx------   2 hadoop   hadoop       4096 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__
+2621545    0 -r-x------   1 hadoop   hadoop          0 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/.yarn-exclude.xml.lock
+2621543    4 -r-x------   1 hadoop   hadoop       1580 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-env.sh
+2621534    4 -r-x------   1 hadoop   hadoop        248 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-metrics.properties
+2621530    8 -r-x------   1 hadoop   hadoop       5238 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-env.sh
+2621550    4 -r-x------   1 hadoop   hadoop       3763 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hdfs-env.sh
+2621515    4 -r-x------   1 hadoop   hadoop       1657 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-log4j.properties
+2621541    4 -r-x------   1 hadoop   hadoop       2615 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-policy.xml
+2621537   12 -r-x------   1 hadoop   hadoop       9182 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hive-site.xml
+2621523    4 -r-x------   1 hadoop   hadoop       1631 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-log4j.properties
+2621547    4 -r-x------   1 hadoop   hadoop        814 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/rack-topology.sh
+2621521   12 -r-x------   1 hadoop   hadoop      10289 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/core-site.xml
+2621542    4 -r-x------   1 hadoop   hadoop        782 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/fair-scheduler.xml
+2621536    4 -r-x------   1 hadoop   hadoop        924 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/truststore
+2621544    4 -r-x------   1 hadoop   hadoop         21 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-signature.secret
+2621538    4 -r-x------   1 hadoop   hadoop       2316 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-client.xml.example
+2621524    4 -r-x------   1 hadoop   hadoop       2367 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-client.xml
+2621548    4 -r-x------   1 hadoop   hadoop       2380 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-server.xml
+2621531   32 -r-x------   1 hadoop   hadoop      31635 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hdfs-site.xml
+2621540    4 -r-x------   1 hadoop   hadoop        314 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hbase-site.xml
+2621522    0 -r-x------   1 hadoop   hadoop          0 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/dfs.exclude
+2621528    4 -r-x------   1 hadoop   hadoop       1335 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/configuration.xsl
+2621513    4 -r-x------   1 hadoop   hadoop       1373 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-env.sh
+2621527    4 -r-x------   1 hadoop   hadoop          6 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms.keystore.password
+2621551    8 -r-x------   1 hadoop   hadoop       5511 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-site.xml
+2621535    4 -r-x------   1 hadoop   hadoop       1639 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/mapred-env.sh
+2621516    4 -r-x------   1 hadoop   hadoop        108 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-metrics2.properties
+2621549    4 -r-x------   1 hadoop   hadoop       2268 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-server.xml.example
+2621518    4 -r-x------   1 hadoop   hadoop       3868 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/keystore
+2621517   16 -r-x------   1 hadoop   hadoop      15784 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-log4j.properties
+2621546    4 -r-x------   1 hadoop   hadoop        829 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-site.xml
+2621520    4 -r-x------   1 hadoop   hadoop        205 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hiveserver2-site.xml
+2621525    4 -r-x------   1 hadoop   hadoop       1376 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/capacity-scheduler.xml
+2621514   12 -r-x------   1 hadoop   hadoop       8974 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/mapred-site.xml
+2621532    4 -r-x------   1 hadoop   hadoop        210 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/container-executor.cfg
+2621526    4 -r-x------   1 hadoop   hadoop       3523 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-acls.xml
+2621512   16 -r-x------   1 hadoop   hadoop      15875 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/log4j.properties
+2621519   16 -r-x------   1 hadoop   hadoop      15945 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-site.xml
+2621529    4 -r-x------   1 hadoop   hadoop          9 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-exclude.xml
+2621533    4 -r-x------   1 hadoop   hadoop        196 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/resource-types.xml
+2621539    4 -r-x------   1 hadoop   hadoop       1411 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-env.sh
+2621554    4 -r-x------   1 hadoop   hadoop       1164 Feb 24 23:25 ./__spark_conf__/__spark_dist_cache__.properties
+2621552  184 -r-x------   1 hadoop   hadoop     185301 Feb 24 23:25 ./__spark_conf__/__spark_hadoop_conf__.xml
+2621510    4 -r-x------   1 hadoop   hadoop        103 Feb 24 23:25 ./__spark_conf__/metrics.properties
+1048916    4 -rw-r-----   1 hadoop   hadoop         12 Feb 24 23:25 ./.container_tokens.crc
+broken symlinks(find -L . -maxdepth 5 -type l -ls):
+
+End of LogType:directory.info
+*******************************************************************************
+
+Container: container_1740409812679_0004_01_000003 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:launch_container.sh
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:6891
+LogContents:
+#!/bin/bash
+
+set -o pipefail -e
+export PRELAUNCH_OUT="/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/prelaunch.out"
+exec >"${PRELAUNCH_OUT}"
+export PRELAUNCH_ERR="/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/prelaunch.err"
+exec 2>"${PRELAUNCH_ERR}"
+echo "Setting up env variables"
+export JAVA_HOME=${JAVA_HOME:-"/usr/lib/jvm/java"}
+export HADOOP_COMMON_HOME=${HADOOP_COMMON_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_HDFS_HOME=${HADOOP_HDFS_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/taihao-apps/hadoop-conf"}
+export HADOOP_YARN_HOME=${HADOOP_YARN_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_HOME=${HADOOP_HOME:-"/opt/apps/YARN/yarn-current"}
+export PATH=${PATH:-"/sbin:/bin:/usr/sbin:/usr/bin"}
+export LANG=${LANG:-"en_US.UTF-8"}
+export HADOOP_TOKEN_FILE_LOCATION="/mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000003/container_tokens"
+export CONTAINER_ID="container_1740409812679_0004_01_000003"
+export NM_PORT="8041"
+export NM_HOST="core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com"
+export NM_HTTP_PORT="8042"
+export LOCAL_DIRS="/mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk2/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk3/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004"
+export LOCAL_USER_DIRS="/mnt/disk1/yarn/nm-local-dir/usercache/root/,/mnt/disk2/yarn/nm-local-dir/usercache/root/,/mnt/disk3/yarn/nm-local-dir/usercache/root/,/mnt/disk4/yarn/nm-local-dir/usercache/root/"
+export LOG_DIRS="/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003,/mnt/disk2/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003,/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003,/mnt/disk4/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003"
+export USER="root"
+export LOGNAME="root"
+export HOME="/home/"
+export PWD="/mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000003"
+export JVM_PID="$$"
+export MALLOC_ARENA_MAX="4"
+export NM_AUX_SERVICE_spark_shuffle=""
+export NM_AUX_SERVICE_mapreduce_shuffle="AAA0+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+export SPARK_YARN_STAGING_DIR="hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0004"
+export PYTHONPATH="$PWD/pyspark.zip:$PWD/py4j-0.10.9.5-src.zip"
+export CLASSPATH="/opt/apps/METASTORE/metastore-current/hive2/*:/opt/apps/JINDOSDK/jindosdk-current/lib/*:/opt/apps/EMRHOOK/emrhook-current/spark-hook-1.1.4-spark30.jar:$PWD:$PWD/__spark_conf__:$PWD/__spark_libs__/*:$PWD/__spark_conf__/__hadoop_conf__"
+export SPARK_USER="root"
+echo "Setting up job resources"
+ln -sf -- "/mnt/disk4/yarn/nm-local-dir/usercache/root/filecache/21/__spark_libs__1414285758766144539.zip" "__spark_libs__"
+ln -sf -- "/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/24/hive-site.xml" "hive-site.xml"
+ln -sf -- "/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/20/pyspark.zip" "pyspark.zip"
+ln -sf -- "/mnt/disk3/yarn/nm-local-dir/usercache/root/filecache/23/py4j-0.10.9.5-src.zip" "py4j-0.10.9.5-src.zip"
+ln -sf -- "/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/22/__spark_conf__.zip" "__spark_conf__"
+echo "Copying debugging information"
+# Creating copy of launch script
+cp "launch_container.sh" "/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/launch_container.sh"
+chmod 640 "/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/launch_container.sh"
+# Determining directory contents
+echo "ls -l:" 1>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/directory.info"
+ls -l 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/directory.info"
+echo "find -L . -maxdepth 5 -ls:" 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/directory.info"
+find -L . -maxdepth 5 -ls 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/directory.info"
+echo "broken symlinks(find -L . -maxdepth 5 -type l -ls):" 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/directory.info"
+find -L . -maxdepth 5 -type l -ls 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/directory.info"
+echo "Launching container"
+exec /bin/bash -c "LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH:/opt/apps/YARN/yarn-current/lib/native/:/opt/apps/SPARK3/spark-current/lib/native/:$LD_LIBRARY_PATH\" $JAVA_HOME/bin/java -server -Xmx2948m '-XX:+IgnoreUnrecognizedVMOptions' '--add-opens=java.base/java.lang=ALL-UNNAMED' '--add-opens=java.base/java.lang.invoke=ALL-UNNAMED' '--add-opens=java.base/java.lang.reflect=ALL-UNNAMED' '--add-opens=java.base/java.io=ALL-UNNAMED' '--add-opens=java.base/java.net=ALL-UNNAMED' '--add-opens=java.base/java.nio=ALL-UNNAMED' '--add-opens=java.base/java.util=ALL-UNNAMED' '--add-opens=java.base/java.util.concurrent=ALL-UNNAMED' '--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED' '--add-opens=java.base/sun.nio.ch=ALL-UNNAMED' '--add-opens=java.base/sun.nio.cs=ALL-UNNAMED' '--add-opens=java.base/sun.security.action=ALL-UNNAMED' '--add-opens=java.base/sun.util.calendar=ALL-UNNAMED' '--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED' '-Dlog4j2.formatMsgNoLookups=true' '-Dlog4j.configuration=/etc/taihao-apps/spark-conf/log4j.properties' '-noverify' '-javaagent:/opt/apps/TAIHAODOCTOR/taihaodoctor-current/emr-agent/btrace-agent.jar=libs=spark-3.2' -Djava.io.tmpdir=$PWD/tmp '-Dspark.driver.port=42271' '-Dspark.history.ui.port=18080' '-Dspark.shuffle.service.port=7337' -Dspark.yarn.app.container.log.dir=/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003 -XX:OnOutOfMemoryError='kill %p' org.apache.spark.executor.YarnCoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42271 --executor-id 2 --hostname core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com --cores 1 --app-id application_1740409812679_0004 --resourceProfileId 0 1>/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/stdout 2>/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000003/stderr"
+
+End of LogType:launch_container.sh
+************************************************************************************
+
+
+End of LogType:prelaunch.err
+******************************************************************************
+
+Container: container_1740409812679_0004_01_000003 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:prelaunch.out
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:100
+LogContents:
+Setting up env variables
+Setting up job resources
+Copying debugging information
+Launching container
+
+End of LogType:prelaunch.out
+******************************************************************************
+
+Container: container_1740409812679_0004_01_000003 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:stderr
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:6401
+LogContents:
+25/02/24 23:25:42 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 21465@core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com
+25/02/24 23:25:42 INFO SignalUtils: Registering signal handler for TERM
+25/02/24 23:25:42 INFO SignalUtils: Registering signal handler for HUP
+25/02/24 23:25:42 INFO SignalUtils: Registering signal handler for INT
+25/02/24 23:25:42 INFO SecurityManager: Changing view acls to: hadoop,root
+25/02/24 23:25:42 INFO SecurityManager: Changing modify acls to: hadoop,root
+25/02/24 23:25:42 INFO SecurityManager: Changing view acls groups to: 
+25/02/24 23:25:42 INFO SecurityManager: Changing modify acls groups to: 
+25/02/24 23:25:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop, root); groups with view permissions: Set(); users  with modify permissions: Set(hadoop, root); groups with modify permissions: Set()
+25/02/24 23:25:42 INFO TransportClientFactory: Successfully created connection to master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:42271 after 39 ms (0 ms spent in bootstraps)
+25/02/24 23:25:42 INFO SecurityManager: Changing view acls to: hadoop,root,*
+25/02/24 23:25:42 INFO SecurityManager: Changing modify acls to: hadoop,root
+25/02/24 23:25:42 INFO SecurityManager: Changing view acls groups to: 
+25/02/24 23:25:42 INFO SecurityManager: Changing modify acls groups to: 
+25/02/24 23:25:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop, root, *); groups with view permissions: Set(); users  with modify permissions: Set(hadoop, root); groups with modify permissions: Set()
+25/02/24 23:25:42 INFO TransportClientFactory: Successfully created connection to master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:42271 after 1 ms (0 ms spent in bootstraps)
+25/02/24 23:25:43 INFO DiskBlockManager: Created local directory at /mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/blockmgr-baf73231-cb19-43a0-ac07-bf3c4b4a9b72
+25/02/24 23:25:43 INFO DiskBlockManager: Created local directory at /mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/blockmgr-8fba1321-79af-4cba-ad4b-8343967ab311
+25/02/24 23:25:43 INFO DiskBlockManager: Created local directory at /mnt/disk2/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/blockmgr-746a7c46-433f-4809-8d72-9521ee77caad
+25/02/24 23:25:43 INFO DiskBlockManager: Created local directory at /mnt/disk3/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/blockmgr-94131054-b827-41e6-b36a-35283b2c2ffa
+25/02/24 23:25:43 INFO MemoryStore: MemoryStore started with capacity 1392.3 MiB
+25/02/24 23:25:43 INFO YarnCoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42271
+25/02/24 23:25:43 INFO ResourceUtils: ==============================================================
+25/02/24 23:25:43 INFO ResourceUtils: No custom resources configured for spark.executor.
+25/02/24 23:25:43 INFO ResourceUtils: ==============================================================
+25/02/24 23:25:43 INFO YarnCoarseGrainedExecutorBackend: Successfully registered with driver
+25/02/24 23:25:43 INFO Executor: Starting executor ID 2 on host core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com
+25/02/24 23:25:43 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39761.
+25/02/24 23:25:43 INFO NettyBlockTransferService: Server created on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:39761
+25/02/24 23:25:43 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/02/24 23:25:43 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(2, core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 39761, None)
+25/02/24 23:25:43 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(2, core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 39761, None)
+25/02/24 23:25:43 INFO BlockManager: external shuffle service port = 7337
+25/02/24 23:25:43 INFO BlockManager: Registering executor with local external shuffle service.
+25/02/24 23:25:43 INFO TransportClientFactory: Successfully created connection to core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.179:7337 after 2 ms (0 ms spent in bootstraps)
+25/02/24 23:25:43 INFO BlockManager: Initialized BlockManager: BlockManagerId(2, core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com, 39761, None)
+25/02/24 23:25:43 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): 'file:/mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000003/__app__.jar,file:/mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000003/__app__.jar'
+25/02/24 23:25:46 INFO YarnCoarseGrainedExecutorBackend: Got assigned task 0
+25/02/24 23:25:46 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/02/24 23:25:47 INFO TorrentBroadcast: Started reading broadcast variable 0 with 1 pieces (estimated total size 4.0 MiB)
+25/02/24 23:25:47 INFO TransportClientFactory: Successfully created connection to master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:39163 after 1 ms (0 ms spent in bootstraps)
+25/02/24 23:25:47 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 6.9 KiB, free 1392.3 MiB)
+25/02/24 23:25:47 INFO TorrentBroadcast: Reading broadcast variable 0 took 62 ms
+25/02/24 23:25:47 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 13.3 KiB, free 1392.3 MiB)
+25/02/24 23:25:48 INFO CodeGenerator: Code generated in 183.468734 ms
+25/02/24 23:25:48 INFO PythonRunner: Times: total = 404, boot = 320, init = 84, finish = 0
+25/02/24 23:25:48 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1905 bytes result sent to driver
+25/02/24 23:25:48 INFO YarnCoarseGrainedExecutorBackend: Driver commanded a shutdown
+25/02/24 23:25:48 INFO MemoryStore: MemoryStore cleared
+25/02/24 23:25:48 INFO BlockManager: BlockManager stopped
+25/02/24 23:25:48 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stderr
+***********************************************************************
+
+
+End of LogType:stdout
+***********************************************************************
+
+Container: container_1740409812679_0004_01_000001 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:directory.info
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:36987
+LogContents:
+ls -l:
+total 44
+-rw-r----- 1 hadoop hadoop   74 Feb 24 23:25 container_tokens
+-rwx------ 1 hadoop hadoop  664 Feb 24 23:25 default_container_executor_session.sh
+-rwx------ 1 hadoop hadoop  719 Feb 24 23:25 default_container_executor.sh
+lrwxrwxrwx 1 hadoop hadoop   70 Feb 24 23:25 hive-site.xml -> /mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/24/hive-site.xml
+-rwx------ 1 hadoop hadoop 6538 Feb 24 23:25 launch_container.sh
+lrwxrwxrwx 1 hadoop hadoop   78 Feb 24 23:25 py4j-0.10.9.5-src.zip -> /mnt/disk3/yarn/nm-local-dir/usercache/root/filecache/23/py4j-0.10.9.5-src.zip
+lrwxrwxrwx 1 hadoop hadoop   68 Feb 24 23:25 pyspark.zip -> /mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/20/pyspark.zip
+lrwxrwxrwx 1 hadoop hadoop   75 Feb 24 23:25 __spark_conf__ -> /mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/22/__spark_conf__.zip
+lrwxrwxrwx 1 hadoop hadoop   94 Feb 24 23:25 __spark_libs__ -> /mnt/disk4/yarn/nm-local-dir/usercache/root/filecache/21/__spark_libs__1414285758766144539.zip
+drwx--x--- 2 hadoop hadoop 4096 Feb 24 23:25 tmp
+find -L . -maxdepth 5 -ls:
+2621558    4 drwx--x---   3 hadoop   hadoop       4096 Feb 24 23:25 .
+2621561    4 -rw-r-----   1 hadoop   hadoop         74 Feb 24 23:25 ./container_tokens
+2621562    4 -rw-r-----   1 hadoop   hadoop         12 Feb 24 23:25 ./.container_tokens.crc
+2621560    4 drwx--x---   2 hadoop   hadoop       4096 Feb 24 23:25 ./tmp
+2621509    4 drwx------   3 hadoop   hadoop       4096 Feb 24 23:25 ./__spark_conf__
+2621553   12 -r-x------   1 hadoop   hadoop       8554 Feb 24 23:25 ./__spark_conf__/__spark_conf__.properties
+2621511    4 drwx------   2 hadoop   hadoop       4096 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__
+2621545    0 -r-x------   1 hadoop   hadoop          0 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/.yarn-exclude.xml.lock
+2621543    4 -r-x------   1 hadoop   hadoop       1580 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-env.sh
+2621534    4 -r-x------   1 hadoop   hadoop        248 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-metrics.properties
+2621530    8 -r-x------   1 hadoop   hadoop       5238 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-env.sh
+2621550    4 -r-x------   1 hadoop   hadoop       3763 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hdfs-env.sh
+2621515    4 -r-x------   1 hadoop   hadoop       1657 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-log4j.properties
+2621541    4 -r-x------   1 hadoop   hadoop       2615 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-policy.xml
+2621537   12 -r-x------   1 hadoop   hadoop       9182 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hive-site.xml
+2621523    4 -r-x------   1 hadoop   hadoop       1631 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-log4j.properties
+2621547    4 -r-x------   1 hadoop   hadoop        814 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/rack-topology.sh
+2621521   12 -r-x------   1 hadoop   hadoop      10289 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/core-site.xml
+2621542    4 -r-x------   1 hadoop   hadoop        782 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/fair-scheduler.xml
+2621536    4 -r-x------   1 hadoop   hadoop        924 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/truststore
+2621544    4 -r-x------   1 hadoop   hadoop         21 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-signature.secret
+2621538    4 -r-x------   1 hadoop   hadoop       2316 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-client.xml.example
+2621524    4 -r-x------   1 hadoop   hadoop       2367 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-client.xml
+2621548    4 -r-x------   1 hadoop   hadoop       2380 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-server.xml
+2621531   32 -r-x------   1 hadoop   hadoop      31635 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hdfs-site.xml
+2621540    4 -r-x------   1 hadoop   hadoop        314 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hbase-site.xml
+2621522    0 -r-x------   1 hadoop   hadoop          0 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/dfs.exclude
+2621528    4 -r-x------   1 hadoop   hadoop       1335 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/configuration.xsl
+2621513    4 -r-x------   1 hadoop   hadoop       1373 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-env.sh
+2621527    4 -r-x------   1 hadoop   hadoop          6 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms.keystore.password
+2621551    8 -r-x------   1 hadoop   hadoop       5511 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-site.xml
+2621535    4 -r-x------   1 hadoop   hadoop       1639 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/mapred-env.sh
+2621516    4 -r-x------   1 hadoop   hadoop        108 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hadoop-metrics2.properties
+2621549    4 -r-x------   1 hadoop   hadoop       2268 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/ssl-server.xml.example
+2621518    4 -r-x------   1 hadoop   hadoop       3868 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/keystore
+2621517   16 -r-x------   1 hadoop   hadoop      15784 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-log4j.properties
+2621546    4 -r-x------   1 hadoop   hadoop        829 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/httpfs-site.xml
+2621520    4 -r-x------   1 hadoop   hadoop        205 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/hiveserver2-site.xml
+2621525    4 -r-x------   1 hadoop   hadoop       1376 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/capacity-scheduler.xml
+2621514   12 -r-x------   1 hadoop   hadoop       8974 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/mapred-site.xml
+2621532    4 -r-x------   1 hadoop   hadoop        210 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/container-executor.cfg
+2621526    4 -r-x------   1 hadoop   hadoop       3523 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-acls.xml
+2621512   16 -r-x------   1 hadoop   hadoop      15875 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/log4j.properties
+2621519   16 -r-x------   1 hadoop   hadoop      15945 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-site.xml
+2621529    4 -r-x------   1 hadoop   hadoop          9 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/yarn-exclude.xml
+2621533    4 -r-x------   1 hadoop   hadoop        196 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/resource-types.xml
+2621539    4 -r-x------   1 hadoop   hadoop       1411 Feb 24 23:25 ./__spark_conf__/__hadoop_conf__/kms-env.sh
+2621554    4 -r-x------   1 hadoop   hadoop       1164 Feb 24 23:25 ./__spark_conf__/__spark_dist_cache__.properties
+2621552  184 -r-x------   1 hadoop   hadoop     185301 Feb 24 23:25 ./__spark_conf__/__spark_hadoop_conf__.xml
+2621510    4 -r-x------   1 hadoop   hadoop        103 Feb 24 23:25 ./__spark_conf__/metrics.properties
+2621563    8 -rwx------   1 hadoop   hadoop       6538 Feb 24 23:25 ./launch_container.sh
+2621568    4 -rw-r-----   1 hadoop   hadoop         16 Feb 24 23:25 ./.default_container_executor.sh.crc
+2621556   12 -r-x------   1 hadoop   hadoop       9182 Feb 24 23:25 ./hive-site.xml
+2621566    4 -rw-r-----   1 hadoop   hadoop         16 Feb 24 23:25 ./.default_container_executor_session.sh.crc
+2621506 1496 -r-x------   1 hadoop   hadoop    1529089 Feb 24 23:25 ./pyspark.zip
+2621564    4 -rw-r-----   1 hadoop   hadoop         60 Feb 24 23:25 ./.launch_container.sh.crc
+786455   44 -r-x------   1 hadoop   hadoop      42404 Feb 24 23:25 ./py4j-0.10.9.5-src.zip
+1048859   24 drwx------   2 hadoop   hadoop      20480 Feb 24 23:25 ./__spark_libs__
+1049048  368 -r-x------   1 hadoop   hadoop     374895 Feb 24 23:25 ./__spark_libs__/jackson-core-2.13.3.jar
+1049122   52 -r-x------   1 hadoop   hadoop      51793 Feb 24 23:25 ./__spark_libs__/spark-repl_2.12-3.3.0.jar
+1048966  692 -r-x------   1 hadoop   hadoop     707948 Feb 24 23:25 ./__spark_libs__/parquet-format-structures-1.12.2.jar
+1049077    8 -r-x------   1 hadoop   hadoop       4360 Feb 24 23:25 ./__spark_libs__/netty-all-4.1.74.Final.jar
+1049011    8 -r-x------   1 hadoop   hadoop       5711 Feb 24 23:25 ./__spark_libs__/minlog-1.3.0.jar
+1048932   76 -r-x------   1 hadoop   hadoop      76818 Feb 24 23:25 ./__spark_libs__/jersey-hk2-2.34.jar
+1049067   36 -r-x------   1 hadoop   hadoop      35085 Feb 24 23:25 ./__spark_libs__/spire-util_2.12-0.17.0.jar
+1048885  324 -r-x------   1 hadoop   hadoop     328436 Feb 24 23:25 ./__spark_libs__/httpcore-4.4.14.jar
+1048951   28 -r-x------   1 hadoop   hadoop      27360 Feb 24 23:25 ./__spark_libs__/spark-ganglia-lgpl_2.12-3.3.0.jar
+1049014   36 -r-x------   1 hadoop   hadoop      33031 Feb 24 23:25 ./__spark_libs__/jsr305-3.0.0.jar
+1049114  228 -r-x------   1 hadoop   hadoop     232470 Feb 24 23:25 ./__spark_libs__/JLargeArrays-1.5.jar
+1049089   16 -r-x------   1 hadoop   hadoop      15071 Feb 24 23:25 ./__spark_libs__/jta-1.1.jar
+1049053   20 -r-x------   1 hadoop   hadoop      16630 Feb 24 23:25 ./__spark_libs__/jcl-over-slf4j-1.7.32.jar
+1048875  104 -r-x------   1 hadoop   hadoop     105305 Feb 24 23:25 ./__spark_libs__/kerb-admin-2.0.1.jar
+1049084 1168 -r-x------   1 hadoop   hadoop    1194003 Feb 24 23:25 ./__spark_libs__/arpack_combined_all-0.1.jar
+1049010 3128 -r-x------   1 hadoop   hadoop    3200351 Feb 24 23:25 ./__spark_libs__/shapeless_2.12-2.3.7.jar
+1048952  576 -r-x------   1 hadoop   hadoop     588337 Feb 24 23:25 ./__spark_libs__/commons-collections-3.2.2.jar
+1048934   44 -r-x------   1 hadoop   hadoop      41513 Feb 24 23:25 ./__spark_libs__/slf4j-api-1.7.32.jar
+1048945   32 -r-x------   1 hadoop   hadoop      31475 Feb 24 23:25 ./__spark_libs__/kerby-xdr-2.0.1.jar
+1048886  300 -r-x------   1 hadoop   hadoop     303443 Feb 24 23:25 ./__spark_libs__/log4j-1.2-api-2.17.2.jar
+1049110   60 -r-x------   1 hadoop   hadoop      58284 Feb 24 23:25 ./__spark_libs__/commons-cli-1.5.0.jar
+1048949  116 -r-x------   1 hadoop   hadoop     114698 Feb 24 23:25 ./__spark_libs__/spire-macros_2.12-0.17.0.jar
+1049102   16 -r-x------   1 hadoop   hadoop      13732 Feb 24 23:25 ./__spark_libs__/hive-shims-scheduler-2.3.9.jar
+1049007   88 -r-x------   1 hadoop   hadoop      89855 Feb 24 23:25 ./__spark_libs__/json4s-ast_2.12-3.7.0-M11.jar
+1048980  468 -r-x------   1 hadoop   hadoop     478807 Feb 24 23:25 ./__spark_libs__/netty-transport-4.1.74.Final.jar
+1048999  108 -r-x------   1 hadoop   hadoop     108076 Feb 24 23:25 ./__spark_libs__/arrow-memory-core-7.0.0.jar
+1049116   16 -r-x------   1 hadoop   hadoop      15151 Feb 24 23:25 ./__spark_libs__/spark-tags_2.12-3.3.0.jar
+1048917   48 -r-x------   1 hadoop   hadoop      45807 Feb 24 23:25 ./__spark_libs__/hive-cli-2.3.9.jar
+1049017   28 -r-x------   1 hadoop   hadoop      27156 Feb 24 23:25 ./__spark_libs__/istack-commons-runtime-3.0.8.jar
+1048876  188 -r-x------   1 hadoop   hadoop     190432 Feb 24 23:25 ./__spark_libs__/gson-2.2.4.jar
+1048916 13632 -r-x------   1 hadoop   hadoop   13956358 Feb 24 23:25 ./__spark_libs__/breeze_2.12-1.2.jar
+1048953  360 -r-x------   1 hadoop   hadoop     366748 Feb 24 23:25 ./__spark_libs__/datanucleus-api-jdo-4.2.4.jar
+1048897   24 -r-x------   1 hadoop   hadoop      24447 Feb 24 23:25 ./__spark_libs__/api-asn1-api-2.0.0.jar
+1048936  116 -r-x------   1 hadoop   hadoop     117077 Feb 24 23:25 ./__spark_libs__/kerb-client-2.0.1.jar
+1049064  420 -r-x------   1 hadoop   hadoop     428511 Feb 24 23:25 ./__spark_libs__/RoaringBitmap-0.9.25.jar
+1048944  560 -r-x------   1 hadoop   hadoop     573380 Feb 24 23:25 ./__spark_libs__/spark-hive-thriftserver_2.12-3.3.0.jar
+1049033   68 -r-x------   1 hadoop   hadoop      67758 Feb 24 23:25 ./__spark_libs__/jettison-1.1.jar
+1049119   88 -r-x------   1 hadoop   hadoop      86352 Feb 24 23:25 ./__spark_libs__/kerb-server-2.0.1.jar
+1048940  160 -r-x------   1 hadoop   hadoop     160519 Feb 24 23:25 ./__spark_libs__/commons-dbcp-1.4.jar
+1048948 1836 -r-x------   1 hadoop   hadoop    1879996 Feb 24 23:25 ./__spark_libs__/parquet-jackson-1.12.2.jar
+1048950 1076 -r-x------   1 hadoop   hadoop    1099948 Feb 24 23:25 ./__spark_libs__/orc-core-1.7.4.jar
+1048938  872 -r-x------   1 hadoop   hadoop     890168 Feb 24 23:25 ./__spark_libs__/jaxb-impl-2.2.3-1.jar
+1049006  764 -r-x------   1 hadoop   hadoop     780321 Feb 24 23:25 ./__spark_libs__/httpclient-4.5.13.jar
+1048896  956 -r-x------   1 hadoop   hadoop     977557 Feb 24 23:25 ./__spark_libs__/parquet-hadoop-1.12.2.jar
+1049097   76 -r-x------   1 hadoop   hadoop      75714 Feb 24 23:25 ./__spark_libs__/jackson-annotations-2.13.3.jar
+1048889   68 -r-x------   1 hadoop   hadoop      69409 Feb 24 23:25 ./__spark_libs__/activation-1.1.1.jar
+1049087   96 -r-x------   1 hadoop   hadoop      96221 Feb 24 23:25 ./__spark_libs__/commons-pool-1.5.4.jar
+1048990 3264 -r-x------   1 hadoop   hadoop    3340031 Feb 24 23:25 ./__spark_libs__/cats-kernel_2.12-2.1.1.jar
+1048931 1152 -r-x------   1 hadoop   hadoop    1175798 Feb 24 23:25 ./__spark_libs__/JTransforms-3.1.jar
+1048928 1372 -r-x------   1 hadoop   hadoop    1402646 Feb 24 23:25 ./__spark_libs__/ivy-2.5.0.jar
+1049080  444 -r-x------   1 hadoop   hadoop     453914 Feb 24 23:25 ./__spark_libs__/org.apache.servicemix.bundles.antlr-2.7.7_5.jar
+1049052   76 -r-x------   1 hadoop   hadoop      75142 Feb 24 23:25 ./__spark_libs__/breeze-macros_2.12-1.2.jar
+1048915   96 -r-x------   1 hadoop   hadoop      96569 Feb 24 23:25 ./__spark_libs__/parquet-common-1.12.2.jar
+1049039   32 -r-x------   1 hadoop   hadoop      30035 Feb 24 23:25 ./__spark_libs__/accessors-smart-1.2.jar
+1049001  124 -r-x------   1 hadoop   hadoop     123356 Feb 24 23:25 ./__spark_libs__/py4j-0.10.9.5.jar
+1048892  300 -r-x------   1 hadoop   hadoop     303281 Feb 24 23:25 ./__spark_libs__/netty-buffer-4.1.74.Final.jar
+1048908   92 -r-x------   1 hadoop   hadoop      93210 Feb 24 23:25 ./__spark_libs__/super-csv-2.2.0.jar
+1048898 1220 -r-x------   1 hadoop   hadoop    1245934 Feb 24 23:25 ./__spark_libs__/zookeeper-3.6.2.jar
+1048973 10724 -r-x------   1 hadoop   hadoop   10978529 Feb 24 23:25 ./__spark_libs__/scala-compiler-2.12.15.jar
+1049117 3592 -r-x------   1 hadoop   hadoop    3678167 Feb 24 23:25 ./__spark_libs__/scala-reflect-2.12.15.jar
+1048904  184 -r-x------   1 hadoop   hadoop     188158 Feb 24 23:25 ./__spark_libs__/avro-mapred-1.11.0.jar
+1049113  164 -r-x------   1 hadoop   hadoop     167282 Feb 24 23:25 ./__spark_libs__/jboss-threads-2.3.0.Beta2.jar
+1048895   44 -r-x------   1 hadoop   hadoop      44513 Feb 24 23:25 ./__spark_libs__/gmetric4j-1.0.10.jar
+1048862  228 -r-x------   1 hadoop   hadoop     232248 Feb 24 23:25 ./__spark_libs__/jackson-core-asl-1.9.13.jar
+1049003  132 -r-x------   1 hadoop   hadoop     131590 Feb 24 23:25 ./__spark_libs__/hk2-utils-2.6.1.jar
+1049026  116 -r-x------   1 hadoop   hadoop     117235 Feb 24 23:25 ./__spark_libs__/hive-jdbc-2.3.9.jar
+1048993  580 -r-x------   1 hadoop   hadoop     593627 Feb 24 23:25 ./__spark_libs__/avro-1.11.0.jar
+1048902  244 -r-x------   1 hadoop   hadoop     249790 Feb 24 23:25 ./__spark_libs__/javax.jdo-3.2.0-m3.jar
+1048870  116 -r-x------   1 hadoop   hadoop     116728 Feb 24 23:25 ./__spark_libs__/kerb-crypto-2.0.1.jar
+1049028  108 -r-x------   1 hadoop   hadoop     107094 Feb 24 23:25 ./__spark_libs__/netty-transport-classes-kqueue-4.1.74.Final.jar
+1049031  896 -r-x------   1 hadoop   hadoop     917420 Feb 24 23:25 ./__spark_libs__/hive-serde-2.3.9.jar
+1049112   28 -r-x------   1 hadoop   hadoop      25475 Feb 24 23:25 ./__spark_libs__/json-1.8.jar
+1048941  736 -r-x------   1 hadoop   hadoop     751914 Feb 24 23:25 ./__spark_libs__/commons-collections4-4.4.jar
+1049118  180 -r-x------   1 hadoop   hadoop     183588 Feb 24 23:25 ./__spark_libs__/aircompressor-0.21.jar
+1048893  160 -r-x------   1 hadoop   hadoop     160299 Feb 24 23:25 ./__spark_libs__/spark-network-shuffle_2.12-3.3.0.jar
+1048884  332 -r-x------   1 hadoop   hadoop     337864 Feb 24 23:25 ./__spark_libs__/antlr4-runtime-4.8.jar
+1048929   64 -r-x------   1 hadoop   hadoop      65261 Feb 24 23:25 ./__spark_libs__/oro-2.0.8.jar
+1049121   84 -r-x------   1 hadoop   hadoop      85707 Feb 24 23:25 ./__spark_libs__/api-util-2.0.0.jar
+1049012  200 -r-x------   1 hadoop   hadoop     201124 Feb 24 23:25 ./__spark_libs__/jdo-api-3.0.1.jar
+1049034  764 -r-x------   1 hadoop   hadoop     780265 Feb 24 23:25 ./__spark_libs__/javassist-3.25.0-GA.jar
+1049058  248 -r-x------   1 hadoop   hadoop     250405 Feb 24 23:25 ./__spark_libs__/zookeeper-jute-3.6.2.jar
+1049093 2140 -r-x------   1 hadoop   hadoop    2189117 Feb 24 23:25 ./__spark_libs__/guava-14.0.1.jar
+1048960  420 -r-x------   1 hadoop   hadoop     427780 Feb 24 23:25 ./__spark_libs__/jodd-core-3.5.2.jar
+1049044  992 -r-x------   1 hadoop   hadoop    1013367 Feb 24 23:25 ./__spark_libs__/jaxb-runtime-2.3.2.jar
+1048877  296 -r-x------   1 hadoop   hadoop     302511 Feb 24 23:25 ./__spark_libs__/log4j-api-2.17.2.jar
+1049030 1468 -r-x------   1 hadoop   hadoop    1502280 Feb 24 23:25 ./__spark_libs__/htrace-core4-4.1.0-incubating.jar
+1048988  544 -r-x------   1 hadoop   hadoop     556575 Feb 24 23:25 ./__spark_libs__/scala-xml_2.12-1.2.0.jar
+1049057   40 -r-x------   1 hadoop   hadoop      37065 Feb 24 23:25 ./__spark_libs__/json4s-jackson_2.12-3.7.0-M11.jar
+1048943   76 -r-x------   1 hadoop   hadoop      77752 Feb 24 23:25 ./__spark_libs__/spark-launcher_2.12-3.3.0.jar
+1049051   84 -r-x------   1 hadoop   hadoop      83989 Feb 24 23:25 ./__spark_libs__/spark-kvstore_2.12-3.3.0.jar
+1049056  708 -r-x------   1 hadoop   hadoop     724777 Feb 24 23:25 ./__spark_libs__/spark-hive_2.12-3.3.0.jar
+1048989   20 -r-x------   1 hadoop   hadoop      16682 Feb 24 23:25 ./__spark_libs__/metrics-json-4.2.7.jar
+1048909  428 -r-x------   1 hadoop   hadoop     436731 Feb 24 23:25 ./__spark_libs__/jersey-core-1.19.4.jar
+1048910  208 -r-x------   1 hadoop   hadoop     212374 Feb 24 23:25 ./__spark_libs__/chill_2.12-0.10.0.jar
+1048962  256 -r-x------   1 hadoop   hadoop     259090 Feb 24 23:25 ./__spark_libs__/jersey-client-2.34.jar
+1048987  164 -r-x------   1 hadoop   hadoop     166244 Feb 24 23:25 ./__spark_libs__/commons-crypto-1.1.0.jar
+1048967   24 -r-x------   1 hadoop   hadoop      21137 Feb 24 23:25 ./__spark_libs__/metrics-jmx-4.2.7.jar
+1048868   40 -r-x------   1 hadoop   hadoop      38352 Feb 24 23:25 ./__spark_libs__/hive-vector-code-gen-2.3.9.jar
+1049066  136 -r-x------   1 hadoop   hadoop     138332 Feb 24 23:25 ./__spark_libs__/netty-transport-classes-epoll-4.1.74.Final.jar
+1049049   16 -r-x------   1 hadoop   hadoop      15935 Feb 24 23:25 ./__spark_libs__/dropwizard-metrics-hadoop-metrics2-reporter-0.1.2.jar
+1048894 1024 -r-x------   1 hadoop   hadoop    1045744 Feb 24 23:25 ./__spark_libs__/leveldbjni-all-1.8.jar
+1049081  108 -r-x------   1 hadoop   hadoop     109948 Feb 24 23:25 ./__spark_libs__/arrow-format-7.0.0.jar
+1048994 1116 -r-x------   1 hadoop   hadoop    1138885 Feb 24 23:25 ./__spark_libs__/spark-streaming_2.12-3.3.0.jar
+1048873 17820 -r-x------   1 hadoop   hadoop   18245921 Feb 24 23:25 ./__spark_libs__/hadoop-client-api-3.2.1.jar
+1048975  200 -r-x------   1 hadoop   hadoop     201965 Feb 24 23:25 ./__spark_libs__/curator-framework-2.13.0.jar
+1048866 10760 -r-x------   1 hadoop   hadoop   11016376 Feb 24 23:25 ./__spark_libs__/spark-core_2.12-3.3.0.jar
+1048998   24 -r-x------   1 hadoop   hadoop      24248 Feb 24 23:25 ./__spark_libs__/log4j-slf4j-impl-2.17.2.jar
+1048991 1040 -r-x------   1 hadoop   hadoop    1062982 Feb 24 23:25 ./__spark_libs__/api-ldap-model-2.0.0.jar
+1049085   60 -r-x------   1 hadoop   hadoop      59826 Feb 24 23:25 ./__spark_libs__/hadoop-annotations-3.1.3.jar
+1049013  632 -r-x------   1 hadoop   hadoop     644596 Feb 24 23:25 ./__spark_libs__/joda-time-2.10.13.jar
+1049096   40 -r-x------   1 hadoop   hadoop      37777 Feb 24 23:25 ./__spark_libs__/netty-resolver-4.1.74.Final.jar
+1048997   84 -r-x------   1 hadoop   hadoop      82872 Feb 24 23:25 ./__spark_libs__/jakarta.servlet-api-4.0.3.jar
+1048976  184 -r-x------   1 hadoop   hadoop     184512 Feb 24 23:25 ./__spark_libs__/hive-beeline-2.3.9.jar
+1048946   60 -r-x------   1 hadoop   hadoop      58683 Feb 24 23:25 ./__spark_libs__/chill-java-0.10.0.jar
+1049041 1948 -r-x------   1 hadoop   hadoop    1992108 Feb 24 23:25 ./__spark_libs__/parquet-column-1.12.2.jar
+1048977  344 -r-x------   1 hadoop   hadoop     348265 Feb 24 23:25 ./__spark_libs__/json4s-scalap_2.12-3.7.0-M11.jar
+1049104   20 -r-x------   1 hadoop   hadoop      18140 Feb 24 23:25 ./__spark_libs__/jakarta.inject-2.6.1.jar
+1048959  200 -r-x------   1 hadoop   hadoop     204386 Feb 24 23:25 ./__spark_libs__/kerby-pkix-2.0.1.jar
+1049032  708 -r-x------   1 hadoop   hadoop     724092 Feb 24 23:25 ./__spark_libs__/jline-3.11.0.jar
+1049086 3160 -r-x------   1 hadoop   hadoop    3232770 Feb 24 23:25 ./__spark_libs__/derby-10.14.2.0.jar
+1049020   64 -r-x------   1 hadoop   hadoop      64357 Feb 24 23:25 ./__spark_libs__/has-common-2.0.1.jar
+1048879   28 -r-x------   1 hadoop   hadoop      25058 Feb 24 23:25 ./__spark_libs__/jakarta.annotation-api-1.3.5.jar
+1048907   76 -r-x------   1 hadoop   hadoop      77537 Feb 24 23:25 ./__spark_libs__/arpack-2.2.1.jar
+1049109   72 -r-x------   1 hadoop   hadoop      71626 Feb 24 23:25 ./__spark_libs__/commons-compiler-3.0.16.jar
+1049016  100 -r-x------   1 hadoop   hadoop     101340 Feb 24 23:25 ./__spark_libs__/kerby-asn1-2.0.1.jar
+1049094  120 -r-x------   1 hadoop   hadoop     120316 Feb 24 23:25 ./__spark_libs__/json-smart-2.3.jar
+1048863  276 -r-x------   1 hadoop   hadoop     282591 Feb 24 23:25 ./__spark_libs__/jsch-0.1.55.jar
+1048881  124 -r-x------   1 hadoop   hadoop     126094 Feb 24 23:25 ./__spark_libs__/metrics-core-4.2.7.jar
+1049045 10624 -r-x------   1 hadoop   hadoop   10875375 Feb 24 23:25 ./__spark_libs__/hive-exec-2.3.9-core.jar
+1048964   36 -r-x------   1 hadoop   hadoop      36767 Feb 24 23:25 ./__spark_libs__/kerb-util-2.0.1.jar
+1048903  108 -r-x------   1 hadoop   hadoop     108555 Feb 24 23:25 ./__spark_libs__/xz-1.8.jar
+1049022  652 -r-x------   1 hadoop   hadoop     667140 Feb 24 23:25 ./__spark_libs__/mina-core-2.1.3.jar
+1048982   16 -r-x------   1 hadoop   hadoop      15071 Feb 24 23:25 ./__spark_libs__/transaction-api-1.1.jar
+1049072  128 -r-x------   1 hadoop   hadoop     127223 Feb 24 23:25 ./__spark_libs__/remotetea-oncrpc-1.1.2.jar
+1048995   24 -r-x------   1 hadoop   hadoop      24145 Feb 24 23:25 ./__spark_libs__/netty-transport-native-kqueue-4.1.74.Final-osx-aarch_64.jar
+1049038   64 -r-x------   1 hadoop   hadoop      64873 Feb 24 23:25 ./__spark_libs__/flatbuffers-java-1.12.0.jar
+1049050  256 -r-x------   1 hadoop   hadoop     261276 Feb 24 23:25 ./__spark_libs__/api-ldap-extras-codec-2.0.0.jar
+1049095   56 -r-x------   1 hadoop   hadoop      54293 Feb 24 23:25 ./__spark_libs__/pickle-1.2.jar
+1049071  404 -r-x------   1 hadoop   hadoop     410874 Feb 24 23:25 ./__spark_libs__/kryo-shaded-4.0.2.jar
+1049076  572 -r-x------   1 hadoop   hadoop     582362 Feb 24 23:25 ./__spark_libs__/xnio-api-3.6.5.Final.jar
+1048869 1644 -r-x------   1 hadoop   hadoop    1679362 Feb 24 23:25 ./__spark_libs__/hive-service-rpc-3.1.2.jar
+1049083   48 -r-x------   1 hadoop   hadoop      47189 Feb 24 23:25 ./__spark_libs__/wildfly-client-config-1.0.0.Final.jar
+1049061  120 -r-x------   1 hadoop   hadoop     121001 Feb 24 23:25 ./__spark_libs__/hive-shims-common-2.3.9.jar
+1048985  176 -r-x------   1 hadoop   hadoop     178149 Feb 24 23:25 ./__spark_libs__/stream-2.9.6.jar
+1048883  832 -r-x------   1 hadoop   hadoop     848557 Feb 24 23:25 ./__spark_libs__/parquet-encoding-1.12.2.jar
+1049019   20 -r-x------   1 hadoop   hadoop      19827 Feb 24 23:25 ./__spark_libs__/opencsv-2.3.jar
+1049073   12 -r-x------   1 hadoop   hadoop      12131 Feb 24 23:25 ./__spark_libs__/jpam-1.1.jar
+1048947  424 -r-x------   1 hadoop   hadoop     434043 Feb 24 23:25 ./__spark_libs__/spark-graphx_2.12-3.3.0.jar
+1049082  220 -r-x------   1 hadoop   hadoop     222980 Feb 24 23:25 ./__spark_libs__/scala-parser-combinators_2.12-1.1.2.jar
+1049042   44 -r-x------   1 hadoop   hadoop      43167 Feb 24 23:25 ./__spark_libs__/api-asn1-ber-2.0.0.jar
+1049123   24 -r-x------   1 hadoop   hadoop      23265 Feb 24 23:25 ./__spark_libs__/metrics-graphite-4.2.7.jar
+1048981 2368 -r-x------   1 hadoop   hadoop    2423157 Feb 24 23:25 ./__spark_libs__/curator-client-2.13.0.jar
+1049009  516 -r-x------   1 hadoop   hadoop     526286 Feb 24 23:25 ./__spark_libs__/json4s-core_2.12-3.7.0-M11.jar
+1049008  264 -r-x------   1 hadoop   hadoop     268780 Feb 24 23:25 ./__spark_libs__/jline-2.14.6.jar
+1048912   32 -r-x------   1 hadoop   hadoop      30727 Feb 24 23:25 ./__spark_libs__/spark-sketch_2.12-3.3.0.jar
+1049106   12 -r-x------   1 hadoop   hadoop       8987 Feb 24 23:25 ./__spark_libs__/hive-shims-2.3.9.jar
+1049046 5748 -r-x------   1 hadoop   hadoop    5885445 Feb 24 23:25 ./__spark_libs__/zstd-jni-1.5.2-1.jar
+1048926   20 -r-x------   1 hadoop   hadoop      18359 Feb 24 23:25 ./__spark_libs__/kerb-identity-2.0.1.jar
+1049021   72 -r-x------   1 hadoop   hadoop      73405 Feb 24 23:25 ./__spark_libs__/jersey-container-servlet-core-2.34.jar
+1049036  908 -r-x------   1 hadoop   hadoop     926574 Feb 24 23:25 ./__spark_libs__/janino-3.0.16.jar
+1048890    8 -r-x------   1 hadoop   hadoop       4722 Feb 24 23:25 ./__spark_libs__/jcip-annotations-1.0-1.jar
+1049079 7076 -r-x------   1 hadoop   hadoop    7243903 Feb 24 23:25 ./__spark_libs__/spire_2.12-0.17.0.jar
+1048860   32 -r-x------   1 hadoop   hadoop      29263 Feb 24 23:25 ./__spark_libs__/orc-shims-1.7.4.jar
+1048963 1144 -r-x------   1 hadoop   hadoop    1168417 Feb 24 23:25 ./__spark_libs__/algebra_2.12-2.0.1.jar
+1048958   88 -r-x------   1 hadoop   hadoop      87023 Feb 24 23:25 ./__spark_libs__/api-i18n-2.0.0.jar
+1048922  196 -r-x------   1 hadoop   hadoop     200223 Feb 24 23:25 ./__spark_libs__/hk2-api-2.6.1.jar
+1048906 1504 -r-x------   1 hadoop   hadoop    1536542 Feb 24 23:25 ./__spark_libs__/jackson-databind-2.13.3.jar
+1048888  764 -r-x------   1 hadoop   hadoop     780664 Feb 24 23:25 ./__spark_libs__/jackson-mapper-asl-1.9.13.jar
+1048983  164 -r-x------   1 hadoop   hadoop     167761 Feb 24 23:25 ./__spark_libs__/antlr-runtime-3.5.2.jar
+1048978   20 -r-x------   1 hadoop   hadoop      19014 Feb 24 23:25 ./__spark_libs__/annotations-17.0.0.jar
+1049091  184 -r-x------   1 hadoop   hadoop     185616 Feb 24 23:25 ./__spark_libs__/avro-ipc-1.11.0.jar
+1049075   48 -r-x------   1 hadoop   hadoop      48253 Feb 24 23:25 ./__spark_libs__/orc-mapreduce-1.7.4.jar
+1049120  116 -r-x------   1 hadoop   hadoop     115498 Feb 24 23:25 ./__spark_libs__/jakarta.xml.bind-api-2.3.2.jar
+1048911  232 -r-x------   1 hadoop   hadoop     236672 Feb 24 23:25 ./__spark_libs__/hive-storage-api-2.7.2.jar
+1049070  232 -r-x------   1 hadoop   hadoop     233745 Feb 24 23:25 ./__spark_libs__/threeten-extra-1.5.0.jar
+1048865  336 -r-x------   1 hadoop   hadoop     342526 Feb 24 23:25 ./__spark_libs__/nimbus-jose-jwt-8.2.1.jar
+1049063   28 -r-x------   1 hadoop   hadoop      25394 Feb 24 23:25 ./__spark_libs__/netty-transport-native-kqueue-4.1.74.Final-osx-x86_64.jar
+1048901  112 -r-x------   1 hadoop   hadoop     110600 Feb 24 23:25 ./__spark_libs__/bonecp-0.8.0.RELEASE.jar
+1049054 5316 -r-x------   1 hadoop   hadoop    5443542 Feb 24 23:25 ./__spark_libs__/scala-library-2.12.15.jar
+1049078    4 -r-x------   1 hadoop   hadoop       2543 Feb 24 23:25 ./__spark_libs__/shims-0.9.25.jar
+1049040 8012 -r-x------   1 hadoop   hadoop    8201240 Feb 24 23:25 ./__spark_libs__/hive-metastore-2.3.9.jar
+1048974  308 -r-x------   1 hadoop   hadoop     315001 Feb 24 23:25 ./__spark_libs__/api-ldap-codec-core-2.0.0.jar
+1049029 2360 -r-x------   1 hadoop   hadoop    2414964 Feb 24 23:25 ./__spark_libs__/spark-network-common_2.12-3.3.0.jar
+1048971 1160 -r-x------   1 hadoop   hadoop    1185133 Feb 24 23:25 ./__spark_libs__/jersey-common-2.34.jar
+1049103   36 -r-x------   1 hadoop   hadoop      34654 Feb 24 23:25 ./__spark_libs__/paranamer-2.8.jar
+1048920  320 -r-x------   1 hadoop   hadoop     327410 Feb 24 23:25 ./__spark_libs__/hive-llap-common-2.3.9.jar
+1049025   32 -r-x------   1 hadoop   hadoop      32387 Feb 24 23:25 ./__spark_libs__/jersey-container-servlet-2.34.jar
+1049092   92 -r-x------   1 hadoop   hadoop      91930 Feb 24 23:25 ./__spark_libs__/jakarta.validation-api-2.0.2.jar
+1049043    8 -r-x------   1 hadoop   hadoop       4589 Feb 24 23:25 ./__spark_libs__/jul-to-slf4j-1.7.32.jar
+1048933  996 -r-x------   1 hadoop   hadoop    1018316 Feb 24 23:25 ./__spark_libs__/commons-compress-1.21.jar
+1049002   40 -r-x------   1 hadoop   hadoop      39404 Feb 24 23:25 ./__spark_libs__/arrow-memory-netty-7.0.0.jar
+1049111 1772 -r-x------   1 hadoop   hadoop    1811089 Feb 24 23:25 ./__spark_libs__/log4j-core-2.17.2.jar
+1048970   80 -r-x------   1 hadoop   hadoop      80872 Feb 24 23:25 ./__spark_libs__/hadoop-yarn-server-web-proxy-3.2.1.jar
+1049074  112 -r-x------   1 hadoop   hadoop     112235 Feb 24 23:25 ./__spark_libs__/scala-collection-compat_2.12-2.1.1.jar
+1049055 8828 -r-x------   1 hadoop   hadoop    9038556 Feb 24 23:25 ./__spark_libs__/spark-sql_2.12-3.3.0.jar
+1048861   52 -r-x------   1 hadoop   hadoop      53194 Feb 24 23:25 ./__spark_libs__/spark-unsafe_2.12-3.3.0.jar
+1048979  220 -r-x------   1 hadoop   hadoop     221719 Feb 24 23:25 ./__spark_libs__/wildfly-common-1.3.0.Final.jar
+1049105  244 -r-x------   1 hadoop   hadoop     246445 Feb 24 23:25 ./__spark_libs__/libthrift-0.12.0.jar
+1049065  280 -r-x------   1 hadoop   hadoop     283653 Feb 24 23:25 ./__spark_libs__/curator-recipes-2.13.0.jar
+1048968  384 -r-x------   1 hadoop   hadoop     392124 Feb 24 23:25 ./__spark_libs__/velocity-1.5.jar
+1049108   40 -r-x------   1 hadoop   hadoop      40163 Feb 24 23:25 ./__spark_libs__/netty-transport-native-unix-common-4.1.74.Final.jar
+1049035  280 -r-x------   1 hadoop   hadoop     284220 Feb 24 23:25 ./__spark_libs__/commons-lang-2.6.jar
+1048969  212 -r-x------   1 hadoop   hadoop     216211 Feb 24 23:25 ./__spark_libs__/commons-text-1.9.jar
+1049023 35240 -r-x------   1 hadoop   hadoop   36085422 Feb 24 23:25 ./__spark_libs__/rocksdbjni-6.20.3.jar
+1048957  140 -r-x------   1 hadoop   hadoop     140376 Feb 24 23:25 ./__spark_libs__/jakarta.ws.rs-api-2.1.6.jar
+1048984  200 -r-x------   1 hadoop   hadoop     203358 Feb 24 23:25 ./__spark_libs__/hk2-locator-2.6.1.jar
+1048874  100 -r-x------   1 hadoop   hadoop     102244 Feb 24 23:25 ./__spark_libs__/jaxb-api-2.2.11.jar
+1048882 1864 -r-x------   1 hadoop   hadoop    1908681 Feb 24 23:25 ./__spark_libs__/datanucleus-rdbms-4.1.19.jar
+1048927  520 -r-x------   1 hadoop   hadoop     528865 Feb 24 23:25 ./__spark_libs__/netty-handler-4.1.74.Final.jar
+1048924   52 -r-x------   1 hadoop   hadoop      49414 Feb 24 23:25 ./__spark_libs__/objenesis-3.2.jar
+1049101   12 -r-x------   1 hadoop   hadoop       8455 Feb 24 23:25 ./__spark_libs__/spire-platform_2.12-0.17.0.jar
+1049115  668 -r-x------   1 hadoop   hadoop     682804 Feb 24 23:25 ./__spark_libs__/lz4-java-1.8.0.jar
+1048887   48 -r-x------   1 hadoop   hadoop      45703 Feb 24 23:25 ./__spark_libs__/has-client-2.0.1.jar
+1048937  116 -r-x------   1 hadoop   hadoop     116144 Feb 24 23:25 ./__spark_libs__/spark-mllib-local_2.12-3.3.0.jar
+1049062   64 -r-x------   1 hadoop   hadoop      62050 Feb 24 23:25 ./__spark_libs__/commons-logging-1.1.3.jar
+1048900   80 -r-x------   1 hadoop   hadoop      81791 Feb 24 23:25 ./__spark_libs__/compress-lzf-1.1.jar
+1048905 2164 -r-x------   1 hadoop   hadoop    2213560 Feb 24 23:25 ./__spark_libs__/commons-math3-3.6.1.jar
+1049024 12364 -r-x------   1 hadoop   hadoop   12660359 Feb 24 23:25 ./__spark_libs__/spark-catalyst_2.12-3.3.0.jar
+1048935   20 -r-x------   1 hadoop   hadoop      20437 Feb 24 23:25 ./__spark_libs__/audience-annotations-0.5.0.jar
+1048923   24 -r-x------   1 hadoop   hadoop      24177 Feb 24 23:25 ./__spark_libs__/metrics-jvm-4.2.7.jar
+1048986   20 -r-x------   1 hadoop   hadoop      19559 Feb 24 23:25 ./__spark_libs__/token-provider-2.0.1.jar
+1049000  636 -r-x------   1 hadoop   hadoop     650152 Feb 24 23:25 ./__spark_libs__/netty-common-4.1.74.Final.jar
+1049069  288 -r-x------   1 hadoop   hadoop     294763 Feb 24 23:25 ./__spark_libs__/xbean-asm9-shaded-4.20.jar
+1048939   20 -r-x------   1 hadoop   hadoop      18336 Feb 24 23:25 ./__spark_libs__/jackson-jaxrs-1.9.13.jar
+1049059   72 -r-x------   1 hadoop   hadoop      72596 Feb 24 23:25 ./__spark_libs__/kerb-common-2.0.1.jar
+1049088   20 -r-x------   1 hadoop   hadoop      19479 Feb 24 23:25 ./__spark_libs__/osgi-resource-locator-1.0.3.jar
+1048880   28 -r-x------   1 hadoop   hadoop      26514 Feb 24 23:25 ./__spark_libs__/stax-api-1.0.1.jar
+1049099   56 -r-x------   1 hadoop   hadoop      55888 Feb 24 23:25 ./__spark_libs__/hive-shims-0.23-2.3.9.jar
+1048864  224 -r-x------   1 hadoop   hadoop     226583 Feb 24 23:25 ./__spark_libs__/kerb-core-2.0.1.jar
+1048955  164 -r-x------   1 hadoop   hadoop     165348 Feb 24 23:25 ./__spark_libs__/jersey-json-1.19.4.jar
+1049027   28 -r-x------   1 hadoop   hadoop      27084 Feb 24 23:25 ./__spark_libs__/jackson-xc-1.9.13.jar
+1049100  928 -r-x------   1 hadoop   hadoop     946794 Feb 24 23:25 ./__spark_libs__/jersey-server-2.34.jar
+1048972 1296 -r-x------   1 hadoop   hadoop    1323178 Feb 24 23:25 ./__spark_libs__/tink-1.6.1.jar
+1048996 29568 -r-x------   1 hadoop   hadoop   30276738 Feb 24 23:25 ./__spark_libs__/hadoop-client-runtime-3.2.1.jar
+1048918  524 -r-x------   1 hadoop   hadoop     533455 Feb 24 23:25 ./__spark_libs__/protobuf-java-2.5.0.jar
+1048925 5996 -r-x------   1 hadoop   hadoop    6138986 Feb 24 23:25 ./__spark_libs__/spark-mllib_2.12-3.3.0.jar
+1049047   40 -r-x------   1 hadoop   hadoop      40916 Feb 24 23:25 ./__spark_libs__/kerby-util-2.0.1.jar
+1048867   32 -r-x------   1 hadoop   hadoop      30772 Feb 24 23:25 ./__spark_libs__/kerby-config-2.0.1.jar
+1049068 1808 -r-x------   1 hadoop   hadoop    1851317 Feb 24 23:25 ./__spark_libs__/arrow-vector-7.0.0.jar
+1049005  576 -r-x------   1 hadoop   hadoop     587402 Feb 24 23:25 ./__spark_libs__/commons-lang3-3.12.0.jar
+1049060  796 -r-x------   1 hadoop   hadoop     813149 Feb 24 23:25 ./__spark_libs__/lapack-2.2.1.jar
+1049098 1972 -r-x------   1 hadoop   hadoop    2016766 Feb 24 23:25 ./__spark_libs__/datanucleus-core-4.1.17.jar
+1049037  136 -r-x------   1 hadoop   hadoop     136363 Feb 24 23:25 ./__spark_libs__/HikariCP-2.5.1.jar
+1048954  308 -r-x------   1 hadoop   hadoop     313702 Feb 24 23:25 ./__spark_libs__/libfb303-0.9.3.jar
+1048992 4092 -r-x------   1 hadoop   hadoop    4189874 Feb 24 23:25 ./__spark_libs__/bcprov-jdk15on-1.60.jar
+1048961  452 -r-x------   1 hadoop   hadoop     458981 Feb 24 23:25 ./__spark_libs__/jackson-module-scala_2.12-2.13.3.jar
+1048921   68 -r-x------   1 hadoop   hadoop      66023 Feb 24 23:25 ./__spark_libs__/jboss-logging-3.3.1.Final.jar
+1049107   36 -r-x------   1 hadoop   hadoop      36199 Feb 24 23:25 ./__spark_libs__/netty-transport-native-epoll-4.1.74.Final-linux-x86_64.jar
+1049015  332 -r-x------   1 hadoop   hadoop     337126 Feb 24 23:25 ./__spark_libs__/netty-codec-4.1.74.Final.jar
+1048930  388 -r-x------   1 hadoop   hadoop     395195 Feb 24 23:25 ./__spark_libs__/javolution-5.5.1.jar
+1048956  232 -r-x------   1 hadoop   hadoop     236660 Feb 24 23:25 ./__spark_libs__/ST4-4.0.4.jar
+1048872  100 -r-x------   1 hadoop   hadoop     101270 Feb 24 23:25 ./__spark_libs__/api-ldap-extras-codec-api-2.0.0.jar
+1048919 1928 -r-x------   1 hadoop   hadoop    1970939 Feb 24 23:25 ./__spark_libs__/snappy-java-1.1.8.4.jar
+1048942  352 -r-x------   1 hadoop   hadoop     357571 Feb 24 23:25 ./__spark_libs__/spark-yarn_2.12-3.3.0.jar
+1048891   40 -r-x------   1 hadoop   hadoop      37683 Feb 24 23:25 ./__spark_libs__/netty-transport-native-epoll-4.1.74.Final-linux-aarch_64.jar
+1048914   28 -r-x------   1 hadoop   hadoop      27006 Feb 24 23:25 ./__spark_libs__/aopalliance-repackaged-2.6.1.jar
+1048871  164 -r-x------   1 hadoop   hadoop     164422 Feb 24 23:25 ./__spark_libs__/core-1.1.2.jar
+1049004  432 -r-x------   1 hadoop   hadoop     441689 Feb 24 23:25 ./__spark_libs__/hive-common-2.3.9.jar
+1048878 3272 -r-x------   1 hadoop   hadoop    3347200 Feb 24 23:25 ./__spark_libs__/hadoop-shaded-guava-1.1.0.jar
+1049018  440 -r-x------   1 hadoop   hadoop     447005 Feb 24 23:25 ./__spark_libs__/univocity-parsers-2.9.1.jar
+1048965  196 -r-x------   1 hadoop   hadoop     198476 Feb 24 23:25 ./__spark_libs__/blas-2.2.1.jar
+1048899  320 -r-x------   1 hadoop   hadoop     327135 Feb 24 23:25 ./__spark_libs__/commons-io-2.11.0.jar
+1049090   36 -r-x------   1 hadoop   hadoop      34943 Feb 24 23:25 ./__spark_libs__/netty-tcnative-classes-2.0.48.Final.jar
+1048913  348 -r-x------   1 hadoop   hadoop     353793 Feb 24 23:25 ./__spark_libs__/commons-codec-1.15.jar
+2621565    4 -rwx------   1 hadoop   hadoop        664 Feb 24 23:25 ./default_container_executor_session.sh
+2621567    4 -rwx------   1 hadoop   hadoop        719 Feb 24 23:25 ./default_container_executor.sh
+broken symlinks(find -L . -maxdepth 5 -type l -ls):
+
+End of LogType:directory.info
+*******************************************************************************
+
+Container: container_1740409812679_0004_01_000001 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:launch_container.sh
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:6538
+LogContents:
+#!/bin/bash
+
+set -o pipefail -e
+export PRELAUNCH_OUT="/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/prelaunch.out"
+exec >"${PRELAUNCH_OUT}"
+export PRELAUNCH_ERR="/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/prelaunch.err"
+exec 2>"${PRELAUNCH_ERR}"
+echo "Setting up env variables"
+export JAVA_HOME=${JAVA_HOME:-"/usr/lib/jvm/java"}
+export HADOOP_COMMON_HOME=${HADOOP_COMMON_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_HDFS_HOME=${HADOOP_HDFS_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/taihao-apps/hadoop-conf"}
+export HADOOP_YARN_HOME=${HADOOP_YARN_HOME:-"/opt/apps/YARN/yarn-current"}
+export HADOOP_HOME=${HADOOP_HOME:-"/opt/apps/YARN/yarn-current"}
+export PATH=${PATH:-"/sbin:/bin:/usr/sbin:/usr/bin"}
+export LANG=${LANG:-"en_US.UTF-8"}
+export HADOOP_TOKEN_FILE_LOCATION="/mnt/disk2/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000001/container_tokens"
+export CONTAINER_ID="container_1740409812679_0004_01_000001"
+export NM_PORT="8041"
+export NM_HOST="core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com"
+export NM_HTTP_PORT="8042"
+export LOCAL_DIRS="/mnt/disk1/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk2/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk3/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004,/mnt/disk4/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004"
+export LOCAL_USER_DIRS="/mnt/disk1/yarn/nm-local-dir/usercache/root/,/mnt/disk2/yarn/nm-local-dir/usercache/root/,/mnt/disk3/yarn/nm-local-dir/usercache/root/,/mnt/disk4/yarn/nm-local-dir/usercache/root/"
+export LOG_DIRS="/mnt/disk1/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001,/mnt/disk2/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001,/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001,/mnt/disk4/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001"
+export USER="root"
+export LOGNAME="root"
+export HOME="/home/"
+export PWD="/mnt/disk2/yarn/nm-local-dir/usercache/root/appcache/application_1740409812679_0004/container_1740409812679_0004_01_000001"
+export JVM_PID="$$"
+export MALLOC_ARENA_MAX="4"
+export NM_AUX_SERVICE_spark_shuffle=""
+export NM_AUX_SERVICE_mapreduce_shuffle="AAA0+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+export SPARK_YARN_STAGING_DIR="hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0004"
+export PYTHONPATH="$PWD/pyspark.zip:$PWD/py4j-0.10.9.5-src.zip"
+export APPLICATION_WEB_PROXY_BASE="/proxy/application_1740409812679_0004"
+export CLASSPATH="/opt/apps/METASTORE/metastore-current/hive2/*:/opt/apps/JINDOSDK/jindosdk-current/lib/*:/opt/apps/EMRHOOK/emrhook-current/spark-hook-1.1.4-spark30.jar:$PWD:$PWD/__spark_conf__:$PWD/__spark_libs__/*:$PWD/__spark_conf__/__hadoop_conf__"
+export APP_SUBMIT_TIME_ENV="1740410736116"
+export SPARK_USER="root"
+echo "Setting up job resources"
+ln -sf -- "/mnt/disk4/yarn/nm-local-dir/usercache/root/filecache/21/__spark_libs__1414285758766144539.zip" "__spark_libs__"
+ln -sf -- "/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/24/hive-site.xml" "hive-site.xml"
+ln -sf -- "/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/20/pyspark.zip" "pyspark.zip"
+ln -sf -- "/mnt/disk3/yarn/nm-local-dir/usercache/root/filecache/23/py4j-0.10.9.5-src.zip" "py4j-0.10.9.5-src.zip"
+ln -sf -- "/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/22/__spark_conf__.zip" "__spark_conf__"
+echo "Copying debugging information"
+# Creating copy of launch script
+cp "launch_container.sh" "/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/launch_container.sh"
+chmod 640 "/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/launch_container.sh"
+# Determining directory contents
+echo "ls -l:" 1>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/directory.info"
+ls -l 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/directory.info"
+echo "find -L . -maxdepth 5 -ls:" 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/directory.info"
+find -L . -maxdepth 5 -ls 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/directory.info"
+echo "broken symlinks(find -L . -maxdepth 5 -type l -ls):" 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/directory.info"
+find -L . -maxdepth 5 -type l -ls 1>>"/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/directory.info"
+echo "Launching container"
+exec /bin/bash -c "$JAVA_HOME/bin/java -server -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Xmx512m -Djava.io.tmpdir=$PWD/tmp '-noverify' '-javaagent:/opt/apps/TAIHAODOCTOR/taihaodoctor-current/emr-agent/btrace-agent.jar=libs=spark-3.2' -Dspark.yarn.app.container.log.dir=/mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001 org.apache.spark.deploy.yarn.ExecutorLauncher --arg 'master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42271' --properties-file $PWD/__spark_conf__/__spark_conf__.properties --dist-cache-conf $PWD/__spark_conf__/__spark_dist_cache__.properties 1> /mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/stdout 2> /mnt/disk3/yarn/userlogs/application_1740409812679_0004/container_1740409812679_0004_01_000001/stderr"
+
+End of LogType:launch_container.sh
+************************************************************************************
+
+
+End of LogType:prelaunch.err
+******************************************************************************
+
+Container: container_1740409812679_0004_01_000001 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:prelaunch.out
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:100
+LogContents:
+Setting up env variables
+Setting up job resources
+Copying debugging information
+Launching container
+
+End of LogType:prelaunch.out
+******************************************************************************
+
+Container: container_1740409812679_0004_01_000001 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:stderr
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:81
+LogContents:
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+
+End of LogType:stderr
+***********************************************************************
+
+Container: container_1740409812679_0004_01_000001 on core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com_8041
+LogAggregationType: AGGREGATED
+==================================================================================================================
+LogType:stdout
+LogLastModifiedTime:Mon Feb 24 23:25:50 +0800 2025
+LogLength:8560
+LogContents:
+25/02/24 23:25:38 INFO SignalUtils: Registering signal handler for TERM
+25/02/24 23:25:38 INFO SignalUtils: Registering signal handler for HUP
+25/02/24 23:25:38 INFO SignalUtils: Registering signal handler for INT
+25/02/24 23:25:39 INFO SecurityManager: Changing view acls to: hadoop,root,*
+25/02/24 23:25:39 INFO SecurityManager: Changing modify acls to: hadoop,root
+25/02/24 23:25:39 INFO SecurityManager: Changing view acls groups to: 
+25/02/24 23:25:39 INFO SecurityManager: Changing modify acls groups to: 
+25/02/24 23:25:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop, root, *); groups with view permissions: Set(); users  with modify permissions: Set(hadoop, root); groups with modify permissions: Set()
+25/02/24 23:25:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/02/24 23:25:39 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1740409812679_0004_000001
+25/02/24 23:25:39 INFO RMProxy: Connecting to ResourceManager at master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:8030
+25/02/24 23:25:39 INFO YarnRMClient: Registering the ApplicationMaster
+25/02/24 23:25:39 INFO TransportClientFactory: Successfully created connection to master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com/192.168.0.180:42271 after 40 ms (0 ms spent in bootstraps)
+25/02/24 23:25:39 INFO ApplicationMaster: Preparing Local resources
+25/02/24 23:25:40 WARN DomainSocketFactory: The short-circuit local reads feature cannot be used because libhadoop cannot be loaded.
+25/02/24 23:25:40 INFO ApplicationMaster: 
+===============================================================================
+Default YARN executor launch context:
+  env:
+    CLASSPATH -> /opt/apps/METASTORE/metastore-current/hive2/*:/opt/apps/JINDOSDK/jindosdk-current/lib/*:/opt/apps/EMRHOOK/emrhook-current/spark-hook-1.1.4-spark30.jar<CPS>{{PWD}}<CPS>{{PWD}}/__spark_conf__<CPS>{{PWD}}/__spark_libs__/*<CPS>{{PWD}}/__spark_conf__/__hadoop_conf__
+    SPARK_YARN_STAGING_DIR -> hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0004
+    SPARK_USER -> root
+    PYTHONPATH -> {{PWD}}/pyspark.zip<CPS>{{PWD}}/py4j-0.10.9.5-src.zip
+
+  command:
+    LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH:/opt/apps/YARN/yarn-current/lib/native/:/opt/apps/SPARK3/spark-current/lib/native/:$LD_LIBRARY_PATH\" \ 
+      {{JAVA_HOME}}/bin/java \ 
+      -server \ 
+      -Xmx2948m \ 
+      '-XX:+IgnoreUnrecognizedVMOptions' \ 
+      '--add-opens=java.base/java.lang=ALL-UNNAMED' \ 
+      '--add-opens=java.base/java.lang.invoke=ALL-UNNAMED' \ 
+      '--add-opens=java.base/java.lang.reflect=ALL-UNNAMED' \ 
+      '--add-opens=java.base/java.io=ALL-UNNAMED' \ 
+      '--add-opens=java.base/java.net=ALL-UNNAMED' \ 
+      '--add-opens=java.base/java.nio=ALL-UNNAMED' \ 
+      '--add-opens=java.base/java.util=ALL-UNNAMED' \ 
+      '--add-opens=java.base/java.util.concurrent=ALL-UNNAMED' \ 
+      '--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED' \ 
+      '--add-opens=java.base/sun.nio.ch=ALL-UNNAMED' \ 
+      '--add-opens=java.base/sun.nio.cs=ALL-UNNAMED' \ 
+      '--add-opens=java.base/sun.security.action=ALL-UNNAMED' \ 
+      '--add-opens=java.base/sun.util.calendar=ALL-UNNAMED' \ 
+      '--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED' \ 
+      '-Dlog4j2.formatMsgNoLookups=true' \ 
+      '-Dlog4j.configuration=/etc/taihao-apps/spark-conf/log4j.properties' \ 
+      '-noverify' \ 
+      '-javaagent:/opt/apps/TAIHAODOCTOR/taihaodoctor-current/emr-agent/btrace-agent.jar=libs=spark-3.2' \ 
+      -Djava.io.tmpdir={{PWD}}/tmp \ 
+      '-Dspark.driver.port=42271' \ 
+      '-Dspark.history.ui.port=18080' \ 
+      '-Dspark.shuffle.service.port=7337' \ 
+      -Dspark.yarn.app.container.log.dir=<LOG_DIR> \ 
+      -XX:OnOutOfMemoryError='kill %p' \ 
+      org.apache.spark.executor.YarnCoarseGrainedExecutorBackend \ 
+      --driver-url \ 
+      spark://CoarseGrainedScheduler@master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42271 \ 
+      --executor-id \ 
+      <executorId> \ 
+      --hostname \ 
+      <hostname> \ 
+      --cores \ 
+      1 \ 
+      --app-id \ 
+      application_1740409812679_0004 \ 
+      --resourceProfileId \ 
+      0 \ 
+      1><LOG_DIR>/stdout \ 
+      2><LOG_DIR>/stderr
+
+  resources:
+    __spark_conf__ -> resource { scheme: "hdfs" host: "master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com" port: 9000 file: "/user/root/.sparkStaging/application_1740409812679_0004/__spark_conf__.zip" } size: 360555 timestamp: 1740410736062 type: ARCHIVE visibility: PRIVATE
+    pyspark.zip -> resource { scheme: "hdfs" host: "master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com" port: 9000 file: "/user/root/.sparkStaging/application_1740409812679_0004/pyspark.zip" } size: 1529089 timestamp: 1740410735848 type: FILE visibility: PRIVATE
+    py4j-0.10.9.5-src.zip -> resource { scheme: "hdfs" host: "master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com" port: 9000 file: "/user/root/.sparkStaging/application_1740409812679_0004/py4j-0.10.9.5-src.zip" } size: 42404 timestamp: 1740410735863 type: FILE visibility: PRIVATE
+    __spark_libs__ -> resource { scheme: "hdfs" host: "master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com" port: 9000 file: "/user/root/.sparkStaging/application_1740409812679_0004/__spark_libs__1414285758766144539.zip" } size: 294972432 timestamp: 1740410735766 type: ARCHIVE visibility: PRIVATE
+    hive-site.xml -> resource { scheme: "hdfs" host: "master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com" port: 9000 file: "/user/root/.sparkStaging/application_1740409812679_0004/hive-site.xml" } size: 9182 timestamp: 1740410735827 type: FILE visibility: PRIVATE
+
+===============================================================================
+25/02/24 23:25:40 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 2948, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/02/24 23:25:40 INFO YarnAllocator: Resource profile 0 doesn't exist, adding it
+25/02/24 23:25:40 INFO Configuration: found resource resource-types.xml at file:/mnt/disk2/yarn/nm-local-dir/usercache/root/filecache/22/__spark_conf__.zip/__hadoop_conf__/resource-types.xml
+25/02/24 23:25:40 INFO YarnAllocator: Will request 2 executor container(s) for  ResourceProfile Id: 0, each with 1 core(s) and 3332 MB memory. with custom resources: <memory:3332, vCores:1>
+25/02/24 23:25:40 INFO YarnAllocator: Submitted 2 unlocalized container requests.
+25/02/24 23:25:40 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+25/02/24 23:25:41 INFO YarnAllocator: Launching container container_1740409812679_0004_01_000002 on host core-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com for executor with ID 1 for ResourceProfile Id 0
+25/02/24 23:25:41 INFO YarnAllocator: Launching container container_1740409812679_0004_01_000003 on host core-1-2.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com for executor with ID 2 for ResourceProfile Id 0
+25/02/24 23:25:41 INFO YarnAllocator: Received 2 containers from YARN, launching executors on 2 of them.
+25/02/24 23:25:41 INFO ExecutorRunnable: Initializing service data for shuffle service using name 'spark_shuffle'
+25/02/24 23:25:41 INFO ExecutorRunnable: Initializing service data for shuffle service using name 'spark_shuffle'
+25/02/24 23:25:48 INFO ApplicationMaster$AMEndpoint: Driver terminated or disconnected! Shutting down. master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42271
+25/02/24 23:25:48 INFO ApplicationMaster$AMEndpoint: Driver terminated or disconnected! Shutting down. master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:42271
+25/02/24 23:25:48 INFO ApplicationMaster: Final app status: SUCCEEDED, exitCode: 0
+25/02/24 23:25:48 INFO ApplicationMaster: Unregistering ApplicationMaster with SUCCEEDED
+25/02/24 23:25:48 INFO AMRMClientImpl: Waiting for application to be successfully unregistered.
+25/02/24 23:25:48 INFO ApplicationMaster: Deleting staging directory hdfs://master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:9000/user/root/.sparkStaging/application_1740409812679_0004
+25/02/24 23:25:48 INFO ShutdownHookManager: Shutdown hook called
+
+End of LogType:stdout
+***********************************************************************
+

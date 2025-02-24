@@ -1,0 +1,7 @@
+{
+    "master_node": {
+        "public_ip": "116.62.148.109",
+        "private_ip": "192.168.0.180",
+        "instance_type": "ecs.g7.xlarge"
+    }
+}

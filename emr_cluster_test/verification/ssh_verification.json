@@ -1,0 +1,10 @@
+{
+    "verification_time": "2025-02-24 15:19:27 UTC",
+    "ssh_status": "success",
+    "hostname": "master-1-1.c-dca6391bee134114",
+    "master_node": {
+        "public_ip": "116.62.148.109",
+        "connection_type": "root SSH access",
+        "system_status": "up and running"
+    }
+}

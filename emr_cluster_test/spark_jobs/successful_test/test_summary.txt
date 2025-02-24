@@ -1,0 +1,14 @@
+Spark test job results:
+- Job completed successfully at Mon Feb 24 15:23:08 UTC 2025
+- Execution time: 1.705 seconds
+- Used 2 executors on core nodes
+- All stages completed successfully
+Word Count Results:
+Cluster: 1
+EMR: 2
+Hello: 1
+Job: 2
+Running: 1
+Spark: 3
+Test: 2
+Testing: 1
