@@ -50,20 +50,6 @@ def test_local() -> Dict[str, Any]:
     except Exception as e:
         print(f"\nError in test execution: {str(e)}")
         raise
-        print("\n5. Collecting debug information...")
-        debug_info_path = collector.collect_all()
-        print(f"Debug information collected at: {debug_info_path}")
-        
-        return {
-            'cluster_id': cluster_info['cluster_id'],
-            'master_ip': cluster_status['master_public_ip'],
-            'cluster_state': cluster_status['cluster_state'],
-            'debug_info_path': debug_info_path
-        }
-        
-    except Exception as e:
-        print(f"\nError in execution: {str(e)}")
-        raise
 
 if __name__ == "__main__":
     try:
