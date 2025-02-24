@@ -10,32 +10,36 @@ debug_info_{timestamp}/
 ```
 
 ## Collected Information
-1. Application logs and error traces
-   - Spark driver logs
-   - Spark executor logs
-   - YARN application logs
+
+1. Configuration Files
+   - Spark configuration (spark-defaults.conf)
+   - YARN configuration (yarn-site.xml)
+   - HDFS configuration (hdfs-site.xml)
+
+2. Application Logs and Error Traces
+   - Spark application logs
    - Error stack traces
+   - System logs
 
-2. System resource metrics
-   - CPU utilization
-   - Memory usage
-   - Disk I/O
-   - Network statistics
+3. System Resource Metrics
+   - CPU: Utilization, load, stats
+   - Memory: Usage, stats, details
+   - Disk: Space, I/O, stats
+   - Network: Stats, interfaces, throughput
 
-3. Configuration files
-   - Spark configuration
-   - YARN configuration
-   - HDFS configuration
+4. Cluster Health Metrics
+   - YARN metrics: nodes, applications, queues
+   - HDFS metrics: report, health, space
+   - Spark metrics: applications, executors
+   - Node metrics: processes, system load
 
-4. Cluster health metrics
-   - Node status
-   - YARN metrics
-   - HDFS metrics
-
-5. Job execution data
-   - Spark application metrics
-   - Task statistics
+5. Job Execution Data
+   - Application metrics
+   - Container logs
    - Resource allocation
+   - Task statistics
+
+All metrics are collected securely with sensitive information redacted.
 
 ## Usage
 The enhanced collector automatically organizes debug information in timestamped directories:

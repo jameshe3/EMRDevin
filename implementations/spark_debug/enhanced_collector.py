@@ -3,6 +3,7 @@ import os
 import subprocess
 import json
 from datetime import datetime
+import re
 from typing import Dict, Any, List, Optional
 from pathlib import Path
 
@@ -17,19 +18,33 @@ class EnhancedSparkCollector:
         self.ssh_prefix = f'sshpass -p "{self.password}" ssh -o StrictHostKeyChecking=no root@{self.host}'
     
     def _run_command(self, cmd: str, info_type: str, timeout: int = 30) -> str:
-        """Run a command and capture its output."""
+        """Run a command and capture its output, sanitizing sensitive information."""
         try:
             result = subprocess.run(
                 cmd, shell=True, capture_output=True, text=True, timeout=timeout
             )
             if result.returncode == 0:
-                return result.stdout
+                # Sanitize output to remove sensitive information
+                output = self._sanitize_output(result.stdout)
+                return output
             else:
-                return f"Error collecting {info_type}: {result.stderr}"
+                error = self._sanitize_output(result.stderr)
+                return f"Error collecting {info_type}: {error}"
         except subprocess.TimeoutExpired:
             return f"Timeout while collecting {info_type}"
         except Exception as e:
-            return f"Exception collecting {info_type}: {str(e)}"
+            return f"Exception collecting {info_type}: Collection failed"
+
+    def _sanitize_output(self, output: str) -> str:
+        """Remove sensitive information from command output."""
+        # Remove IP addresses
+        output = re.sub(r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b', '[REDACTED_IP]', output)
+        # Remove potential passwords
+        output = re.sub(r'password[=:]\s*\S+', 'password=[REDACTED]', output, flags=re.IGNORECASE)
+        # Remove potential access keys
+        output = re.sub(r'access[_-]key[_-]id[=:]\s*\S+', 'access_key_id=[REDACTED]', output, flags=re.IGNORECASE)
+        output = re.sub(r'secret[_-]key[=:]\s*\S+', 'secret_key=[REDACTED]', output, flags=re.IGNORECASE)
+        return output
     
     def collect_cluster_metrics(self) -> Dict[str, str]:
         """Collect comprehensive cluster metrics."""
@@ -167,8 +182,11 @@ class EnhancedSparkCollector:
                 'disk/metrics': self._run_command(f'{self.ssh_prefix} "df -h && iostat -x"', 'disk metrics'),
                 'network/metrics': self._run_command(f'{self.ssh_prefix} "netstat -i && sar -n DEV 1 5"', 'network metrics')
             },
-            'resources': self.collect_resource_metrics(),
-            'logs': self.collect_logs(app_id)
+            'logs': {
+                'application/spark': self._run_command(f'{self.ssh_prefix} "yarn logs -applicationId {app_id if app_id else \'$(yarn application -list | grep RUNNING | head -1 | cut -f1)\' }"', 'spark logs'),
+                'error_traces/spark': self._run_command(f'{self.ssh_prefix} "yarn logs -applicationId {app_id if app_id else \'$(yarn application -list | grep RUNNING | head -1 | cut -f1)\'} | grep -A 10 Exception"', 'spark errors'),
+                'system/messages': self._run_command(f'{self.ssh_prefix} "dmesg | tail -n 1000"', 'system logs')
+            }
         }
         
         # Write collected information with proper directory structure
