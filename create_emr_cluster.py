@@ -91,7 +91,7 @@ def get_create_cluster_request(
         deploy_mode='NORMAL',
         security_mode='NORMAL',
         release_version=release_version,
-        password=emr_password,
+        init_custom_password=emr_password,
         node_attributes=emr_20210320_models.NodeAttributes(
             zone_id=zone_id,
             vpc_id=vpc_id,
