@@ -17,9 +17,17 @@ def submit_and_debug(host: str, job_path: str, output_dir: Optional[str] = None)
     collector = ExtendedSparkInfoCollector(host, root_password)
     
     try:
+        # Copy job file to remote host
+        print(f"Copying job file to remote host: {job_path}")
+        remote_job_path = f"/tmp/{os.path.basename(job_path)}"
+        copy_cmd = f'sshpass -p "{root_password}" scp {job_path} root@{host}:{remote_job_path}'
+        copy_status = os.system(copy_cmd)
+        if copy_status != 0:
+            raise RuntimeError("Failed to copy job file to remote host")
+
         # Submit job
-        print(f"Submitting job: {job_path}")
-        submit_cmd = f'spark-submit --master yarn --deploy-mode cluster {job_path}'
+        print(f"Submitting job: {remote_job_path}")
+        submit_cmd = f'spark-submit --master yarn --deploy-mode cluster {remote_job_path}'
         submit_status = os.system(f'sshpass -p "{root_password}" ssh -o StrictHostKeyChecking=no root@{host} "{submit_cmd}"')
         
         if submit_status != 0:
