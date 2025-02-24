@@ -44,9 +44,23 @@ Analysis of the EMR cluster and Spark job (application_1740409812679_0004) revea
 - **Name**: EMR Test - Failing Job
 - **Type**: SPARK
 - **User**: root
-- **Final State**: SUCCEEDED
+- **Final State**: FAILED
 - **Progress**: 100%
 - **History URL**: master-1-1.c-dca6391bee134114.cn-hangzhou.emr.aliyuncs.com:18080/history/application_1740409812679_0004/1
+
+### Root Cause Analysis
+- **Error Type**: IndexError (list index out of range)
+- **Location**: UDF function at line 7 of failing_job.py
+- **Impact**: Task failures across both executors
+- **Failure Pattern**: 
+  - Multiple task retries attempted
+  - All attempts failed with the same IndexError
+  - Job terminated after exhausting retry attempts
+- **Technical Details**:
+  - Python UDF attempted to access invalid list index
+  - Error propagated through Spark's task execution framework
+  - No data corruption or resource issues involved
+  - Pure application logic error
 
 ### Resource Utilization
 - **Memory Usage**: Well within limits (10GB available)
