@@ -8,8 +8,9 @@ import random
 def create_failing_job():
     """Create a Spark job with various failure scenarios."""
     # Create SparkSession using the recommended pattern
-    builder = SparkSession.builder
-    spark = builder.master("local[*]") \
+    spark = SparkSession \
+        .builder \
+        .master("local[*]") \
         .appName("IntentionallyFailingJob") \
         .config("spark.executor.memory", "512m") \
         .config("spark.driver.memory", "512m") \
