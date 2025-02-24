@@ -39,8 +39,9 @@ def verify_cluster_status(cluster_id: str) -> Tuple[bool, str]:
         region_id='cn-hangzhou'
     )
     nodes_response = client.list_nodes(list_nodes_request)
+    nodes = nodes_response.body.nodes
     master_node = next(
-        (node for node in nodes_response.body.node_list if node.node_group_type == 'MASTER'),
+        (node for node in nodes if node.node_group_type == 'MASTER'),
         None
     )
     
