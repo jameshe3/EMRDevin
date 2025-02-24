@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import time
-from collectors.spark_info_collector import SparkInfoCollector
+from spark_debugger.collectors.spark_info_collector import SparkInfoCollector
 
 def submit_job(host, password):
     # Copy the failing job to EMR cluster

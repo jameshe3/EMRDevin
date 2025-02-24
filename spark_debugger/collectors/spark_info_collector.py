@@ -157,7 +157,6 @@ class SparkInfoCollector:
 
 if __name__ == "__main__":
     collector = SparkInfoCollector("112.124.29.1", "1qaz@WSX3edc")
-    results = collector.collect_all()
+    output_dir = collector.collect_all()
     print("Collected information saved to:")
-    for filename, filepath in results.items():
-        print(f"- {filename}: {filepath}")
+    print(f"- {output_dir}")
