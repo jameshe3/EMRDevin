@@ -12,6 +12,8 @@ def create_failing_job():
         .config("spark.executor.instances", "2") \
         .config("spark.yarn.am.memory", "2g") \
         .config("spark.yarn.submit.waitAppCompletion", "true") \
+        .config("spark.sql.warehouse.dir", "/user/hive/warehouse") \
+        .enableHiveSupport() \
         .getOrCreate()
 
     # Read a non-existent file
