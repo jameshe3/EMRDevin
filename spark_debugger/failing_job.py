@@ -1,9 +1,11 @@
 from pyspark.sql import SparkSession
 
 def create_failing_job():
-    builder = SparkSession.builder
-    spark = builder.master("yarn") \
+    spark = SparkSession \
+        .builder \
         .appName("IntentionallyFailingJob") \
+        .config("spark.submit.deployMode", "cluster") \
+        .config("spark.master", "yarn") \
         .getOrCreate()
 
     # Read a non-existent file
