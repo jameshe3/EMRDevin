@@ -3,24 +3,27 @@ import os
 import subprocess
 import json
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 
 class SparkDebugCollector:
     """Enhanced debug information collector for Spark jobs."""
     
-    def __init__(self, host: str, password: str):
+    def __init__(self, host: str, password: Optional[str] = None):
         self.host = host
         self.password = password
-        self.ssh_prefix = f'sshpass -p "{self.password}" ssh -o StrictHostKeyChecking=no root@{self.host}'
+        self.is_local = host == 'localhost'
+        self.ssh_prefix = '' if self.is_local else f'sshpass -p "{self.password}" ssh -o StrictHostKeyChecking=no root@{self.host}'
     
     def _run_command(self, cmd: str, info_type: str, timeout: int = 30) -> str:
         """Run a command and capture its output."""
         try:
+            # For local execution, strip ssh prefix
+            exec_cmd = cmd if self.is_local else f'{self.ssh_prefix} "{cmd}"'
             result = subprocess.run(
-                cmd, shell=True, capture_output=True, text=True, timeout=timeout
+                exec_cmd, shell=True, capture_output=True, text=True, timeout=timeout
             )
             if result.returncode == 0:
-                return result.stdout
+                return result.stdout or "No output"
             else:
                 return f"Error collecting {info_type}: {result.stderr}"
         except subprocess.TimeoutExpired:
@@ -80,7 +83,7 @@ class SparkDebugCollector:
             results[metric_type] = self._run_command(full_cmd, metric_type)
         return results
     
-    def collect_logs(self, app_id: str = None) -> Dict[str, str]:
+    def collect_logs(self, app_id: Optional[str] = None) -> Dict[str, str]:
         """Collect relevant logs."""
         if app_id:
             yarn_logs_cmd = f'yarn logs -applicationId {app_id}'
@@ -100,7 +103,7 @@ class SparkDebugCollector:
             results[log_type] = self._run_command(full_cmd, log_type)
         return results
     
-    def collect_all(self, app_id: str = None) -> str:
+    def collect_all(self, app_id: Optional[str] = None) -> str:
         """Collect all debug information."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_dir = f"debug_info_{timestamp}"
