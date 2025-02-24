@@ -18,7 +18,7 @@ These operations failed as expected, demonstrating proper error handling in the 
 
 ## Configuration Review
 Cluster Configuration:
-- YARN ResourceManager: master-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:8032
+- YARN ResourceManager: <cluster-master-hostname>:8032
 - Memory per Container: 13107 MB (max)
 - AM Container Memory: 3072 MB (including 1024 MB overhead)
 - Deploy Mode: cluster
@@ -68,6 +68,6 @@ The logs confirm that the failure was due to the intentional file access errors 
    - Consider fallback paths for missing files
 
 3. Monitoring:
-   - Monitor application through YARN UI: http://master-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:20888/
+   - Monitor application through YARN UI (available on cluster master node)
    - Set up alerts for application failures
    - Implement retry mechanism for transient failures

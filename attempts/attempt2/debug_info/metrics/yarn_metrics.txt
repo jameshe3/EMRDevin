@@ -1,4 +1,0 @@
-Total Nodes:2
-         Node-Id	     Node-State	Node-Http-Address	Number-of-Running-Containers
-core-1-2.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:8041	        RUNNING	core-1-2.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:8042	                           1
-core-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:8041	        RUNNING	core-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:8042	                           0

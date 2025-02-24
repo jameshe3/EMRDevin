@@ -1,2 +1,0 @@
-Filesystem                                                                 Size     Used  Available  Use%
-hdfs://master-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com:9000  633.7 G  569.0 M    633.1 G    0%

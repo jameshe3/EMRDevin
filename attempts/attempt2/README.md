@@ -16,7 +16,14 @@ attempt2/
 ```
 
 ## Execution Steps
-1. Submit failing job:
+1. Set required environment variables:
+```bash
+export ACCESS_KEY_ID=<your_access_key>
+export ACCESS_KEY_SECRET=<your_secret_key>
+export EMR_ROOT_PASSWORD=<your_root_password>
+```
+
+2. Submit failing job:
 ```bash
 python run_debug.py <master_ip> file_error_job.py
 ```

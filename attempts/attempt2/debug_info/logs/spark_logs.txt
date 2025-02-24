@@ -1,5 +1,0 @@
-Error collecting spark_logs: /etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (C.UTF-8)
-2025-02-24 16:51:24,020 INFO client.RMProxy: Connecting to ResourceManager at master-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com/192.168.0.99:8032
-2025-02-24 16:51:24,160 INFO client.AHSProxy: Connecting to Application History server at master-1-1.c-9d5a54cfca9f2530.cn-hangzhou.emr.aliyuncs.com/192.168.0.99:10200
-Invalid ApplicationId specified
-xargs: yarn: exited with status 255; aborting
