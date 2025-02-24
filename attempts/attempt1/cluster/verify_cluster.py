@@ -55,7 +55,11 @@ def verify_cluster_status(cluster_id: str) -> Tuple[bool, str]:
 
 def verify_ssh_access(public_ip: str) -> bool:
     """Test SSH access to master node."""
-    ssh_cmd = f'ssh -o StrictHostKeyChecking=no -o ConnectTimeout=5 root@{public_ip} "echo SSH test successful"'
+    root_password = os.getenv('EMR_ROOT_PASSWORD')
+    if not root_password:
+        raise ValueError("EMR_ROOT_PASSWORD environment variable must be set")
+    
+    ssh_cmd = f'sshpass -p "{root_password}" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=5 root@{public_ip} "echo SSH test successful"'
     return os.system(ssh_cmd) == 0
 
 def main():
