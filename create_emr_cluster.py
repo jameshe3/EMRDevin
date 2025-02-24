@@ -44,6 +44,8 @@ def get_create_cluster_request(
     security_group_id: str,
     v_switch_id: str,
     instance_type: str,
+    emr_password: str,
+    emr_root_password: str,
 ) -> emr_20210320_models.CreateClusterRequest:
     master_group = emr_20210320_models.NodeGroupConfig(
         node_group_type='MASTER',
@@ -171,7 +173,8 @@ def main():
     
     create_cluster_req = get_create_cluster_request(
         region_id, cluster_name, cluster_type, release_version,
-        vpc_id, zone_id, security_group_id, v_switch_id, instance_type
+        vpc_id, zone_id, security_group_id, v_switch_id, instance_type,
+        emr_password, emr_root_password
     )
     create_cluster_response = client.create_cluster(create_cluster_req)
     body = create_cluster_response.body
