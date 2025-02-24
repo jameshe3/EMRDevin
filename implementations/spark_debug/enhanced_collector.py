@@ -13,13 +13,23 @@ class EnhancedSparkCollector:
     def __init__(self, host: str, password: Optional[str] = None):
         self.host = host
         self.password = password or os.getenv('EMR_ROOT_PASSWORD', '')
-        if not self.password:
+        self.is_local = host == 'localhost'
+        if not self.is_local and not self.password:
             raise ValueError("Password must be provided either directly or via EMR_ROOT_PASSWORD environment variable")
-        self.ssh_prefix = f'sshpass -p "{self.password}" ssh -o StrictHostKeyChecking=no root@{self.host}'
+        self.ssh_prefix = '' if self.is_local else f'sshpass -p "{self.password}" ssh -o StrictHostKeyChecking=no root@{self.host}'
     
     def _run_command(self, cmd: str, info_type: str, timeout: int = 30) -> str:
         """Run a command and capture its output, sanitizing sensitive information."""
         try:
+            # For local testing, use local commands
+            if self.is_local:
+                # Extract the actual command from the SSH command string
+                if '"' in cmd:
+                    cmd = cmd.split('"')[1]
+                # Handle local alternatives for remote commands
+                cmd = cmd.replace('/etc/spark/conf/', '/usr/local/spark/conf/')
+                cmd = cmd.replace('/etc/hadoop/conf/', '/usr/local/hadoop/conf/')
+            
             result = subprocess.run(
                 cmd, shell=True, capture_output=True, text=True, timeout=timeout
             )
@@ -183,8 +193,14 @@ class EnhancedSparkCollector:
                 'network/metrics': self._run_command(f'{self.ssh_prefix} "netstat -i && sar -n DEV 1 5"', 'network metrics')
             },
             'logs': {
-                'application/spark': self._run_command(f'{self.ssh_prefix} "yarn logs -applicationId {app_id if app_id else \'$(yarn application -list | grep RUNNING | head -1 | cut -f1)\' }"', 'spark logs'),
-                'error_traces/spark': self._run_command(f'{self.ssh_prefix} "yarn logs -applicationId {app_id if app_id else \'$(yarn application -list | grep RUNNING | head -1 | cut -f1)\'} | grep -A 10 Exception"', 'spark errors'),
+                'application/spark': self._run_command(
+                    f'{self.ssh_prefix} "yarn logs -applicationId {app_id or "$(yarn application -list | grep RUNNING | head -1 | cut -f1)"}"',
+                    'spark logs'
+                ),
+                'error_traces/spark': self._run_command(
+                    f'{self.ssh_prefix} "yarn logs -applicationId {app_id or "$(yarn application -list | grep RUNNING | head -1 | cut -f1)"} | grep -A 10 Exception"',
+                    'spark errors'
+                ),
                 'system/messages': self._run_command(f'{self.ssh_prefix} "dmesg | tail -n 1000"', 'system logs')
             }
         }

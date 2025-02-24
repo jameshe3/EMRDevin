@@ -88,13 +88,25 @@ def create_failing_job():
             base_df = spark.range(0, 100)
             growing_df = base_df
             
-            print("Starting resource exhaustion loop...")
-            for i in range(5):  # Will try to create an enormous dataset
-                growing_df = growing_df.crossJoin(base_df.select(
-                    col("id").alias(f"id_{i}")
-                ))
-                print(f"Iteration {i}: forcing computation...")
-                growing_df.count()
+            print("Starting resource exhaustion test...")
+            import signal
+            
+            def timeout_handler(signum, frame):
+                raise TimeoutError("Resource exhaustion test timeout")
+            
+            # Set 30 second timeout
+            signal.signal(signal.SIGALRM, timeout_handler)
+            signal.alarm(30)
+            
+            try:
+                for i in range(5):
+                    growing_df = growing_df.crossJoin(base_df.select(
+                        col("id").alias(f"id_{i}")
+                    ))
+                    print(f"Iteration {i}: forcing computation...")
+                    growing_df.count()
+            finally:
+                signal.alarm(0)  # Disable alarm
             
         except Exception as e:
             print(f"Expected resource exhaustion: {str(e)}")

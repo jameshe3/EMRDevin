@@ -16,50 +16,40 @@ def validate_environment() -> None:
     if missing_vars:
         raise ValueError(f"Missing required environment variables: {', '.join(missing_vars)}")
 
-def main() -> Dict[str, Any]:
-    """Main execution flow."""
-    print("Starting EMR cluster creation and debugging process...")
-    
-    # Validate environment
-    validate_environment()
+def test_local() -> Dict[str, Any]:
+    """Test failing job and debug collection locally."""
+    print("Starting local debug testing process...")
     
     try:
-        # Step 1: Create EMR cluster
-        print("\n1. Creating EMR cluster...")
-        cluster_info = create_cluster(
-            ak=os.getenv('ACCESS_KEY_ID'),
-            sk=os.getenv('ACCESS_KEY_SECRET'),
-            vpc_id='vpc-bp167nedawwbwmt9ti0pv',
-            vswitch_id='vsw-bp1bg5pnp84s73pms20cs',
-            security_group_id='sg-bp17gnp2vumd1o4okw4s'
-        )
-        print(f"Cluster created with ID: {cluster_info['cluster_id']}")
+        # Step 1: Run failing job
+        print("\n1. Running failing job scenarios...")
+        from implementations.spark_debug.failing_job import create_failing_job
+        create_failing_job()
         
-        # Step 2: Verify cluster and SSH connectivity
-        print("\n2. Verifying cluster status and connectivity...")
-        cluster_status = verify_cluster(
-            cluster_id=cluster_info['cluster_id'],
-            ak=os.getenv('ACCESS_KEY_ID'),
-            sk=os.getenv('ACCESS_KEY_SECRET')
-        )
-        
-        if not cluster_status['ssh_connectivity']['success']:
-            raise Exception(
-                f"SSH connectivity failed: {cluster_status['ssh_connectivity']['error']}"
-            )
-        
-        print("Cluster verification successful:")
-        print(f"- State: {cluster_status['cluster_state']}")
-        print(f"- Master IP: {cluster_status['master_public_ip']}")
-        
-        # Step 3: Initialize debug collector
-        print("\n3. Initializing debug collector...")
+        # Step 2: Initialize debug collector
+        print("\n2. Collecting debug information...")
+        from implementations.spark_debug.enhanced_collector import EnhancedSparkCollector
         collector = EnhancedSparkCollector(
-            host=cluster_status['master_public_ip'],
-            password=os.getenv('EMR_ROOT_PASSWORD')
+            host='localhost',
+            password=None  # Local testing doesn't need password
         )
         
-        # Step 4: Run failing job
+        # Step 3: Run debug collection
+        debug_info_path = collector.collect_all()
+        print(f"\nDebug information collected at: {debug_info_path}")
+        
+        return {
+            'debug_info_path': debug_info_path,
+            'test_scenarios': [
+                'memory_pressure',
+                'invalid_data_access',
+                'transformation_errors',
+                'resource_exhaustion'
+            ]
+        }
+    except Exception as e:
+        print(f"\nError in test execution: {str(e)}")
+        raise
         print("\n4. Submitting failing job...")
         try:
             create_failing_job()
@@ -84,10 +74,13 @@ def main() -> Dict[str, Any]:
 
 if __name__ == "__main__":
     try:
-        result = main()
-        print("\nExecution completed successfully:")
+        result = test_local()
+        print("\nLocal testing completed successfully:")
         for key, value in result.items():
             print(f"{key}: {value}")
     except Exception as e:
-        print(f"\nExecution failed: {str(e)}")
+        print(f"\nLocal testing failed: {str(e)}")
+        print("\nError details:")
+        import traceback
+        traceback.print_exc()
         exit(1)
