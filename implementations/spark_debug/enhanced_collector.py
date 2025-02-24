@@ -4,13 +4,16 @@ import subprocess
 import json
 from datetime import datetime
 from typing import Dict, Any, List, Optional
+from pathlib import Path
 
 class EnhancedSparkCollector:
     """Enhanced debug information collector for Spark jobs."""
     
-    def __init__(self, host: str, password: str):
+    def __init__(self, host: str, password: Optional[str] = None):
         self.host = host
-        self.password = password
+        self.password = password or os.getenv('EMR_ROOT_PASSWORD', '')
+        if not self.password:
+            raise ValueError("Password must be provided either directly or via EMR_ROOT_PASSWORD environment variable")
         self.ssh_prefix = f'sshpass -p "{self.password}" ssh -o StrictHostKeyChecking=no root@{self.host}'
     
     def _run_command(self, cmd: str, info_type: str, timeout: int = 30) -> str:
@@ -31,26 +34,21 @@ class EnhancedSparkCollector:
     def collect_cluster_metrics(self) -> Dict[str, str]:
         """Collect comprehensive cluster metrics."""
         commands = {
-            # YARN metrics
-            'yarn_nodes': 'yarn node -list -all',
-            'yarn_apps': 'yarn application -list -appStates ALL',
-            'yarn_queues': 'yarn queue -status default',
-            'yarn_scheduler': 'yarn schedulerconf',
-            
-            # HDFS metrics
-            'hdfs_report': 'hdfs dfsadmin -report',
-            'hdfs_health': 'hdfs fsck /',
-            'hdfs_space': 'hadoop fs -du -h /',
-            
-            # Spark metrics
-            'spark_apps': 'curl -s http://localhost:18080/api/v1/applications',
+            # Required metrics from completion criteria
+            'yarn_metrics': 'yarn node -list -all',
+            'hdfs_metrics': 'hdfs dfsadmin -report',
             'spark_metrics': 'curl -s http://localhost:18080/metrics/json/',
-            'spark_executors': 'curl -s http://localhost:18080/api/v1/applications/[APP_ID]/executors',
-            
-            # Node metrics
             'node_metrics': 'top -bn1 | head -n 20',
             'network_metrics': 'netstat -s',
-            'disk_io': 'iostat -x 1 2'
+            'disk_io': 'iostat -x 1 2',
+            
+            # Additional metrics for comprehensive monitoring
+            'yarn_apps': 'yarn application -list -appStates ALL',
+            'yarn_queues': 'yarn queue -status default',
+            'hdfs_health': 'hdfs fsck /',
+            'hdfs_space': 'hadoop fs -du -h /',
+            'spark_apps': 'curl -s http://localhost:18080/api/v1/applications',
+            'spark_executors': 'curl -s http://localhost:18080/api/v1/applications/[APP_ID]/executors'
         }
         
         results = {}
@@ -136,29 +134,52 @@ class EnhancedSparkCollector:
         output_dir = f"debug_info_{timestamp}"
         os.makedirs(output_dir, exist_ok=True)
         
-        # Create organized subdirectories
-        subdirs = ['configs', 'logs', 'metrics', 'resources']
-        for subdir in subdirs:
-            os.makedirs(os.path.join(output_dir, subdir), exist_ok=True)
+        # Create organized subdirectories based on requirements
+        subdirs = {
+            'configs': ['spark', 'yarn', 'hdfs'],
+            'logs': ['application', 'error_traces', 'system'],
+            'metrics': ['yarn', 'hdfs', 'spark', 'cluster_health', 'job_execution'],
+            'resources': ['cpu', 'memory', 'disk', 'network']
+        }
+        
+        for main_dir, sub_dirs in subdirs.items():
+            for sub_dir in sub_dirs:
+                os.makedirs(os.path.join(output_dir, main_dir, sub_dir), exist_ok=True)
         
         # Collect all information
         collections = {
             'configs': {
-                'spark-defaults.conf': self._run_command(f'{self.ssh_prefix} "cat /etc/spark/conf/spark-defaults.conf"', 'spark config'),
-                'yarn-site.xml': self._run_command(f'{self.ssh_prefix} "cat /etc/hadoop/conf/yarn-site.xml"', 'yarn config'),
-                'hdfs-site.xml': self._run_command(f'{self.ssh_prefix} "cat /etc/hadoop/conf/hdfs-site.xml"', 'hdfs config')
+                'spark/defaults.conf': self._run_command(f'{self.ssh_prefix} "cat /etc/spark/conf/spark-defaults.conf"', 'spark config'),
+                'yarn/site.xml': self._run_command(f'{self.ssh_prefix} "cat /etc/hadoop/conf/yarn-site.xml"', 'yarn config'),
+                'hdfs/site.xml': self._run_command(f'{self.ssh_prefix} "cat /etc/hadoop/conf/hdfs-site.xml"', 'hdfs config')
             },
-            'metrics': self.collect_cluster_metrics(),
+            'metrics': {
+                'yarn/metrics': self._run_command(f'{self.ssh_prefix} "yarn node -list -all"', 'yarn metrics'),
+                'hdfs/metrics': self._run_command(f'{self.ssh_prefix} "hdfs dfsadmin -report"', 'hdfs metrics'),
+                'spark/metrics': self._run_command(f'{self.ssh_prefix} "curl -s http://localhost:18080/metrics/json/"', 'spark metrics'),
+                'cluster_health/node_metrics': self._run_command(f'{self.ssh_prefix} "top -bn1 | head -n 20"', 'node metrics'),
+                'cluster_health/network_metrics': self._run_command(f'{self.ssh_prefix} "netstat -s"', 'network metrics'),
+                'cluster_health/disk_io': self._run_command(f'{self.ssh_prefix} "iostat -x 1 2"', 'disk io')
+            },
+            'resources': {
+                'cpu/metrics': self._run_command(f'{self.ssh_prefix} "mpstat -P ALL 1 5"', 'cpu metrics'),
+                'memory/metrics': self._run_command(f'{self.ssh_prefix} "free -h && vmstat -s"', 'memory metrics'),
+                'disk/metrics': self._run_command(f'{self.ssh_prefix} "df -h && iostat -x"', 'disk metrics'),
+                'network/metrics': self._run_command(f'{self.ssh_prefix} "netstat -i && sar -n DEV 1 5"', 'network metrics')
+            },
             'resources': self.collect_resource_metrics(),
             'logs': self.collect_logs(app_id)
         }
         
-        # Write collected information
+        # Write collected information with proper directory structure
         for category, data in collections.items():
-            category_dir = os.path.join(output_dir, category)
-            for name, content in data.items():
-                filepath = os.path.join(category_dir, f"{name}.txt")
-                with open(filepath, "w") as f:
+            for path, content in data.items():
+                # Create full path including subdirectories
+                full_path = os.path.join(output_dir, category, path)
+                os.makedirs(os.path.dirname(full_path), exist_ok=True)
+                
+                # Write content to file
+                with open(f"{full_path}.txt", "w") as f:
                     f.write(content)
         
         # Create summary

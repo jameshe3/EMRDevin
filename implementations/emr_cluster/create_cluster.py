@@ -86,7 +86,7 @@ def create_cluster(
             vpc_id=vpc_id,
             ram_role='AliyunECSInstanceForEMRRole',
             security_group_id=security_group_id,
-            master_root_password='1qaz@WSX3edc'  # From requirements
+            master_root_password=os.getenv('EMR_ROOT_PASSWORD')
         ),
         payment_type='PayAsYouGo',
         node_groups=[master_group, core_group],

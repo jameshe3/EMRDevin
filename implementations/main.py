@@ -56,7 +56,7 @@ def main() -> Dict[str, Any]:
         print("\n3. Initializing debug collector...")
         collector = EnhancedSparkCollector(
             host=cluster_status['master_public_ip'],
-            password='1qaz@WSX3edc'  # From requirements
+            password=os.getenv('EMR_ROOT_PASSWORD')
         )
         
         # Step 4: Run failing job
