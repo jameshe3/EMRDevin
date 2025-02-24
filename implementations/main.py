@@ -49,13 +49,7 @@ def test_local() -> Dict[str, Any]:
         }
     except Exception as e:
         print(f"\nError in test execution: {str(e)}")
-        raise
-        print("\n4. Submitting failing job...")
-        try:
-            create_failing_job()
-        except Exception as e:
-            print(f"Job failed as expected: {str(e)}")
-        
+        raise        
         # Step 5: Collect debug information
         print("\n5. Collecting debug information...")
         debug_info_path = collector.collect_all()
