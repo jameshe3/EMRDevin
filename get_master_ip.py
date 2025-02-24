@@ -34,11 +34,11 @@ def get_master_ip(cluster_id: str) -> str:
         print("Response:", response_json)
         
         # Find master node
-        if hasattr(nodes_response.body, 'node_list'):
-            for node in nodes_response.body.node_list:
-                if node.node_group_type == 'MASTER':
-                    if hasattr(node, 'public_ip'):
-                        return node.public_ip
+        if hasattr(nodes_response.body, 'Nodes'):
+            for node in nodes_response.body.Nodes:
+                if node.NodeGroupType == 'MASTER':
+                    if hasattr(node, 'PublicIp') and node.PublicIp:
+                        return node.PublicIp
                     else:
                         raise Exception("Master node found but no public IP available")
         raise Exception("Master node not found in response")
