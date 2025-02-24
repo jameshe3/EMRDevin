@@ -13,86 +13,34 @@ class ExtendedSparkInfoCollector(SparkInfoCollector):
         super().__init__(host, password)
         self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
-    def collect_hadoop_config(self, output_dir: str) -> None:
+    def collect_hadoop_config(self) -> str:
         """Collect Hadoop-related configuration files."""
-        config_dir = os.path.join(output_dir, "configs")
-        os.makedirs(config_dir, exist_ok=True)
-        
-        config_files = [
-            "/etc/ecm/hadoop-conf/core-site.xml",
-            "/etc/ecm/hadoop-conf/hdfs-site.xml",
-            "/etc/ecm/hadoop-conf/mapred-site.xml",
-            "/etc/ecm/hadoop-conf/yarn-site.xml",
-            "/etc/ecm/hive-conf/hive-site.xml"
-        ]
-        
-        for config_file in config_files:
-            cmd = f'sshpass -p "{self.password}" scp root@{self.host}:{config_file} {config_dir}/'
-            os.system(cmd)
+        cmd = f'{self.ssh_prefix} "cat /etc/ecm/hadoop-conf/hdfs-site.xml"'
+        return self._run_command(cmd, "hadoop_config")
     
-    def collect_resource_metrics(self, output_dir: str) -> None:
+    def collect_system_resources(self) -> dict:
         """Collect system resource metrics."""
-        metrics_dir = os.path.join(output_dir, "resources")
-        os.makedirs(metrics_dir, exist_ok=True)
-        
-        # CPU info
-        self._run_remote_command(
-            "top -b -n 1 > /tmp/cpu_info.txt && " +
-            "vmstat 1 5 >> /tmp/cpu_info.txt && " +
-            "cat /proc/cpuinfo >> /tmp/cpu_info.txt"
-        )
-        
-        # Memory info
-        self._run_remote_command(
-            "free -h > /tmp/memory_info.txt && " +
-            "cat /proc/meminfo >> /tmp/memory_info.txt"
-        )
-        
-        # Disk space
-        self._run_remote_command("df -h > /tmp/disk_info.txt")
-        
-        # HDFS space
-        self._run_remote_command("hdfs dfs -df -h > /tmp/hdfs_info.txt")
-        
-        # Running processes
-        self._run_remote_command("ps aux | grep -i 'spark\\|yarn\\|hadoop' > /tmp/running_processes.txt")
-        
-        # Copy all metrics files
-        metrics_files = [
-            "cpu_info.txt",
-            "memory_info.txt",
-            "disk_info.txt",
-            "hdfs_info.txt",
-            "running_processes.txt"
-        ]
-        for file in metrics_files:
-            cmd = f'sshpass -p "{self.password}" scp root@{self.host}:/tmp/{file} {metrics_dir}/'
-            os.system(cmd)
+        commands = {
+            "cpu_info": "cat /proc/cpuinfo | grep 'processor\\|model name\\|cpu MHz'",
+            "memory_info": "free -h && cat /proc/meminfo",
+            "disk_space": "df -h",
+            "hdfs_space": "hdfs dfs -df -h",
+            "running_processes": "ps aux | grep -i 'spark\\|yarn\\|hadoop'"
+        }
+        results = {}
+        for resource_type, cmd in commands.items():
+            full_cmd = f'{self.ssh_prefix} "{cmd}"'
+            results[resource_type] = self._run_command(full_cmd, resource_type)
+        return results
     
-    def collect_yarn_logs(self, output_dir: str) -> None:
+    def collect_spark_logs(self, app_id=None) -> str:
         """Collect YARN application logs."""
-        logs_dir = os.path.join(output_dir, "yarn_logs")
-        os.makedirs(logs_dir, exist_ok=True)
-        
-        # Get recent application IDs
-        self._run_remote_command(
-            "yarn application -list -appStates ALL | " +
-            "grep -i 'spark' | awk '{print $1}' > /tmp/app_ids.txt"
-        )
-        
-        # Copy application logs
-        cmd = f'sshpass -p "{self.password}" scp root@{self.host}:/tmp/app_ids.txt {logs_dir}/'
-        os.system(cmd)
-        
-        with open(os.path.join(logs_dir, "app_ids.txt")) as f:
-            app_ids = f.read().splitlines()
-        
-        for app_id in app_ids:
-            self._run_remote_command(
-                f"yarn logs -applicationId {app_id} > /tmp/{app_id}_logs.txt"
-            )
-            cmd = f'sshpass -p "{self.password}" scp root@{self.host}:/tmp/{app_id}_logs.txt {logs_dir}/'
-            os.system(cmd)
+        if app_id:
+            cmd = f'{self.ssh_prefix} "yarn logs -applicationId {app_id}"'
+        else:
+            # Get logs from the most recent application
+            cmd = f'{self.ssh_prefix} "yarn application -list -appStates ALL | grep FINISHED | head -1 | awk \'{{print $1}}\' | xargs -I% yarn logs -applicationId %"'
+        return self._run_command(cmd, "spark_logs")
     
     def collect_all(self) -> str:
         """Collect all debug information."""
