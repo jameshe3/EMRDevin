@@ -5,7 +5,7 @@ def create_failing_job():
     spark = SparkSession \
         .builder \
         .appName("IntentionallyFailingJob") \
-        .master("yarn") \
+        .config("spark.master", "yarn") \
         .config("spark.submit.deployMode", "client") \
         .config("spark.driver.memory", "2g") \
         .config("spark.executor.memory", "2g") \
