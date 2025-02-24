@@ -1,10 +1,8 @@
 from pyspark.sql import SparkSession
 
 def create_failing_job():
-    spark = SparkSession \
-        .builder \
+    spark = SparkSession.builder \
         .appName("IntentionallyFailingJob") \
-        .config("spark.submit.deployMode", "cluster") \
         .config("spark.master", "yarn") \
         .getOrCreate()
 
