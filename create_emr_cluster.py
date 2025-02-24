@@ -22,6 +22,18 @@ def create_client(
     config.region_id = region_id
     return Emr20210320Client(config)
 
+# EMR configuration constants
+EMR_CONFIG = {
+    'REGION_ID': 'cn-hangzhou',
+    'CLUSTER_TYPE': 'DATALAKE',
+    'RELEASE_VERSION': 'EMR-5.9.0',
+    'VPC_ID': 'vpc-bp167nedawwbwmt9ti0pv',
+    'ZONE_ID': 'cn-hangzhou-i',
+    'SECURITY_GROUP_ID': 'sg-bp17gnp2vumd1o4okw4s',
+    'VSWITCH_ID': 'vsw-bp1bg5pnp84s73pms20cs',
+    'INSTANCE_TYPE': 'ecs.g7.xlarge'
+}
+
 def get_create_cluster_request(
     region_id: str,
     cluster_name: str,
@@ -32,6 +44,8 @@ def get_create_cluster_request(
     security_group_id: str,
     v_switch_id: str,
     instance_type: str,
+    emr_password: str,
+    emr_root_password: str,
 ) -> emr_20210320_models.CreateClusterRequest:
     master_group = emr_20210320_models.NodeGroupConfig(
         node_group_type='MASTER',
@@ -77,13 +91,12 @@ def get_create_cluster_request(
         deploy_mode='NORMAL',
         security_mode='NORMAL',
         release_version=release_version,
-        user_password=os.getenv('EMR_PASSWORD'),
         node_attributes=emr_20210320_models.NodeAttributes(
             zone_id=zone_id,
             vpc_id=vpc_id,
             ram_role='AliyunECSInstanceForEMRRole',
             security_group_id=security_group_id,
-            master_root_password=os.getenv('EMR_ROOT_PASSWORD')
+            master_root_password=emr_root_password
         ),
         payment_type='PayAsYouGo',
         node_groups=[master_group, core_group],
@@ -132,7 +145,19 @@ def await_cluster_status_to_running(
     return operation_response.body.operation.operation_state
 
 def main():
-    client = create_client(os.getenv('ACCESS_KEY_ID'), os.getenv('ACCESS_KEY_SECRET'), 'cn-hangzhou')
+    # Check required credentials
+    access_key_id = os.getenv('ACCESS_KEY_ID')
+    access_key_secret = os.getenv('ACCESS_KEY_SECRET')
+    if not access_key_id or not access_key_secret:
+        raise ValueError("ACCESS_KEY_ID and ACCESS_KEY_SECRET environment variables must be set")
+    
+    # Get EMR passwords with defaults
+    emr_password = os.getenv('EMR_PASSWORD', '1qaz@WSX3edc')
+    emr_root_password = os.getenv('EMR_ROOT_PASSWORD', '1qaz@WSX3edc')
+    if os.getenv('EMR_PASSWORD') and os.getenv('EMR_ROOT_PASSWORD'):
+        ConsoleClient.log("Using EMR passwords from environment variables")
+    
+    client = create_client(access_key_id, access_key_secret, 'cn-hangzhou')
     ConsoleClient.log('create cluster begins')
     
     region_id = 'cn-hangzhou'
@@ -147,7 +172,8 @@ def main():
     
     create_cluster_req = get_create_cluster_request(
         region_id, cluster_name, cluster_type, release_version,
-        vpc_id, zone_id, security_group_id, v_switch_id, instance_type
+        vpc_id, zone_id, security_group_id, v_switch_id, instance_type,
+        emr_password, emr_root_password
     )
     create_cluster_response = client.create_cluster(create_cluster_req)
     body = create_cluster_response.body
