@@ -153,7 +153,8 @@ def main():
     # Get EMR passwords with defaults
     emr_password = os.getenv('EMR_PASSWORD', '1qaz@WSX3edc')
     emr_root_password = os.getenv('EMR_ROOT_PASSWORD', '1qaz@WSX3edc')
-    ConsoleClient.log("Using default EMR passwords since environment variables not set")
+    if os.getenv('EMR_PASSWORD') and os.getenv('EMR_ROOT_PASSWORD'):
+        ConsoleClient.log("Using EMR passwords from environment variables")
     
     client = create_client(access_key_id, access_key_secret, 'cn-hangzhou')
     ConsoleClient.log('create cluster begins')
