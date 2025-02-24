@@ -6,6 +6,7 @@ from alibabacloud_emr20210320 import models as emr_20210320_models
 from alibabacloud_tea_util.client import Client as UtilClient
 
 def get_master_ip(cluster_id: str) -> str:
+    """Get the public IP of the master node for the given EMR cluster."""
     # Verify environment variables
     access_key_id = os.getenv('ACCESS_KEY_ID')
     access_key_secret = os.getenv('ACCESS_KEY_SECRET')
@@ -29,13 +30,18 @@ def get_master_ip(cluster_id: str) -> str:
         nodes_response = client.list_nodes(list_nodes_request)
         
         # Debug output
-        print("Response:", UtilClient.to_jsonstring(nodes_response.body))
+        response_json = UtilClient.to_jsonstring(nodes_response.body)
+        print("Response:", response_json)
         
         # Find master node
-        for node in nodes_response.body.node_list:
-            if node.node_group_type == 'MASTER':
-                return node.public_ip
-        raise Exception("Master node not found")
+        if hasattr(nodes_response.body, 'node_list'):
+            for node in nodes_response.body.node_list:
+                if node.node_group_type == 'MASTER':
+                    if hasattr(node, 'public_ip'):
+                        return node.public_ip
+                    else:
+                        raise Exception("Master node found but no public IP available")
+        raise Exception("Master node not found in response")
     except Exception as e:
         print(f"Error: {str(e)}")
         raise
