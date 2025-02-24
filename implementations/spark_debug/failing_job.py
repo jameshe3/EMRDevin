@@ -8,11 +8,11 @@ import random
 def create_failing_job():
     """Create a Spark job with various failure scenarios."""
     # Create SparkSession using the recommended pattern
-    builder = SparkSession.builder
-    builder.appName("IntentionallyFailingJob")
-    builder.config("spark.executor.memory", "512m")
-    builder.config("spark.driver.memory", "512m")
-    spark = builder.getOrCreate()
+    spark = (SparkSession.builder
+        .appName("IntentionallyFailingJob")
+        .config("spark.executor.memory", "512m")
+        .config("spark.driver.memory", "512m")
+        .getOrCreate())
 
     try:
         print("Starting failing job scenarios...")
