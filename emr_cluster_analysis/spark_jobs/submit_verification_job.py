@@ -70,8 +70,15 @@ def main():
         print("ERROR: Empty master node IP")
         return False
     
-    # Root password for SSH access
-    root_password = '1qaz@WSX3edc'
+    # Read root password from config file
+    import configparser
+    import os
+    
+    config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'credentials.ini')
+    credentials = configparser.ConfigParser()
+    credentials.read(config_path)
+    
+    root_password = credentials.get('DEFAULT', 'root_password')
     
     # Submit the verification job
     success = submit_verification_job(master_ip, root_password)

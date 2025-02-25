@@ -155,7 +155,8 @@ def main():
     security_group_id = 'sg-bp17gnp2vumd1o4okw4s'
     v_switch_id = 'vsw-bp1bg5pnp84s73pms20cs'
     instance_type = 'ecs.g7.xlarge'
-    root_password = '1qaz@WSX3edc'  # ECS login password
+    # Root password from config file
+    root_password = credentials.get('DEFAULT', 'root_password')
     
     create_cluster_req = get_create_cluster_request(
         region_id, cluster_name, cluster_type, release_version,
