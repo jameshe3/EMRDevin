@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-import os
-import json
 import sys
 from alibabacloud_emr20210320.client import Client as Emr20210320Client
 from alibabacloud_tea_openapi import models as open_api_models
